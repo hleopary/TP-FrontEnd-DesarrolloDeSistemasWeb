@@ -1,0 +1,8 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "--- favorite: true reply: false last:": "checkbox"
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"t2","type":"file","file":"Kanban/Kanban-Tareas.md","x":420,"y":0,"width":360,"height":200},
+		{"id":"t3","type":"file","file":"Sprints/Sprint-0-Setup.md","x":0,"y":260,"width":280,"height":160},
+		{"id":"t4","type":"file","file":"Sprints/Sprint-1-Core.md","x":300,"y":260,"width":280,"height":160},
+		{"id":"t5","type":"file","file":"Sprints/Sprint-2-Individuales.md","x":600,"y":260,"width":280,"height":160},
+		{"id":"t6","type":"file","file":"Sprints/Sprint-3-Estilos.md","x":900,"y":260,"width":280,"height":160},
+		{"id":"t7","type":"file","file":"Sprints/Sprint-4-JS.md","x":1200,"y":260,"width":280,"height":160},
+		{"id":"t8","type":"file","file":"Sprints/Sprint-5-Assets.md","x":1500,"y":260,"width":280,"height":160},
+		{"id":"t9","type":"file","file":"Sprints/Sprint-6-Docs.md","x":1800,"y":260,"width":280,"height":160},
+		{"id":"t1","type":"file","file":"Tareas.md","x":0,"y":0,"width":360,"height":200}
+	],
+	"edges":[
+		{"id":"te1","fromNode":"t1","fromSide":"right","toNode":"t2","toSide":"left"},
+		{"id":"te2","fromNode":"t1","fromSide":"bottom","toNode":"t3","toSide":"top"},
+		{"id":"te3","fromNode":"t2","fromSide":"bottom","toNode":"t4","toSide":"top"},
+		{"id":"te4","fromNode":"t4","fromSide":"right","toNode":"t5","toSide":"left"},
+		{"id":"te5","fromNode":"t5","fromSide":"right","toNode":"t6","toSide":"left"},
+		{"id":"te6","fromNode":"t6","fromSide":"right","toNode":"t7","toSide":"left"},
+		{"id":"te7","fromNode":"t7","fromSide":"right","toNode":"t8","toSide":"left"},
+		{"id":"te8","fromNode":"t8","fromSide":"right","toNode":"t9","toSide":"left"}
+	]
+}

@@ -1,0 +1,15 @@
+{
+  "show-checkboxes": true,
+  "tag-colors": [
+    {
+      "tagKey": "",
+      "color": "rgba(255, 255, 255, 1)",
+      "backgroundColor": "rgba(0, 0, 0, 0.1)"
+    },
+    {
+      "tagKey": "",
+      "color": "rgba(160, 250, 137, 1)",
+      "backgroundColor": "rgba(238, 14, 14, 0.1)"
+    }
+  ]
+}

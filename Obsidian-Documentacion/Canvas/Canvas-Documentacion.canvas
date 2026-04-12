@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"n3","type":"file","file":"Proyecto-Core/Overview.md","x":0,"y":240,"width":320,"height":180},
+		{"id":"n4","type":"file","file":"Sprints/Sprint-0-Setup.md","x":380,"y":240,"width":320,"height":180},
+		{"id":"n5","type":"file","file":"Gestion/Decisiones.md","x":760,"y":240,"width":320,"height":180},
+		{"id":"n6","type":"file","file":"Gestion/Registro-IA.md","x":1140,"y":240,"width":320,"height":180},
+		{"id":"n7","type":"file","file":"Referencia/Guia-Estilos.md","x":0,"y":480,"width":320,"height":180},
+		{"id":"n8","type":"file","file":"Plantillas/INDEX.md","x":380,"y":480,"width":320,"height":180},
+		{"id":"n9","type":"file","file":"wiki/_master-index.md","x":760,"y":480,"width":320,"height":180},
+		{"id":"n10","type":"file","file":"output/query-results.md","x":1140,"y":480,"width":320,"height":180},
+		{"id":"n11","type":"file","file":"Bitacora-Errores/PLANTILLA-Error.md","x":1520,"y":480,"width":320,"height":180},
+		{"id":"n1","type":"file","file":"INDEX.md","x":0,"y":-120,"width":320,"height":180},
+		{"id":"n2","type":"file","file":"README.md","x":380,"y":-120,"width":320,"height":180}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"n1","fromSide":"right","toNode":"n2","toSide":"left"},
+		{"id":"e2","fromNode":"n1","fromSide":"bottom","toNode":"n3","toSide":"top"},
+		{"id":"e3","fromNode":"n2","fromSide":"bottom","toNode":"n4","toSide":"top"},
+		{"id":"e4","fromNode":"n4","fromSide":"right","toNode":"n5","toSide":"left"},
+		{"id":"e5","fromNode":"n5","fromSide":"right","toNode":"n6","toSide":"left"},
+		{"id":"e6","fromNode":"n3","fromSide":"bottom","toNode":"n7","toSide":"top"},
+		{"id":"e7","fromNode":"n4","fromSide":"bottom","toNode":"n8","toSide":"top"},
+		{"id":"e8","fromNode":"n5","fromSide":"bottom","toNode":"n9","toSide":"top"},
+		{"id":"e9","fromNode":"n6","fromSide":"bottom","toNode":"n10","toSide":"top"},
+		{"id":"e10","fromNode":"n10","fromSide":"right","toNode":"n11","toSide":"left"}
+	]
+}

@@ -1,0 +1,205 @@
+{
+  "main": {
+    "id": "6db1e69987006db0",
+    "type": "split",
+    "children": [
+      {
+        "id": "948c7a22aeaf2a3c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0eed9f76a160ddc0",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Canvas/Canvas-Documentacion.canvas",
+                "viewState": {
+                  "x": 1038.498150789369,
+                  "y": 291.32966714208646,
+                  "zoom": -1.2448645454710194
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Canvas-Documentacion"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4a08cef73490ec5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "98036452b3ad18af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d13ab3f9dbfd5567",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "1d336dcdc819b17c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "741a2fc7c7039015",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 240.5
+  },
+  "right": {
+    "id": "6db90bd96a12f16e",
+    "type": "split",
+    "children": [
+      {
+        "id": "0a6f170b7778fa67",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d40e12f43841d09",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tareas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Tareas"
+            }
+          },
+          {
+            "id": "214d0362772cdc71",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Tareas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Tareas"
+            }
+          },
+          {
+            "id": "65d67d927073cd03",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "5720379bfd79ca98",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "022167eab671a5fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Tareas.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Tareas"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "0eed9f76a160ddc0",
+  "lastOpenFiles": [
+    "Canvas/Canvas-Tareas.canvas",
+    "Canvas/Canvas-Documentacion.canvas",
+    "Tareas.md",
+    "INDEX.md",
+    "Kanban/Kanban-Tareas.md",
+    "Gestion/Reuniones/2026-04-08.md",
+    "Proyecto-Core/Overview.md",
+    "Sprints/Sprint-0-Setup.md",
+    "Referencia/Convenciones.md",
+    "wiki/_master-index.md",
+    "img/Pasted image 20260408210208.png",
+    "output/query-results.md"
+  ]
+}
