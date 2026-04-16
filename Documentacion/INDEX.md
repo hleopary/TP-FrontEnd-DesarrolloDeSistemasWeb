@@ -1,78 +1,48 @@
 ---
-title: INDEX
+title: Inicio Documentacion
 status: activo
-proyecto: Proyecto Front IFTS 2.2
-propuesta: 3 RPG
+owner: equipo-clouds
+updated: 2026-04-16
 ---
 
-# INDEX - Proyecto Front IFTS 2.2
+# Inicio de Documentacion
 
-Este es el punto de entrada del vault del proyecto. Desde aca se navega toda la documentacion del frontend y su seguimiento.
+Este archivo funciona como punto de entrada en Obsidian para organizar el TP1.
 
-## Estado rapido
+## Objetivo actual
 
-- Propuesta elegida: Propuesta 3 RPG.
-- Frontend objetivo: carpeta [Proyect](../Proyect).
-- Horizonte: 2 semanas.
-- Integrantes: eduardo, leandro, marcelo, melisa.
+Alinear al equipo en tres frentes antes de programar:
 
-## Navegacion principal
+- Alcance del proyecto.
+- Decisiones visuales y tecnicas.
+- Tareas minimas obligatorias segun consigna.
 
-- [README del vault](README.md)
-- [Tareas maestras](Tareas.md)
-- [Kanban Sprint 0](Sprints/Sprint-0-Setup-Kanban.md)
-- [Kanban Sprint 1](Sprints/Sprint-1-Core-Kanban.md)
-- [Kanban Sprint 2](Sprints/Sprint-2-Individuales-Kanban.md)
-- [Kanban Sprint 3](Sprints/Sprint-3-Estilos-Kanban.md)
-- [Kanban Sprint 4](Sprints/Sprint-4-JS-Kanban.md)
-- [Kanban Sprint 5](Sprints/Sprint-5-Assets-Kanban.md)
-- [Kanban Sprint 6](Sprints/Sprint-6-Docs-Kanban.md)
-- [Minuta inicial](Gestion/Reuniones/2026-04-08.md)
-- [Canvas de documentacion](Canvas/Canvas-Documentacion.canvas)
-- [Canvas de tareas](Canvas/Canvas-Tareas.canvas)
+## Navegacion rapida
 
-## Estructura tipo RAG
+### Base del proyecto
 
-- [Master index de wiki](wiki/_master-index.md)
-- [Carpeta raw](raw/README.md)
-- [Carpeta output](output/query-results.md)
+- [[Consigna TP1 - Markdown]]
+- [[Proyecto-Core/Overview]]
+- [[Proyecto-Core/Arquitectura]]
+- [[Proyecto-Core/Estilo-Visual]]
 
-## Proyecto Core
+### Gestion del equipo
 
-- [Overview](Proyecto-Core/Overview.md)
-- [Estilo visual](Proyecto-Core/Estilo-Visual.md)
-- [Arquitectura](Proyecto-Core/Arquitectura.md)
-- [Roadmap](Proyecto-Core/Roadmap.md)
+- [[Gestion/Decisiones]]
+- [[Gestion/Registro-IA]]
 
-## Sprints
+### Plan de arranque
 
-- [Sprint 0 - Setup](Sprints/Sprint-0-Setup.md)
-- [Sprint 1 - Core](Sprints/Sprint-1-Core.md)
-- [Sprint 2 - Individuales](Sprints/Sprint-2-Individuales.md)
-- [Sprint 3 - Estilos](Sprints/Sprint-3-Estilos.md)
-- [Sprint 4 - JS](Sprints/Sprint-4-JS.md)
-- [Sprint 5 - Assets](Sprints/Sprint-5-Assets.md)
-- [Sprint 6 - Docs](Sprints/Sprint-6-Docs.md)
+- [[Proyecto-Core/Consignas-Faltantes-Por-Definir]]
 
-## Gestion
+## Estado recomendado de avance
 
-- [Decisiones](Gestion/Decisiones.md)
-- [Registro IA](Gestion/Registro-IA.md)
-- [Trabajo](trabajo.md)
-- [Bitacora de errores](Bitacora-Errores/PLANTILLA-Error.md)
+- [ ] Consignas faltantes definidas y aprobadas por el equipo.
+- [ ] Estructura final de archivos confirmada.
+- [ ] Sistema de navegacion comun definido para todas las paginas.
+- [ ] Guia visual minima cerrada (paleta, tipografias, estilo base).
+- [ ] Plan de contenidos por integrante validado.
 
-## Plantillas
+## Criterio de trabajo
 
-- [Index de plantillas](Plantillas/INDEX.md)
-- [Tarea](Plantillas/Tarea.md)
-- [Sprint](Plantillas/Sprint.md)
-- [Minuta](Plantillas/Minuta.md)
-- [Bug](Plantillas/Bug.md)
-- [Decision](Plantillas/Decision.md)
-
-## Referencia
-
-- [Convenciones](Referencia/Convenciones.md)
-- [Paleta de colores](Referencia/Paleta-Colores.md)
-- [Google Fonts](Referencia/Google-Fonts.md)
-- [Guia de estilos](Referencia/Guia-Estilos.md)
+Toda decision importante debe registrarse antes de implementarse para evitar retrabajo. Si cambia una definicion, actualizar primero la nota correspondiente y luego el codigo.

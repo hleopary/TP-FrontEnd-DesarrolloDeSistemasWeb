@@ -8,7 +8,6 @@ status: activo
 ## Decision actual
 
 - Propuesta elegida: Propuesta 3 RPG.
-- Estructura de trabajo: Obsidian centralizado + Kanban por tareas.
 - Horizonte: 2 semanas.
 - Integrantes: eduardo, leandro, marcelo, melisa.
 
