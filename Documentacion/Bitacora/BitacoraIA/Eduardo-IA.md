@@ -116,3 +116,21 @@ Cada entrada representa un cambio puntual realizado con asistencia de IA.
   - Navegacion interna mas clara entre index principal, bitacora e indice de IA.
 - Validacion manual:
   - Se reviso visualmente el grafo y se confirmo mejora de la estructura.
+
+### [2026-04-16] Estandarizacion de minutas por fecha en Bitacora
+
+- Tipo: Documentacion Obsidian.
+- Modelo: GPT-5.3-Codex.
+- Herramienta: GitHub Copilot Chat.
+- Archivos impactados:
+  - `Documentacion/Bitacora/Bitacora/Index-Bitacora.md`
+  - `Documentacion/Bitacora/Bitacora/2026-04-08.md`
+- Cambio:
+  - Se actualizo el indice de bitacora con una estructura estandar para minutas `YYYY-MM-DD.md`.
+  - Se agrego plantilla base para nuevas minutas.
+  - Se reorganizo la minuta `2026-04-08.md` para cumplir la estructura definida sin alterar su contenido.
+- Impacto:
+  - Uniformidad en todos los registros de reunion.
+  - Facilita mantener y auditar la bitacora de forma progresiva.
+- Validacion manual:
+  - Se verifico que la minuta conserva toda la informacion original y ahora sigue el formato estandar.
