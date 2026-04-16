@@ -9,7 +9,7 @@ status: activo
 
 - `index.html` como portada.
 - `bitacora.html` como documentacion del proceso.
-- 4 paginas personales para integrantes.
+- `nombre.html` 4 paginas personales para integrantes.
 - `css/style.css` como hoja global.
 - `js/main.js` como logica principal.
 
