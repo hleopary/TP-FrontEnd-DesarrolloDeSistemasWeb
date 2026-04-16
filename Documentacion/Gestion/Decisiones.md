@@ -8,8 +8,11 @@ status: activo
 ## Decision actual
 
 - Propuesta elegida: Propuesta 3 RPG.
-- Horizonte: 2 semanas.
-- Integrantes: eduardo, leandro, marcelo, melisa.
+- Integrantes: 
+	- Eduardo Moreno
+	- Leandro Paryszewski
+	- Marcelo Moreno
+	- Melissa Galeano Ibañez
 
 ## Registro minimo por decision
 
