@@ -11,6 +11,7 @@ Este indice agrupa la documentacion de proceso, reuniones y uso de IA.
 
 ## Minutas de reunion
 
+- [[Bitacora/Bitacora/2026-04-17]]
 - [[Bitacora/Bitacora/2026-04-08]]
 
 ## Estructura estandar para minutas con fecha

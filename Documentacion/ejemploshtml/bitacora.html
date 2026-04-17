@@ -1,0 +1,224 @@
+<html class="" lang="es">
+
+<head></head>
+
+<body class="antialiased font-body bg-surface text-on-surface">```html
+
+
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Grupo Clouds - Atmospheric Logic Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-bright": "#fbf8fc", "on-tertiary-container": "#243449", "secondary-fixed-dim": "#00e1a8", "tertiary-container": "#8d9db5", "on-secondary-fixed-variant": "#00513b", "inverse-on-surface": "#f3f0f4", "surface-container-low": "#f6f2f7", "on-secondary-container": "#007153", "on-tertiary-fixed-variant": "#38485d", background: "#fbf8fc", "on-primary": "#ffffff", "surface-tint": "#006591", "on-error-container": "#93000a", error: "#ba1a1a", "surface-container": "#f0edf1", "surface-container-high": "#eae7eb", "secondary-fixed": "#47fec3", tertiary: "#505f76", "primary-fixed-dim": "#89ceff", "outline-variant": "#bec8d2", "on-tertiary": "#ffffff", "on-error": "#ffffff", "secondary-container": "#43fbc0", "on-primary-fixed-variant": "#004c6e", "tertiary-fixed": "#d3e4fe", secondary: "#006c4f", "primary-container": "#0ea5e9", "on-surface-variant": "#3e4850", "on-surface": "#1b1b1e", "on-primary-fixed": "#001e2f", surface: "#fbf8fc", primary: "#006591", "on-background": "#1b1b1e", "error-container": "#ffdad6", "on-secondary-fixed": "#002116", "on-primary-container": "#003751", outline: "#6e7881", "inverse-primary": "#89ceff", "surface-variant": "#e4e1e6", "tertiary-fixed-dim": "#b7c8e1", "surface-dim": "#dcd9dd", "inverse-surface": "#303033", "surface-container-lowest": "#ffffff", "primary-fixed": "#c9e6ff", "on-secondary": "#ffffff", "surface-container-highest": "#e4e1e6", "on-tertiary-fixed": "#0b1c30" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, fontFamily: { headline: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"], display: "Plus Jakarta Sans" } } } };</script>
+    <style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; background-color: #0F172A; color: #F1F5F9; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #22D3EE, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #22D3EE, #06B6D4);
+            color: #0F172A;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 0 15px rgba(34, 211, 238, 0.4); }
+        .btn-secondary {
+            background-color: #1E293B;
+            color: #22D3EE;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .btn-secondary:hover { background-color: #2D3748; }
+        .shadow-cloud {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+        .glow-effect::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, rgba(15, 23, 42, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+    <section class="py-24 px-8 max-w-5xl mx-auto bg-surface" id="bitacora">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <h2 class="text-4xl font-headline font-bold text-on-surface tracking-tight mb-2">Bitácora</h2>
+                <p class="text-lg text-on-surface-variant font-body">Actualizaciones, ingeniería y notas de despliegue.
+                </p>
+            </div>
+            <a class="hidden sm:flex items-center gap-2 text-primary font-semibold hover:text-cyan-300 transition-colors"
+                href="#">
+                Ver todo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+        </div>
+        <div class="space-y-8">
+            <article
+                class="group flex flex-col md:flex-row gap-8 items-center bg-surface-container-lowest rounded-[1.5rem] p-4 shadow-cloud hover:border-primary/30 border border-white/5 transition-all duration-300">
+                <div
+                    class="w-full md:w-2/5 h-48 md:h-56 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+                    <img alt="Abstract digital network connections"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                        data-alt="Abstract 3D rendering of glowing blue digital network nodes and data streams connecting on a dark background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXBs7-nKzlfvVnchqh9LJumBngfzo1w9YkE_Rjrgie9OC6cLtOH8rxO8QZpUig6X1ipASNHe-7OI_TZAavwhWV3UodjfFpuCPtau2fGj5lhR-_fxp7YxTjNaQG91nZDTdcYQpXMogb0fnKzh1_NpPU1r5GSUQalDG_sTqUFeYAaBkytnm9uBgAYVe8dFbWz5WrEJFowB0KpDPQFSxoO0vtVk10rg7WLi0stlfjqqtrhsaXtt8_InmvMUaB8Spk4mmuFRY4XX-f6xPF" />
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="px-3 py-1 bg-[#0F172A]/90 backdrop-blur-sm rounded-full text-xs font-bold text-primary border border-primary/30 uppercase tracking-wider">Lanzamiento</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 py-2 pr-4 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-3 text-sm text-on-surface-variant mb-3 font-medium">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[16px]">calendar_today</span> 12 Oct
+                                2024</span>
+                            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                            <span>5 min lectura</span>
+                        </div>
+                        <h3
+                            class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            Nueva región europea: Despliegue en Frankfurt</h3>
+                        <p class="text-on-surface-variant font-body line-clamp-2 mb-6">Ampliamos nuestra presencia
+                            global con un nuevo data center Tier IV en Alemania, reduciendo la latencia en Europa
+                            Central en un 40%.</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary text-xs font-bold">
+                            EC</div>
+                        <div class="text-sm">
+                            <p class="font-semibold text-on-surface leading-tight">Elena Cortés</p>
+                            <p class="text-on-surface-variant text-xs">Ingeniería de Infraestructura</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article
+                class="group flex flex-col md:flex-row gap-8 items-center bg-surface-container-lowest rounded-[1.5rem] p-4 shadow-cloud hover:border-primary/30 border border-white/5 transition-all duration-300">
+                <div
+                    class="w-full md:w-2/5 h-48 md:h-56 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+                    <img alt="Code on a screen"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                        data-alt="Close up view of clean colorful programming code on a dark computer monitor with soft shallow depth of field"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD50OQpu1zNSE-xSZYamS9OFIGJviZjc1YvUsijnqth5Z9SnDNN3XhxsjB5D0coQwaXF3nhikVHz-pRm_iXkcp_1FvwikUt36N2grDdCnR7GjjLQD_faFKRG2qiL1o-X82sDgOcRB8oB0KobkUaobDMZXBvTDq056lFj-2W6uo1V0i1Au_LqL7bgSn7zQgS5pScWRBggdzBgJA2P9zMAfe0cwBaQPfvqADUhExlX8-Xy-OSgXs5Pj8OaUni1vDRKPiDNayQJHEp1ZkQ" />
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="px-3 py-1 bg-[#0F172A]/90 backdrop-blur-sm rounded-full text-xs font-bold text-primary border border-primary/30 uppercase tracking-wider">Ingeniería</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 py-2 pr-4 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-3 text-sm text-on-surface-variant mb-3 font-medium">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[16px]">calendar_today</span> 28 Sep
+                                2024</span>
+                            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                            <span>8 min lectura</span>
+                        </div>
+                        <h3
+                            class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            Optimizando el enrutamiento Edge con Rust</h3>
+                        <p class="text-on-surface-variant font-body line-clamp-2 mb-6">Detalles técnicos sobre cómo
+                            reescribimos nuestro componente de enrutamiento principal en Rust para manejar 10M de
+                            peticiones por segundo de forma segura.</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div
+                            class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary text-xs font-bold">
+                            MR</div>
+                        <div class="text-sm">
+                            <p class="font-semibold text-on-surface leading-tight">Miguel Rojas</p>
+                            <p class="text-on-surface-variant text-xs">Lead Backend Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article
+                class="group flex flex-col md:flex-row gap-8 items-center bg-surface-container-lowest rounded-[1.5rem] p-4 shadow-cloud hover:border-primary/30 border border-white/5 transition-all duration-300">
+                <div
+                    class="w-full md:w-2/5 h-48 md:h-56 rounded-xl overflow-hidden bg-surface-container-low flex-shrink-0 relative">
+                    <img alt="Cybersecurity lock concept"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80"
+                        data-alt="Digital blue glowing padlock icon floating above a sleek metallic surface representing cybersecurity and data protection"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp4FWsTPhjFcpbKogA6zWrqy6VNKT1aqDwgDrA9jv2_UaJoyhhBTUh7gY95L_mDketOPf-8ChI62R0YufYvjAbPPj8sl28p9TPmwJ2Yf7NzuHLCps4aDVMYAumYqKssIA3droqSgSJGXKBSnZGOU48aKIr1Hr1Mbj1XcSetcrMZJnkNHBanKcBEscGTkX9pbhABH5zpdk1-B6WxhnyNDthQntNXIp1ruFed3hmEVSM4a50Qt4ccZdPR9ZdZWLex6FFRzXKvp6C4UWj" />
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="px-3 py-1 bg-[#0F172A]/90 backdrop-blur-sm rounded-full text-xs font-bold text-primary border border-primary/30 uppercase tracking-wider">Seguridad</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 py-2 pr-4 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-3 text-sm text-on-surface-variant mb-3 font-medium">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[16px]">calendar_today</span> 15 Sep
+                                2024</span>
+                            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                            <span>4 min lectura</span>
+                        </div>
+                        <h3
+                            class="text-2xl font-headline font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            Implementación de Zero-Trust por defecto</h3>
+                        <p class="text-on-surface-variant font-body line-clamp-2 mb-6">A partir de este mes, todas las
+                            nuevas cuentas de Grupo Clouds tendrán políticas de acceso Zero-Trust habilitadas por
+                            defecto para mayor protección.</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-auto">
+                        <div
+                            class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary text-xs font-bold">
+                            AL</div>
+                        <div class="text-sm">
+                            <p class="font-semibold text-on-surface leading-tight">Ana López</p>
+                            <p class="text-on-surface-variant text-xs">Directora de Seguridad</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="mt-12 text-center sm:hidden">
+            <button class="btn-secondary w-full">Ver todos los artículos</button>
+        </div>
+    </section>
+    <footer
+        class="w-full py-12 bg-surface-container-lowest border-t border-white/5 font-['Inter'] text-sm leading-relaxed transition-opacity duration-300">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <div class="text-lg font-bold text-primary">
+                    Grupo Clouds
+                </div>
+                <p class="text-slate-500">
+                    © 2024 Grupo Clouds. Atmospheric Logic Infrastructure.
+                </p>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <a class="text-slate-400 hover:text-primary underline decoration-primary/30" href="#">Privacidad</a>
+                <a class="text-slate-400 hover:text-primary underline decoration-primary/30" href="#">Términos de
+                    Uso</a>
+                <a class="text-slate-400 hover:text-primary underline decoration-primary/30" href="#">Contacto</a>
+                <a class="text-slate-400 hover:text-primary underline decoration-primary/30" href="#">LinkedIn</a>
+            </nav>
+        </div>
+    </footer>
+    ```
+</body>
+
+</html>

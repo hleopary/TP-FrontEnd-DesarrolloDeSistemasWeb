@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marcelo Moreno - Member Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#006591",
+                        "on-surface": "#1b1b1e",
+                        "on-primary-fixed": "#001e2f",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f6f2f7",
+                        "secondary": "#006c4f",
+                        "on-primary-container": "#003751",
+                        "on-background": "#1b1b1e",
+                        "secondary-container": "#43fbc0",
+                        "on-surface-variant": "#3e4850",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#c9e6ff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0edf1",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#89ceff",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-container": "#8d9db5",
+                        "surface": "#fbf8fc",
+                        "surface-variant": "#e4e1e6",
+                        "primary-container": "#0ea5e9",
+                        "on-secondary-fixed": "#002116",
+                        "inverse-surface": "#303033",
+                        "surface-container-highest": "#e4e1e6",
+                        "background": "#fbf8fc",
+                        "surface-bright": "#fbf8fc",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#89ceff",
+                        "inverse-on-surface": "#f3f0f4",
+                        "on-secondary-container": "#007153",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#47fec3",
+                        "on-secondary-fixed-variant": "#00513b",
+                        "primary": "#006591",
+                        "secondary-fixed-dim": "#00e1a8",
+                        "tertiary": "#505f76",
+                        "surface-container-high": "#eae7eb",
+                        "on-tertiary-container": "#243449",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#bec8d2",
+                        "outline": "#6e7881",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-dim": "#dcd9dd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .cloud-shadow {
+            box-shadow: 0 40px 40px -15px rgba(27, 27, 30, 0.04);
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.primary-container'));
+        }
+
+        .atmospheric-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, theme('colors.primary-fixed') 0%, transparent 70%);
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col md:flex-row">
+    <!-- SideNavBar (Mobile Bottom Navbar logic handled by hiding on md and showing TopNavBar instead as per JSON/Design System rules. For this specific request, a TopNavBar is asked for in the structure, but we have a SideNavBar JSON. We'll implement the TopNavBar as it fits the "Member profile page within company ecosystem" better for web, but the prompt also asks to "use the predicted components... SideNavBar". I will use SideNavBar for md:flex and TopNavBar for mobile as per standard practice, but modify to match the prompt's request for "Header with company logo and navigation" by adapting the TopNavBar.) -->
+    <!-- TopNavBar (Web & Mobile as requested by "Header with company logo and navigation") -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl transition-all duration-300 ease-in-out shadow-[0_40px_40px_-15px_rgba(27,27,30,0.04)]">
+        <div class="flex justify-between items-center px-8 h-16 w-full max-w-full">
+            <div class="flex items-center gap-8">
+                <span class="text-xl font-bold text-sky-900 font-headline tracking-tight">CloudStructure</span>
+                <div class="hidden md:flex gap-6">
+                    <a class="text-slate-500 font-body text-sm hover:text-sky-600 transition-colors"
+                        href="#">Directory</a>
+                    <a class="text-slate-500 font-body text-sm hover:text-sky-600 transition-colors" href="#">Teams</a>
+                    <a class="text-slate-500 font-body text-sm hover:text-sky-600 transition-colors"
+                        href="#">Projects</a>
+                    <a class="text-slate-500 font-body text-sm hover:text-sky-600 transition-colors"
+                        href="#">Knowledge</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="text-slate-500 hover:text-sky-600 transition-colors">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 0;">notifications</span>
+                </button>
+                <button class="text-slate-500 hover:text-sky-600 transition-colors">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+                </button>
+                <img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover"
+                    data-alt="professional headshot of a young male with short hair in soft office lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLW5NzYTLCdgkSZ9TDMngdSZWOfKx6hZe3f8wVvoIdQd4t3UJnI8NwP9t4DfU6uOviuoKpKitdKik8Ub9s1m2llcx-jp6N8YzaG6wrtFgc3ZxjTZOTuIUUcS81DiB_Zdob4b0xutTWBSgQeAPIuPegXItVcPAxjH3EWsnluUIuOWASYIaTe17c2Ih4Zk4xkcdyAndTq7pnjUUIWZT4ucC3J4L2-0rY8ptdY8GevfzMQvp-ZIc1K3XvHQp9MTJG_0z-rWeLS24SKmoJ" />
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="flex-1 mt-16 p-6 md:p-16 lg:p-24 overflow-y-auto">
+        <div class="max-w-6xl mx-auto space-y-24">
+            <!-- Hero Profile Section: Asymmetric & Atmospheric -->
+            <section class="relative atmospheric-glow flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="flex-1 space-y-8 order-2 lg:order-1">
+                    <div>
+                        <p class="text-primary font-label text-sm font-semibold tracking-wider uppercase mb-2">Member
+                            Profile</p>
+                        <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface leading-tight">
+                            Marcelo <br /> <span class="text-primary-container">Moreno</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl font-body text-on-surface-variant mt-4">
+                            Senior Solutions Architect <span class="text-outline">at Grupo Clouds</span>
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-6 text-on-surface-variant font-body">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;">location_on</span>
+                            <span>Buenos Aires, Argentina</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;">cake</span>
+                            <span>34 years</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;">work</span>
+                            <span>8 YOE</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 pt-4">
+                        <button
+                            class="gradient-primary text-on-primary font-label font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity">
+                            Contact Marcelo
+                        </button>
+                        <button
+                            class="bg-surface-container-high text-primary font-label font-medium px-6 py-3 rounded-md hover:bg-surface-variant transition-colors">
+                            View Projects
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[45%] order-1 lg:order-2">
+                    <div
+                        class="relative w-full aspect-[4/5] rounded-xl overflow-hidden cloud-shadow bg-surface-container-low">
+                        <img alt="Marcelo Moreno" class="w-full h-full object-cover"
+                            data-alt="professional portrait of a 34 year old hispanic male in a modern corporate tech office setting, natural light, confident expression"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKV-JJu4hJv6q7cuHbqADHu2kxOoiVw43rI3oZk8a4omdJd6g2upNAu2ppLs7MuIjBn0B3qT8sAy_353poG368kLRuyNaKUwtLt7LClxAIFBt0OTw3A7mspCcwxPKIUX-FXiwk91oxAmYgKKEnFcVpyVMFAFtzrqSNL1rpaJxJUd42Bq2dSvM2sMGTGNVgWbGM6s3LPCfw-U4wkW2LD78-3Awy5UCLSu8CgKD16fD3-_Ug0OJLdXzIkS_W80wStOa5soBQpPRPgNdf" />
+                    </div>
+                </div>
+            </section>
+            <!-- Technical Expertise (Bento Grid Style) -->
+            <section class="space-y-12 bg-surface-container-low p-8 md:p-12 rounded-xl transition-colors">
+                <h2 class="text-3xl font-headline font-bold text-on-surface">Technical Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Skill 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl cloud-shadow border-b border-surface-variant hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 rounded-md bg-primary-fixed flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 0;">cloud</span>
+                            </div>
+                            <h3 class="font-headline font-semibold text-lg text-on-surface">Cloud Architecture</h3>
+                        </div>
+                        <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-primary h-full rounded-full w-[95%]"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl cloud-shadow border-b border-surface-variant hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 rounded-md bg-tertiary-fixed flex items-center justify-center text-tertiary">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 0;">account_tree</span>
+                            </div>
+                            <h3 class="font-headline font-semibold text-lg text-on-surface">Microservices</h3>
+                        </div>
+                        <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-tertiary h-full rounded-full w-[88%]"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl cloud-shadow border-b border-surface-variant hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 rounded-md bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 0;">anchor</span>
+                            </div>
+                            <h3 class="font-headline font-semibold text-lg text-on-surface">Kubernetes</h3>
+                        </div>
+                        <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-secondary h-full rounded-full w-[90%]"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 4 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl cloud-shadow border-b border-surface-variant hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 rounded-md bg-primary-fixed-dim flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 0;">code</span>
+                            </div>
+                            <h3 class="font-headline font-semibold text-lg text-on-surface">React</h3>
+                        </div>
+                        <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-primary-container h-full rounded-full w-[80%]"></div>
+                        </div>
+                    </div>
+                    <!-- Skill 5 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl cloud-shadow border-b border-surface-variant hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div
+                                class="w-10 h-10 rounded-md bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 0;">terminal</span>
+                            </div>
+                            <h3 class="font-headline font-semibold text-lg text-on-surface">Node.js</h3>
+                        </div>
+                        <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-secondary-fixed-dim h-full rounded-full w-[85%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Personal Interests Section -->
+            <section class="space-y-16 pt-8">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-headline font-bold text-on-surface mb-4">Off the Grid</h2>
+                    <p class="text-on-surface-variant font-body text-lg max-w-2xl">What inspires Marcelo outside the
+                        cloud environment.</p>
+                </div>
+                <!-- Movies -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-2xl"
+                            style="font-variation-settings: 'FILL' 0;">movie</span>
+                        <h3 class="text-2xl font-headline font-semibold text-on-surface">Películas favoritas</h3>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- Movie Card 1 -->
+                        <div
+                            class="group relative aspect-[2/3] rounded-xl overflow-hidden bg-surface-container-low cloud-shadow">
+                            <img alt="Interstellar Vibe"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="deep space galaxy with bright stars and nebula clouds cinematic lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuApu_CQ-8ocJlQRf_EypFB1Bp9xQYWzmoAROvO5HiHsOoHsjlm69Dgf-W9f_XM0kkAKXTZazJWG6ewL2_vWXZ1sfuRcWA-xo2E6Or3rAYUiAApAvtYxwpNd_hGDTGVNY0eSfqxAoUyz4GKcghBsF9YEXrK_seTjPwc8j3SkUOsle3et1iYm-IEPZqOg5E6tFArPgRNunIdD6NCfK6gSBdE2GTkzXrrTbEqN9iz6gsljoJ3iExDJTeoAL9mWnaeBU0egIYQT7qAc541J" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/20 to-transparent flex flex-col justify-end p-6">
+                                <p class="text-white font-headline font-semibold text-lg">Interstellar</p>
+                            </div>
+                        </div>
+                        <!-- Movie Card 2 -->
+                        <div
+                            class="group relative aspect-[2/3] rounded-xl overflow-hidden bg-surface-container-low cloud-shadow">
+                            <img alt="Inception Vibe"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="abstract city architecture folding into itself dreamlike atmosphere surreal lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClra1ahMmP4aGUGunifYdCQZgjatyL_nS84Vp6-ZNBrvExq8nMoethZanpMIcs7ka-7I8HgmB6d2ooUFXhuyDDfMuNms4NyltOG-LWX2kmRRmPhleNQCLVua6X3M6pzLDQ9-CDAjK-DTZsZN_m0sWdkb2-AmrqFOgdH6n4kQawpiV9yGjiy2lnwDOTARquCVpOnoqPcS2wdhzYvv1PsWjwnfuTc7A8Kg9gXjNvkH2LKDqQrh3YEDrJM6GT3aAH58NJeU5q3FCyb5S7" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/20 to-transparent flex flex-col justify-end p-6">
+                                <p class="text-white font-headline font-semibold text-lg">Inception</p>
+                            </div>
+                        </div>
+                        <!-- Movie Card 3 -->
+                        <div
+                            class="group relative aspect-[2/3] rounded-xl overflow-hidden bg-surface-container-low cloud-shadow hidden md:block">
+                            <img alt="Blade Runner Vibe"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="futuristic cyberpunk city street at night with neon lights and rain cinematic"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnpEKtuZgD40TfhCq-ea7iBDrZfWzcEAQFvDHyygc3OlA3GJ501R9NhVAJVbF5fara8LL28ihZQ229ik3L-4vRAVMxSPw66wcba-pEQi84c-aIIGSxaU8Nj0bkW6fFGlA63ZMGPeq6vIdodN9FE2h3qjz9YaUzrklmq8LGXMl4872ymEO-H0wSB3goFYuMzJSIYMswT8vnoZmZsl9DVQb5U01aCwXcmKs-eJAvIz01-vk3Wy_6w4oF7BU9VcmVxDwkXvdK6DrUAm1R" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/20 to-transparent flex flex-col justify-end p-6">
+                                <p class="text-white font-headline font-semibold text-lg">Blade Runner 2049</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Music -->
+                <div class="space-y-6 pt-8 border-t border-surface-variant/50">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary-container text-2xl"
+                            style="font-variation-settings: 'FILL' 0;">album</span>
+                        <h3 class="text-2xl font-headline font-semibold text-on-surface">Discos favoritos</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <!-- Music Card 1 -->
+                        <div
+                            class="bg-surface-container-lowest p-4 rounded-xl cloud-shadow flex flex-col items-center text-center hover:bg-surface-container-low transition-colors duration-300">
+                            <div class="w-full aspect-square rounded-lg overflow-hidden mb-4">
+                                <img alt="Random Access Memories vibe" class="w-full h-full object-cover"
+                                    data-alt="sleek metallic futuristic helmet reflecting neon lights studio shot"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2dTVYwNI1ddb6uvAZRQGSDgZDcXf6riW3iCwsdr_0GYvGisqhvqHJy2f-82BunzEcatwDdKZfiNJR-lcTgJKHDzmm6YT7PJKKgoh0nKLCdqFtsghnPCfFARSsxtxJRP-UP3GzXJcmh9xhkvM6I2sjUUUeZp-6lYEaplDai4GwpXxxD4-aLRwqJPy4aapvqmKIGTtPLHMy0KTrBwqcEhhhdGbIfAvu3fge63XuNPiHaVn-rMMNUKtth9S4kte7LPeQWI0TQQ8xi2U" />
+                            </div>
+                            <p class="font-headline font-semibold text-on-surface text-sm">Random Access Memories</p>
+                            <p class="font-body text-xs text-on-surface-variant mt-1">Daft Punk</p>
+                        </div>
+                        <!-- Music Card 2 -->
+                        <div
+                            class="bg-surface-container-lowest p-4 rounded-xl cloud-shadow flex flex-col items-center text-center hover:bg-surface-container-low transition-colors duration-300">
+                            <div class="w-full aspect-square rounded-lg overflow-hidden mb-4">
+                                <img alt="Currents vibe" class="w-full h-full object-cover"
+                                    data-alt="abstract flowing liquid metal sphere with purple and orange gradient background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDO650ucoXL89yOCylLTxCNxFaB4pSMBPP60fjC7HKlWMK6T3rJhQGS866292znFjQ_iqdDVpRc78uMyR8dqt21c4fNB23r-rUnRrGwov7c30ihyOYh_w40EZY_p5B2uEXvKALxs6FuXMxucHbXupuh7xYHgI-wqJdsr2j2ZHLvnMimmO0zHVR--6SbrMD7ElVX1iJZqXmQrvZEAo8mxDUu_ECvWE4k6Iu_SzzSLU5adcxFUCxIiVau6rmbWY8ycmFVeK6xWU-3zE" />
+                            </div>
+                            <p class="font-headline font-semibold text-on-surface text-sm">Currents</p>
+                            <p class="font-body text-xs text-on-surface-variant mt-1">Tame Impala</p>
+                        </div>
+                        <!-- Music Card 3 -->
+                        <div
+                            class="bg-surface-container-lowest p-4 rounded-xl cloud-shadow flex flex-col items-center text-center hover:bg-surface-container-low transition-colors duration-300">
+                            <div class="w-full aspect-square rounded-lg overflow-hidden mb-4">
+                                <img alt="Plastic Beach vibe" class="w-full h-full object-cover"
+                                    data-alt="miniature island model in the middle of a calm ocean stylized vibrant colors"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaPh5tYKL99MdFuK4vhRjEUx63O5vPSMuSsOYI6BOdJ_dFy8_URzR9KkHvQm3c0lJN1Me-Ao3xJCGbC95y2JjsWJp76knypNv_7FX_Zr0Ecr-Y_j9xb-etCEvu2Z099rq_idhA2NakgRefOAHZ2XyZoNY_-ASZjXL71yJtr0CE6w0CynAW3pmykxbtBYzxhhjmFXBJOa7M_96A_z5gidan5YhSaxejBFlJngxxnxysAgd2eVkAVvp086e2Qi3izyGte5e3vttVFRTS" />
+                            </div>
+                            <p class="font-headline font-semibold text-on-surface text-sm">Plastic Beach</p>
+                            <p class="font-body text-xs text-on-surface-variant mt-1">Gorillaz</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
