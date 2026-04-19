@@ -1,47 +1,257 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clouds Guild - TP1</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Grupo Clouds - Elevamos tu empresa a la próxima generación tecnológica</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Estilos principales -->
+    <link href="css/style.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header class="site-header">
-        <h1>Clouds Guild</h1>
-        <p>Equipo de frontend - presentacion TP1</p>
-        <nav class="site-nav" aria-label="Navegacion principal">
-            <a href="index.html" aria-current="page">Inicio</a>
-            <a href="bitacora.html">Bitacora</a>
-            <a href="eduardo.html">Eduardo</a>
-            <a href="leandro.html">Leandro</a>
-            <a href="marcelo.html">Marcelo</a>
-            <a href="melisa.html">Melisa</a>
-        </nav>
-    </header>
+    <!-- TopNavBar -->
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <div class="navbar__brand">
+                Grupo Clouds
+            </div>
+            <div class="navbar__links">
+                <a class="navbar__link--active" href="index.html">Principal</a>
+                <a class="navbar__link" href="bitacora.html">Bitácora</a>
+                <div class="navbar__dropdown">
+                    <a class="navbar__link navbar__dropdown-toggle" href="#">
+                        Team
+                        <span class="material-symbols-outlined navbar__dropdown-icon">expand_more</span>
+                    </a>
+                    <div class="navbar__dropdown-menu">
+                        <a class="navbar__dropdown-item" href="eduardo.html">Eduardo</a>
+                        <a class="navbar__dropdown-item" href="leandro.html">Leandro</a>
+                        <a class="navbar__dropdown-item" href="melisa.html">Melisa</a>
+                        <a class="navbar__dropdown-item" href="marcelo.html">Marcelo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__cta-wrapper">
+                <button class="navbar__cta">
+                    Get Started
+                </button>
+            </div>
+            <button class="navbar__menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
 
-    <main class="container">
-        <section class="card">
-            <h2>Presentacion del equipo</h2>
-            <p>
-                Somos el equipo Clouds. En este TP construimos una portada, una bitacora de proceso
-                y una pagina individual por integrante.
-            </p>
-            <button id="portadaBtn" class="btn" type="button">Activar modo aventura</button>
-            <p id="portadaMensaje" class="hint" aria-live="polite"></p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Atmospheric Glow -->
+        <div class="hero__glow--top"></div>
+        <div class="hero__glow--bottom"></div>
 
-        <section class="card">
-            <h2>Integrantes</h2>
-            <ul class="member-list">
-                <li><a href="eduardo.html">Eduardo</a></li>
-                <li><a href="leandro.html">Leandro</a></li>
-                <li><a href="marcelo.html">Marcelo</a></li>
-                <li><a href="melisa.html">Melisa</a></li>
-            </ul>
-        </section>
-    </main>
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 class="hero__title">
+                    Elevamos tu empresa a la <br class="hero__title-break" />
+                    <span class="text-gradient">próxima generación</span> tecnológica
+                </h1>
+                <p class="hero__subtitle">
+                    Soluciones de software personalizadas con arquitectura en la nube de alto rendimiento. Diseñadas
+                    para escalar.
+                </p>
+                <div class="hero__actions">
+                    <button class="hero__cta-primary">
+                        Empieza ahora
+                    </button>
+                    <button class="hero__cta-secondary">
+                        Explorar soluciones
+                    </button>
+                </div>
+            </div>
+            <div class="hero__image-wrapper">
+                <img alt="Abstract representation of cloud computing"
+                    class="hero__image cloud-shadow"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApJUsFRlGv8cv88NW0N4b0M6_Prz1D4hPZ4M46SiXJNVSvaX4Wn5bqq7gD3HKxkfuonDkLil1YAzkqn_5MPd288W3rmnQnGG_Ltu7BaLjQW73po-F5YsiRoRjzMLbvGXJTAWmE-TwB5z2_hj9MJRmFy9lf97Lcwv8HDspUaxvdtr9HTyicNz8JXTb5UoXRm-FXi5iVyRjBrzh3xrX-f-nzav-zFZS4RfyqS4C7Epk5IPk2VEswW5YNDmM06EzlSCOLSGi44zeReMsd" />
+            </div>
+        </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services__inner">
+            <div class="services__header">
+                <h2 class="services__title">
+                    Arquitectura de alto rendimiento</h2>
+                <p class="services__description">Construimos la infraestructura invisible que
+                    impulsa el crecimiento de tu negocio.</p>
+            </div>
+            <div class="services__grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="material-symbols-outlined" data-weight="fill">code_blocks</span>
+                    </div>
+                    <h3 class="service-card__title">Desarrollo a Medida</h3>
+                    <p class="service-card__text">Software diseñado específicamente para
+                        tus flujos de trabajo, eliminando cuellos de botella y maximizando la eficiencia operativa.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="material-symbols-outlined" data-weight="fill">cloud_queue</span>
+                    </div>
+                    <h3 class="service-card__title">Infraestructura Cloud</h3>
+                    <p class="service-card__text">Migración y gestión de entornos cloud
+                        seguros, escalables y resilientes que garantizan la disponibilidad continua de tus servicios.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <span class="material-symbols-outlined" data-weight="fill">insights</span>
+                    </div>
+                    <h3 class="service-card__title">Consultoría IT</h3>
+                    <p class="service-card__text">Asesoramiento estratégico para alinear
+                        la tecnología con tus objetivos empresariales y preparar tu arquitectura para el futuro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials__inner">
+            <h2 class="testimonials__title">
+                Impacto comprobado</h2>
+            <div class="testimonials__grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                    </div>
+                    <p class="testimonial-card__quote">"La migración a la
+                        infraestructura de Grupo Clouds redujo nuestros tiempos de carga en un 40% y eliminó los tiempos
+                        de inactividad que sufríamos mensualmente."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar testimonial-card__avatar--tertiary">
+                            CM
+                        </div>
+                        <div>
+                            <p class="testimonial-card__name">Carlos Mendoza</p>
+                            <p class="testimonial-card__role">CTO, Logística Fintech</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                    </div>
+                    <p class="testimonial-card__quote">"El desarrollo a medida se
+                        integró perfectamente con nuestros sistemas legacy. Fue una modernización transparente y
+                        altamente eficiente."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar testimonial-card__avatar--secondary">
+                            AL
+                        </div>
+                        <div>
+                            <p class="testimonial-card__name">Ana López</p>
+                            <p class="testimonial-card__role">Directora de Operaciones, Retail Global
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                        <span class="material-symbols-outlined" data-weight="fill">star</span>
+                    </div>
+                    <p class="testimonial-card__quote">"Su consultoría nos ahorró
+                        meses de desarrollo al apuntar directamente a las soluciones cloud adecuadas para nuestra
+                        escala. Un socio tecnológico invaluable."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar testimonial-card__avatar--primary">
+                            JR
+                        </div>
+                        <div>
+                            <p class="testimonial-card__name">Javier Ruiz</p>
+                            <p class="testimonial-card__role">Fundador, SaaS Startup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand-col">
+                <div class="footer__brand-name">
+                    Grupo Clouds
+                </div>
+                <p class="footer__brand-tagline">Atmospheric Infrastructure for the Modern Enterprise.</p>
+                <div class="footer__social-links">
+                    <a class="footer__social-link" href="#"><span
+                            class="material-symbols-outlined">public</span></a>
+                    <a class="footer__social-link" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Navegación</h4>
+                <a class="footer__link" href="index.html">Principal</a>
+                <a class="footer__link" href="bitacora.html">Bitácora</a>
+                <a class="footer__link" href="eduardo.html">Eduardo</a>
+                <a class="footer__link" href="leandro.html">Leandro</a>
+                <a class="footer__link" href="melisa.html">Melisa</a>
+                <a class="footer__link" href="marcelo.html">Marcelo</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Legal</h4>
+                <a class="footer__link" href="#">Privacy
+                    Policy</a>
+                <a class="footer__link" href="#">Terms of
+                    Service</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Platform</h4>
+                <a class="footer__link" href="#">Architecture</a>
+                <a class="footer__link" href="#">Cloud
+                    Security</a>
+                <a class="footer__link" href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            © 2024 Grupo Clouds. Atmospheric Infrastructure for the Modern Enterprise.
+        </div>
+    </footer>
 </body>
+
 </html>

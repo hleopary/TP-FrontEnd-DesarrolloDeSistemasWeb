@@ -1,109 +1,969 @@
+/* ==========================================================================
+   GRUPO CLOUDS — Hoja de estilos principal
+   Archivo: css/style.css
+   Descripción: Estilos convertidos desde Tailwind CSS a CSS vanilla,
+                organizados por sección semántica del documento.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CUSTOM PROPERTIES (Design Tokens)
+   --------------------------------------------------------------------------
+   Paleta de colores extraída de la configuración de Tailwind.
+   Se usa el sistema de nomenclatura Material Design 3.
+   -------------------------------------------------------------------------- */
 :root {
-	--bg: #f5efe4;
-	--surface: #fffaf1;
-	--ink: #2f1f14;
-	--accent: #a13f2a;
-	--accent-2: #d07a2d;
+    /* --- Colores primarios --- */
+    --primary:                  #006591;
+    --primary-container:        #0ea5e9;
+    --primary-fixed:            #c9e6ff;
+    --primary-fixed-dim:        #89ceff;
+    --on-primary:               #ffffff;
+    --on-primary-container:     #003751;
+    --on-primary-fixed:         #001e2f;
+    --on-primary-fixed-variant: #004c6e;
+    --inverse-primary:          #89ceff;
+
+    /* --- Colores secundarios --- */
+    --secondary:                  #006c4f;
+    --secondary-container:        #43fbc0;
+    --secondary-fixed:            #47fec3;
+    --secondary-fixed-dim:        #00e1a8;
+    --on-secondary:               #ffffff;
+    --on-secondary-container:     #007153;
+    --on-secondary-fixed:         #002116;
+    --on-secondary-fixed-variant: #00513b;
+
+    /* --- Colores terciarios --- */
+    --tertiary:                      #505f76;
+    --tertiary-container:            #8d9db5;
+    --tertiary-fixed:                #d3e4fe;
+    --tertiary-fixed-dim:            #b7c8e1;
+    --on-tertiary:                   #ffffff;
+    --on-tertiary-container:         #243449;
+    --on-tertiary-fixed:             #0b1c30;
+    --on-tertiary-fixed-variant:     #38485d;
+
+    /* --- Superficies --- */
+    --surface:                    #fbf8fc;
+    --surface-dim:                #dcd9dd;
+    --surface-bright:             #fbf8fc;
+    --surface-variant:            #e4e1e6;
+    --surface-tint:               #006591;
+    --surface-container-lowest:   #ffffff;
+    --surface-container-low:      #f6f2f7;
+    --surface-container:          #f0edf1;
+    --surface-container-high:     #eae7eb;
+    --surface-container-highest:  #e4e1e6;
+    --on-surface:                 #1b1b1e;
+    --on-surface-variant:         #3e4850;
+    --on-background:              #1b1b1e;
+    --inverse-surface:            #303033;
+    --inverse-on-surface:         #f3f0f4;
+    --background:                 #fbf8fc;
+
+    /* --- Error --- */
+    --error:                #ba1a1a;
+    --error-container:      #ffdad6;
+    --on-error:             #ffffff;
+    --on-error-container:   #93000a;
+
+    /* --- Outline --- */
+    --outline:         #6e7881;
+    --outline-variant:  #bec8d2;
+
+    /* --- Tipografías --- */
+    --font-headline: 'Plus Jakarta Sans', sans-serif;
+    --font-body:     'Inter', sans-serif;
+    --font-label:    'Inter', sans-serif;
+
+    /* --- Border Radius --- */
+    --radius-default: 0.25rem;
+    --radius-lg:      0.5rem;
+    --radius-xl:      0.75rem;
+    --radius-full:    9999px;
 }
 
-* {
-	box-sizing: border-box;
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE
+   --------------------------------------------------------------------------
+   Estilos globales del documento y normalización básica.
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	margin: 0;
-	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-	background: linear-gradient(180deg, #efe2c8 0%, var(--bg) 100%);
-	color: var(--ink);
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;   /* antialiased */
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
 }
 
-.site-header {
-	padding: 1.5rem 1rem 1rem;
-	background-color: #2a1a10;
-	color: #fcefd8;
+/* Selección de texto personalizada */
+body ::selection {
+    background-color: var(--primary-container);
+    color: var(--on-primary);
 }
 
-.site-header h1 {
-	margin: 0;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.site-nav {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	margin-top: 0.75rem;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.site-nav a {
-	text-decoration: none;
-	color: #fcefd8;
-	background: rgba(255, 255, 255, 0.12);
-	padding: 0.4rem 0.7rem;
-	border-radius: 8px;
+
+/* --------------------------------------------------------------------------
+   3. UTILIDADES REUTILIZABLES
+   --------------------------------------------------------------------------
+   Clases utilitarias convertidas de Tailwind para uso general.
+   -------------------------------------------------------------------------- */
+
+/* --- Sombra tipo nube (cloud-shadow) --- */
+.cloud-shadow {
+    box-shadow: 0 10px 40px rgba(27, 27, 30, 0.04);
 }
 
-.site-nav a[aria-current="page"] {
-	background: var(--accent);
+/* --- Texto con gradiente (text-gradient) --- */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #006591, #0ea5e9);
 }
 
+/* --- Fondo con gradiente primario (bg-gradient-primary) --- */
+.bg-gradient-primary {
+    background-image: linear-gradient(135deg, #006591, #0ea5e9);
+}
+
+/* --- Contenedor principal (max-width centrado) --- */
 .container {
-	width: min(1100px, 92%);
-	margin: 1.5rem auto;
-	display: grid;
-	gap: 1rem;
+    max-width: 80rem;  /* max-w-7xl = 1280px */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;   /* px-8 */
+    padding-right: 2rem;
 }
 
-.card {
-	background: var(--surface);
-	border: 1px solid #d9c9ab;
-	border-radius: 12px;
-	padding: 1rem;
-	box-shadow: 0 8px 18px rgba(40, 24, 15, 0.08);
+
+/* --------------------------------------------------------------------------
+   4. NAVEGACIÓN SUPERIOR (TopNavBar)
+   --------------------------------------------------------------------------
+   Barra de navegación fija con fondo translúcido y blur.
+   -------------------------------------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition: all 0.3s ease;
 }
 
-.member-list {
-	margin: 0;
-	padding-left: 1rem;
+/* Modo oscuro de la navbar */
+.dark .navbar {
+    background-color: rgba(15, 23, 42, 0.7);  /* dark:bg-slate-900/70 */
 }
 
-.btn {
-	border: 0;
-	background: var(--accent);
-	color: #fff;
-	padding: 0.6rem 1rem;
-	border-radius: 10px;
-	cursor: pointer;
+/* Contenedor interno de la navbar */
+.navbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; /* py-4 px-8 */
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
-.btn:hover {
-	background: var(--accent-2);
+/* Logo / Marca */
+.navbar__brand {
+    font-size: 1.25rem;    /* text-xl */
+    font-weight: 700;      /* font-bold */
+    letter-spacing: -0.05em; /* tracking-tighter */
+    color: #0c4a6e;        /* text-sky-900 */
+    font-family: var(--font-headline);
 }
 
-.hint {
-	min-height: 1.2rem;
-	margin-top: 0.7rem;
-	font-weight: 600;
+.dark .navbar__brand {
+    color: #e0f2fe;        /* dark:text-sky-100 */
 }
 
-@media (max-width: 1200px) {
-	.container {
-		width: 94%;
-	}
+/* Grupo de enlaces de navegación */
+.navbar__links {
+    display: none;           /* hidden por defecto (mobile-first) */
+    gap: 2rem;               /* space-x-8 */
+    align-items: center;
+    font-family: var(--font-headline);
+    letter-spacing: -0.025em; /* tracking-tight */
 }
 
-@media (max-width: 900px) {
-	.site-header {
-		text-align: center;
-	}
-
-	.site-nav {
-		justify-content: center;
-	}
+/* Enlace activo de la navbar */
+.navbar__link--active {
+    color: #0369a1;         /* text-sky-700 */
+    font-weight: 600;
+    border-bottom: 2px solid #0284c7; /* border-sky-600 */
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 400px) {
-	.site-nav a {
-		width: 100%;
-		text-align: center;
-	}
+.navbar__link--active:hover {
+    opacity: 0.8;
+}
+
+.dark .navbar__link--active {
+    color: #38bdf8;         /* dark:text-sky-400 */
+}
+
+/* Enlaces inactivos de la navbar */
+.navbar__link {
+    color: #475569;         /* text-slate-600 */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar__link:hover {
+    color: #0284c7;         /* hover:text-sky-600 */
+    opacity: 0.8;
+}
+
+.dark .navbar__link {
+    color: #94a3b8;         /* dark:text-slate-400 */
+}
+
+/* Contenedor del botón CTA en navbar */
+.navbar__cta-wrapper {
+    display: none;           /* hidden en mobile */
+}
+
+/* Botón CTA de la navbar */
+.navbar__cta {
+    background-image: linear-gradient(135deg, #006591, #0ea5e9);
+    color: var(--on-primary);
+    font-family: var(--font-label);
+    font-weight: 500;
+    padding: 0.625rem 1.5rem; /* py-2.5 px-6 */
+    border-radius: var(--radius-default);
+    border: none;
+    cursor: pointer;
+    transform: scale(0.95);     /* scale-95 */
+    transition: opacity 0.2s ease;
+}
+
+.navbar__cta:hover {
+    opacity: 0.9;
+}
+
+.navbar__cta:active {
+    transform: scale(0.9);   /* active:scale-90 */
+}
+
+/* Botón hamburguesa (mobile) */
+.navbar__menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* --- Dropdown (menú desplegable "Team") --- */
+.navbar__dropdown {
+    position: relative;
+}
+
+/* Enlace que activa el dropdown */
+.navbar__dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+/* Icono chevron del dropdown */
+.navbar__dropdown-icon {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+/* Rotación del icono al hacer hover sobre el dropdown */
+.navbar__dropdown:hover .navbar__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Menú desplegable oculto por defecto */
+.navbar__dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 40px rgba(27, 27, 30, 0.12);
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 60;
+}
+
+/* Mostrar dropdown al hacer hover */
+.navbar__dropdown:hover .navbar__dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dark .navbar__dropdown-menu {
+    background-color: rgba(15, 23, 42, 0.95);
+}
+
+/* Cada enlace dentro del dropdown */
+.navbar__dropdown-item {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    color: #475569;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar__dropdown-item:hover {
+    background-color: var(--primary-fixed);
+    color: var(--primary);
+}
+
+.dark .navbar__dropdown-item {
+    color: #94a3b8;
+}
+
+.dark .navbar__dropdown-item:hover {
+    background-color: rgba(14, 165, 233, 0.15);
+    color: #38bdf8;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. SECCIÓN HERO
+   --------------------------------------------------------------------------
+   Sección principal con título grande, subtítulo y CTAs.
+   Incluye efectos de "atmospheric glow" decorativos.
+   -------------------------------------------------------------------------- */
+
+.hero {
+    position: relative;
+    padding-top: 10rem;     /* pt-40 */
+    padding-bottom: 6rem;   /* pb-24 */
+    overflow: hidden;
+}
+
+/* Resplandor atmosférico superior derecho */
+.hero__glow--top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 800px;
+    height: 800px;
+    background-color: var(--primary-fixed);
+    opacity: 0.2;
+    border-radius: 50%;
+    filter: blur(120px);
+    transform: translateY(-50%) translateX(33%);
+    pointer-events: none;
+}
+
+/* Resplandor atmosférico inferior izquierdo */
+.hero__glow--bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background-color: var(--primary-container);
+    opacity: 0.1;
+    border-radius: 50%;
+    filter: blur(100px);
+    transform: translateY(33%) translateX(-33%);
+    pointer-events: none;
+}
+
+/* Grid del contenido hero */
+.hero__content {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    gap: 4rem;           /* gap-16 */
+    align-items: center;
+}
+
+/* Columna de texto del hero */
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;            /* space-y-8 */
+}
+
+/* Título principal H1 */
+.hero__title {
+    font-family: var(--font-headline);
+    font-weight: 800;      /* font-extrabold */
+    font-size: 3rem;        /* text-5xl */
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--on-surface);
+}
+
+/* Salto de línea decorativo (solo desktop) */
+.hero__title-break {
+    display: none;
+}
+
+/* Subtítulo del hero */
+.hero__subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;    /* text-xl */
+    color: var(--on-surface-variant);
+    max-width: 42rem;      /* max-w-2xl */
+    line-height: 1.75;     /* leading-relaxed */
+}
+
+/* Grupo de botones CTA del hero */
+.hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;             /* gap-4 */
+    padding-top: 1rem;
+}
+
+/* Botón principal CTA del hero */
+.hero__cta-primary {
+    background-image: linear-gradient(135deg, #006591, #0ea5e9);
+    color: var(--on-primary);
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 1.125rem;    /* text-lg */
+    padding: 1rem 2rem;     /* py-4 px-8 */
+    border-radius: var(--radius-default);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(0, 101, 145, 0.2);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.hero__cta-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Botón secundario CTA del hero */
+.hero__cta-secondary {
+    color: var(--primary);
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-default);
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero__cta-secondary:hover {
+    background-color: var(--primary-fixed);
+}
+
+/* Columna de imagen del hero */
+.hero__image-wrapper {
+    position: relative;
+    display: none;           /* hidden en mobile, visible en lg */
+}
+
+/* Imagen del hero */
+.hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;  /* rounded-3xl */
+    object-fit: cover;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN DE SERVICIOS
+   --------------------------------------------------------------------------
+   Grid de 3 tarjetas con iconos, títulos y descripciones.
+   -------------------------------------------------------------------------- */
+
+.services {
+    padding: 6rem 0;        /* py-24 */
+    background-color: var(--surface-container-low);
+    transition: background-color 0.5s ease;
+}
+
+/* Contenedor interno de servicios */
+.services__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Encabezado de la sección servicios */
+.services__header {
+    margin-bottom: 4rem;    /* mb-16 */
+    max-width: 42rem;       /* max-w-2xl */
+}
+
+.services__title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.875rem;    /* text-3xl */
+    color: var(--on-surface);
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+}
+
+.services__description {
+    font-family: var(--font-body);
+    color: var(--on-surface-variant);
+    font-size: 1.125rem;    /* text-lg */
+}
+
+/* Grid de tarjetas de servicio */
+.services__grid {
+    display: grid;
+    gap: 2rem;              /* gap-8 */
+}
+
+/* Tarjeta individual de servicio */
+.service-card {
+    background-color: var(--surface-container-lowest);
+    border-radius: var(--radius-xl);
+    padding: 2rem;          /* p-8 */
+    box-shadow: 0 10px 40px rgba(27, 27, 30, 0.04);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);  /* hover:-translate-y-1 */
+}
+
+/* Icono circular del servicio */
+.service-card__icon {
+    width: 3.5rem;          /* w-14 */
+    height: 3.5rem;         /* h-14 */
+    background-color: var(--surface-container-high);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;  /* mb-6 */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover del icono cuando se pasa sobre la tarjeta */
+.service-card:hover .service-card__icon {
+    background-color: var(--primary-fixed);
+}
+
+/* Icono Material Symbols dentro del círculo */
+.service-card__icon .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 1.5rem;  /* text-2xl */
+}
+
+/* Título de la tarjeta de servicio */
+.service-card__title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.25rem;    /* text-xl */
+    color: var(--on-surface);
+    margin-bottom: 0.75rem;
+}
+
+/* Descripción de la tarjeta de servicio */
+.service-card__text {
+    font-family: var(--font-body);
+    color: var(--on-surface-variant);
+    line-height: 1.75;      /* leading-relaxed */
+}
+
+
+/* --------------------------------------------------------------------------
+   7. SECCIÓN DE TESTIMONIOS
+   --------------------------------------------------------------------------
+   Grid de 3 testimonios con estrellas, citas y avatares.
+   -------------------------------------------------------------------------- */
+
+.testimonials {
+    padding: 6rem 0;           /* py-24 */
+    background-color: var(--surface);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor interno de testimonios */
+.testimonials__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Título de la sección testimonios */
+.testimonials__title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.875rem;       /* text-3xl */
+    color: var(--on-surface);
+    letter-spacing: -0.025em;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+/* Grid de tarjetas de testimonios */
+.testimonials__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Tarjeta individual de testimonio */
+.testimonial-card {
+    background-color: var(--surface-container-low);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+    background-color: var(--surface-container);
+}
+
+/* Estrellas de valoración */
+.testimonial-card__stars {
+    display: flex;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+/* Texto de la cita */
+.testimonial-card__quote {
+    font-family: var(--font-body);
+    color: var(--on-surface-variant);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+}
+
+/* Zona del autor (avatar + datos) */
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Avatar circular con iniciales */
+.testimonial-card__avatar {
+    width: 2.5rem;         /* w-10 */
+    height: 2.5rem;        /* h-10 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--font-label);
+    font-size: 0.875rem;
+}
+
+/* Variantes de color para los avatares */
+.testimonial-card__avatar--tertiary {
+    background-color: var(--tertiary-fixed);
+    color: var(--on-tertiary-fixed);
+}
+
+.testimonial-card__avatar--secondary {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+}
+
+.testimonial-card__avatar--primary {
+    background-color: var(--primary-fixed);
+    color: var(--on-primary-fixed);
+}
+
+/* Nombre del autor */
+.testimonial-card__name {
+    font-family: var(--font-headline);
+    font-weight: 600;
+    color: var(--on-surface);
+    font-size: 0.875rem;   /* text-sm */
+}
+
+/* Rol del autor */
+.testimonial-card__role {
+    font-family: var(--font-body);
+    color: var(--on-surface-variant);
+    font-size: 0.75rem;    /* text-xs */
+}
+
+
+/* --------------------------------------------------------------------------
+   8. PIE DE PÁGINA (Footer)
+   --------------------------------------------------------------------------
+   Footer con grid de 4 columnas: marca, navegación, legal y plataforma.
+   -------------------------------------------------------------------------- */
+
+.footer {
+    width: 100%;
+    padding: 3rem 0;           /* py-12 */
+    background-color: #f8fafc;  /* bg-slate-50 */
+    color: #075985;             /* text-sky-800 */
+    font-family: var(--font-body);
+    font-size: 0.875rem;       /* text-sm */
+}
+
+.dark .footer {
+    background-color: #020617;  /* dark:bg-slate-950 */
+    color: #7dd3fc;             /* dark:text-sky-300 */
+}
+
+/* Grid del footer */
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 3rem;           /* px-12 */
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* Columna de marca del footer */
+.footer__brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Nombre de la marca en el footer */
+.footer__brand-name {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    color: #0c4a6e;            /* text-sky-900 */
+    font-size: 1.125rem;
+}
+
+.dark .footer__brand-name {
+    color: #e0f2fe;            /* dark:text-sky-100 */
+}
+
+/* Eslogan del footer */
+.footer__brand-tagline {
+    color: #64748b;            /* text-slate-500 */
+}
+
+/* Iconos sociales */
+.footer__social-links {
+    display: flex;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.footer__social-link {
+    color: #64748b;
+    transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+    color: #0ea5e9;            /* hover:text-sky-500 */
+}
+
+.footer__social-link .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* Columna de enlaces del footer */
+.footer__link-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Título de columna del footer */
+.footer__col-title {
+    font-weight: 600;
+    color: #0c4a6e;            /* text-sky-900 */
+    margin-bottom: 0.5rem;
+}
+
+.dark .footer__col-title {
+    color: #e0f2fe;
+}
+
+/* Enlaces del footer */
+.footer__link {
+    color: #64748b;            /* text-slate-500 */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer__link:hover {
+    color: #0ea5e9;            /* hover:text-sky-500 */
+    transform: translateX(4px); /* hover:translate-x-1 */
+}
+
+/* Línea de copyright */
+.footer__copyright {
+    margin-top: 3rem;          /* mt-12 */
+    padding-top: 2rem;         /* pt-8 */
+    border-top: 1px solid #e2e8f0; /* border-slate-200 */
+    text-align: center;
+    color: #64748b;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.dark .footer__copyright {
+    border-top-color: #1e293b; /* dark:border-slate-800 */
+}
+
+
+/* --------------------------------------------------------------------------
+   9. MEDIA QUERIES — Responsive Design
+   --------------------------------------------------------------------------
+   Breakpoints:
+     sm  ≥ 640px
+     md  ≥ 768px
+     lg  ≥ 1024px
+   -------------------------------------------------------------------------- */
+
+/* --- sm: ≥ 640px --- */
+@media (min-width: 640px) {
+
+    /* Hero CTAs en fila horizontal */
+    .hero__actions {
+        flex-direction: row;
+    }
+}
+
+/* --- md: ≥ 768px --- */
+@media (min-width: 768px) {
+
+    /* Mostrar enlaces de navegación */
+    .navbar__links {
+        display: flex;
+    }
+
+    /* Mostrar CTA de la navbar */
+    .navbar__cta-wrapper {
+        display: block;
+    }
+
+    /* Ocultar hamburguesa */
+    .navbar__menu-toggle {
+        display: none;
+    }
+
+    /* Grid de servicios: 3 columnas */
+    .services__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Grid de testimonios: 3 columnas */
+    .testimonials__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Grid del footer: 4 columnas */
+    .footer__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --- lg: ≥ 1024px --- */
+@media (min-width: 1024px) {
+
+    /* Hero: más padding vertical */
+    .hero {
+        padding-top: 14rem;    /* lg:pt-56 */
+        padding-bottom: 8rem;  /* lg:pb-32 */
+    }
+
+    /* Contenedor hero: grid 12 columnas */
+    .hero__content {
+        grid-template-columns: repeat(12, 1fr);
+        padding-left: 3rem;    /* lg:px-12 */
+        padding-right: 3rem;
+    }
+
+    /* Texto ocupa 7 de 12 columnas */
+    .hero__text {
+        grid-column: span 7;
+    }
+
+    /* Título más grande en desktop */
+    .hero__title {
+        font-size: 4.5rem;     /* lg:text-7xl */
+    }
+
+    /* Mostrar salto de línea decorativo */
+    .hero__title-break {
+        display: block;
+    }
+
+    /* Subtítulo más grande en desktop */
+    .hero__subtitle {
+        font-size: 1.5rem;     /* lg:text-2xl */
+    }
+
+    /* Imagen ocupa 5 de 12 columnas */
+    .hero__image-wrapper {
+        grid-column: span 5;
+        display: block;
+    }
+
+    /* Servicios: padding lateral mayor */
+    .services__inner {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* Títulos de sección más grandes */
+    .services__title {
+        font-size: 2.25rem;    /* lg:text-4xl */
+    }
+
+    /* Testimonios: padding lateral mayor */
+    .testimonials__inner {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .testimonials__title {
+        font-size: 2.25rem;    /* lg:text-4xl */
+    }
 }
