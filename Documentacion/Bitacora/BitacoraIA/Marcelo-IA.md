@@ -14,6 +14,25 @@ Cada entrada representa un cambio puntual realizado con asistencia de IA.
 
 ## Changelog
 
+### [2026-04-19] Creación de Perfil Marcelo con Carrusel estilo Netflix y Spotify
+
+- Tipo: Desarrollo Frontend / UI.
+- Modelo: Gemini 3.1 Pro (High).
+- Herramienta: AI Assistant.
+- Archivos impactados:
+  - `Proyecto/marcelo.html`
+  - `Proyecto/css/style.css`
+  - `Proyecto/js/main.js`
+- Cambio:
+  - Creación completa de la tarjeta de perfil en `marcelo.html` con sus estilos siguiendo lineamientos de *Atmospheric Logic*.
+  - Especificación en el diseño de las tecnologías dominadas (HTML, CSS, Git/GitHub, JavaScript, TypeScript, C#, Kotlin, Bases de datos SQL).
+  - Desarrollo de un carrusel de películas interactivo embebido estilo Netflix.
+  - Integración de código provisto por Spotify para los discos favoritos, adaptado con `.cloud-shadow` y `border-radius` xl en concordancia con el sistema de diseño.
+- Impacto:
+  - Provee la presentación individual del integrante con interactividad compleja que enriquece el ecosistema visual del equipo de desarrollo.
+- Validación manual:
+  - Se comprobó la correcta visualización del Stack, la reproducción y navegación de las películas del carrusel, y la carga correcta de los iframes de Spotify sin romper estilos.
+
 ### [2026-04-19] Refactorización a CSS Vanilla, Menú Desplegable y Modo Oscuro "Relámpago Dorado"
 
 - Tipo: Refactorización y UI/UX Frontend.
