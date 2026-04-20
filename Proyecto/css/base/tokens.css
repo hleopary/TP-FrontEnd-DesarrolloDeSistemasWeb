@@ -1,0 +1,85 @@
+/* ==========================================================================
+   GRUPO CLOUDS — Hoja de estilos principal
+   Archivo: css/style.css
+   Descripción: Estilos convertidos desde Tailwind CSS a CSS vanilla,
+                organizados por sección semántica del documento.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CUSTOM PROPERTIES (Design Tokens)
+   --------------------------------------------------------------------------
+   Paleta de colores extraída de la configuración de Tailwind.
+   Se usa el sistema de nomenclatura Material Design 3.
+   -------------------------------------------------------------------------- */
+:root {
+	/* --- Colores primarios --- */
+	--primary: #006591;
+	--primary-container: #0ea5e9;
+	--primary-fixed: #c9e6ff;
+	--primary-fixed-dim: #89ceff;
+	--on-primary: #ffffff;
+	--on-primary-container: #003751;
+	--on-primary-fixed: #001e2f;
+	--on-primary-fixed-variant: #004c6e;
+	--inverse-primary: #89ceff;
+
+	/* --- Colores secundarios --- */
+	--secondary: #006c4f;
+	--secondary-container: #43fbc0;
+	--secondary-fixed: #47fec3;
+	--secondary-fixed-dim: #00e1a8;
+	--on-secondary: #ffffff;
+	--on-secondary-container: #007153;
+	--on-secondary-fixed: #002116;
+	--on-secondary-fixed-variant: #00513b;
+
+	/* --- Colores terciarios --- */
+	--tertiary: #505f76;
+	--tertiary-container: #8d9db5;
+	--tertiary-fixed: #d3e4fe;
+	--tertiary-fixed-dim: #b7c8e1;
+	--on-tertiary: #ffffff;
+	--on-tertiary-container: #243449;
+	--on-tertiary-fixed: #0b1c30;
+	--on-tertiary-fixed-variant: #38485d;
+
+	/* --- Superficies --- */
+	--surface: #fbf8fc;
+	--surface-dim: #dcd9dd;
+	--surface-bright: #fbf8fc;
+	--surface-variant: #e4e1e6;
+	--surface-tint: #006591;
+	--surface-container-lowest: #ffffff;
+	--surface-container-low: #f6f2f7;
+	--surface-container: #f0edf1;
+	--surface-container-high: #eae7eb;
+	--surface-container-highest: #e4e1e6;
+	--on-surface: #1b1b1e;
+	--on-surface-variant: #3e4850;
+	--on-background: #1b1b1e;
+	--inverse-surface: #303033;
+	--inverse-on-surface: #f3f0f4;
+	--background: #fbf8fc;
+
+	/* --- Error --- */
+	--error: #ba1a1a;
+	--error-container: #ffdad6;
+	--on-error: #ffffff;
+	--on-error-container: #93000a;
+
+	/* --- Outline --- */
+	--outline: #6e7881;
+	--outline-variant: #bec8d2;
+
+	/* --- Tipografías --- */
+	--font-headline: 'Plus Jakarta Sans', sans-serif;
+	--font-body: 'Inter', sans-serif;
+	--font-label: 'Inter', sans-serif;
+
+	/* --- Border Radius --- */
+	--radius-default: 0.25rem;
+	--radius-lg: 0.5rem;
+	--radius-xl: 0.75rem;
+	--radius-full: 9999px;
+}
+

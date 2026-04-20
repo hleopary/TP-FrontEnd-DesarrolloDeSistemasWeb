@@ -1,0 +1,35 @@
+/* --------------------------------------------------------------------------
+   3. UTILIDADES REUTILIZABLES
+   --------------------------------------------------------------------------
+   Clases utilitarias convertidas de Tailwind para uso general.
+   -------------------------------------------------------------------------- */
+
+/* --- Sombra tipo nube (cloud-shadow) --- */
+.cloud-shadow {
+	box-shadow: 0 10px 40px rgba(27, 27, 30, 0.04);
+}
+
+/* --- Texto con gradiente (text-gradient) --- */
+.text-gradient {
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(135deg, #006591, #0ea5e9);
+}
+
+/* --- Fondo con gradiente primario (bg-gradient-primary) --- */
+.bg-gradient-primary {
+	background-image: linear-gradient(135deg, #006591, #0ea5e9);
+}
+
+/* --- Contenedor principal (max-width centrado) --- */
+.container {
+	max-width: 80rem;
+	/* max-w-7xl = 1280px */
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	/* px-8 */
+	padding-right: 2rem;
+}
+

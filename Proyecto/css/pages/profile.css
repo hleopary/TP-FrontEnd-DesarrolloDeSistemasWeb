@@ -1,0 +1,703 @@
+/* --------------------------------------------------------------------------
+   9. PERFIL DE MIEMBRO (Profile Hero)
+   --------------------------------------------------------------------------
+   Sección hero específica para las páginas de perfil de los miembros.
+   Reutiliza tokens del design system y la estética atmosférica.
+   -------------------------------------------------------------------------- */
+
+.profile-hero {
+	position: relative;
+	padding-top: 8rem;
+	padding-bottom: 4rem;
+	overflow: hidden;
+}
+
+/* Resplandores atmosféricos del perfil */
+.profile-hero__glow--top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 700px;
+	height: 700px;
+	background-color: var(--primary-fixed);
+	opacity: 0.15;
+	border-radius: 50%;
+	filter: blur(120px);
+	transform: translateY(-40%) translateX(30%);
+	pointer-events: none;
+}
+
+.profile-hero__glow--bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	background-color: var(--primary-container);
+	opacity: 0.08;
+	border-radius: 50%;
+	filter: blur(100px);
+	transform: translateY(30%) translateX(-30%);
+	pointer-events: none;
+}
+
+/* Grid del contenido del perfil */
+.profile-hero__content {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	position: relative;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	align-items: center;
+}
+
+/* Columna de información */
+.profile-hero__info {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	order: 2;
+}
+
+/* Etiqueta "Member Profile" */
+.profile-hero__label {
+	font-family: var(--font-label);
+	font-size: 0.875rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--primary);
+}
+
+/* Nombre grande */
+.profile-hero__name {
+	font-family: var(--font-headline);
+	font-weight: 800;
+	font-size: 3rem;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	color: var(--on-surface);
+}
+
+/* Rol / puesto */
+.profile-hero__role {
+	font-family: var(--font-body);
+	font-size: 1.25rem;
+	color: var(--on-surface-variant);
+	margin-top: 0.25rem;
+}
+
+.profile-hero__role-detail {
+	color: var(--outline);
+}
+
+/* Datos rápidos (ubicación, edad, exp.) */
+.profile-hero__meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	color: var(--on-surface-variant);
+	font-family: var(--font-body);
+}
+
+.profile-hero__meta-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.profile-hero__meta-icon {
+	color: var(--outline);
+	font-size: 1.25rem;
+}
+
+/* Botones CTA del perfil */
+.profile-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding-top: 0.5rem;
+}
+
+.profile-hero__cta-primary {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	background-image: linear-gradient(135deg, #006591, #0ea5e9);
+	color: var(--on-primary);
+	font-family: var(--font-label);
+	font-weight: 500;
+	padding: 0.75rem 1.5rem;
+	border-radius: var(--radius-default);
+	border: none;
+	cursor: pointer;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-hero__cta-primary:hover {
+	opacity: 0.9;
+	transform: translateY(-2px);
+}
+
+.profile-hero__cta-secondary {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	background-color: var(--surface-container-high);
+	color: var(--primary);
+	font-family: var(--font-label);
+	font-weight: 500;
+	padding: 0.75rem 1.5rem;
+	border-radius: var(--radius-default);
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.profile-hero__cta-secondary:hover {
+	background-color: var(--surface-variant);
+}
+
+/* Mensaje hint del perfil */
+.profile-hero__hint {
+	font-family: var(--font-body);
+	color: var(--primary);
+	font-size: 0.875rem;
+	min-height: 1.25rem;
+}
+
+/* Columna de imagen */
+.profile-hero__image-col {
+	width: 100%;
+	order: 1;
+}
+
+.profile-hero__image-wrapper {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 4 / 5;
+	border-radius: var(--radius-xl);
+	overflow: hidden;
+	background-color: var(--surface-container-low);
+}
+
+.profile-hero__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. SECCIÓN STACK TECNOLÓGICO (Tech Stack)
+   --------------------------------------------------------------------------
+   Chips tecnológicos flotantes con iconos SVG.
+   Diseño atmosférico: sin bordes, capas tonales, sombras cloud.
+   -------------------------------------------------------------------------- */
+
+.tech-stack {
+	padding: 5rem 0;
+	background-color: var(--surface-container-low);
+	transition: background-color 0.5s ease;
+	position: relative;
+}
+
+.tech-stack__inner {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.tech-stack__header {
+	margin-bottom: 3rem;
+	max-width: 42rem;
+}
+
+.tech-stack__title {
+	font-family: var(--font-headline);
+	font-weight: 700;
+	font-size: 1.875rem;
+	color: var(--on-surface);
+	letter-spacing: -0.025em;
+	margin-bottom: 0.75rem;
+}
+
+.tech-stack__subtitle {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+/* Grid de chips: fluido, centra en mobile, wrap natural */
+.tech-stack__grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+/* Chip individual */
+.tech-chip {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.875rem;
+	padding: 1.5rem 1.75rem;
+	background-color: var(--surface-container-lowest);
+	border-radius: 1.5rem;
+	/* roundness-xl per DESIGN.md */
+	box-shadow: 0 10px 40px rgba(27, 27, 30, 0.04);
+	transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
+	cursor: default;
+	flex: 0 0 auto;
+	min-width: 6.5rem;
+}
+
+.tech-chip:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 20px 50px rgba(0, 101, 145, 0.1);
+	background-color: var(--surface-container-low);
+}
+
+/* Contenedor del icono SVG */
+.tech-chip__icon-wrapper {
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.75rem;
+	/* roundness-md */
+	background-color: var(--surface-container-high);
+	padding: 0.5rem;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tech-chip:hover .tech-chip__icon-wrapper {
+	background-color: var(--primary-fixed);
+	transform: scale(1.1);
+}
+
+/* SVG icon sizing */
+.tech-chip__svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* Label del chip */
+.tech-chip__label {
+	font-family: var(--font-headline);
+	font-weight: 600;
+	font-size: 0.8125rem;
+	color: var(--on-surface);
+	text-align: center;
+	white-space: nowrap;
+}
+
+
+/* --------------------------------------------------------------------------
+   11. SECCIÓN DE INTERESES PERSONALES (Interests)
+   --------------------------------------------------------------------------
+   Películas favoritas y discos favoritos.
+   -------------------------------------------------------------------------- */
+
+.interests {
+	padding: 4rem 0;
+	background-color: var(--surface);
+	transition: background-color 0.5s ease;
+}
+
+.interests__inner {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.interests__header {
+	text-align: center;
+}
+
+.interests__title {
+	font-family: var(--font-headline);
+	font-weight: 700;
+	font-size: 1.875rem;
+	color: var(--on-surface);
+	letter-spacing: -0.025em;
+	margin-bottom: 0.75rem;
+}
+
+.interests__description {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	font-size: 1.125rem;
+	max-width: 42rem;
+	margin: 0 auto;
+}
+
+/* Bloque individual (películas / música) */
+.interests__block {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.interests__block--border-top {
+	padding-top: 2rem;
+	border-top: 1px solid var(--surface-variant);
+}
+
+/* Encabezado de bloque con icono */
+.interests__block-header {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.interests__block-icon {
+	font-size: 1.5rem;
+}
+
+.interests__block-icon--primary {
+	color: var(--primary);
+}
+
+.interests__block-icon--accent {
+	color: var(--primary-container);
+}
+
+.interests__block-title {
+	font-family: var(--font-headline);
+	font-weight: 600;
+	font-size: 1.5rem;
+	color: var(--on-surface);
+}
+
+/* --------------------------------------------------------------------------
+   CAROUSEL DE PELÍCULAS (Movie Carousel)
+   --------------------------------------------------------------------------
+   Carousel con trailers embedidos de YouTube, flechas de navegación
+   e indicadores de posición (dots).
+   -------------------------------------------------------------------------- */
+
+.movie-carousel {
+	position: relative;
+	width: 100%;
+	max-width: 64rem;
+	margin: 0 auto;
+}
+
+/* Flechas de navegación */
+.movie-carousel__arrow {
+	position: absolute;
+	top: 35%;
+	transform: translateY(-50%);
+	z-index: 10;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	box-shadow: 0 4px 20px rgba(27, 27, 30, 0.1);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--on-surface);
+	transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movie-carousel__arrow:hover {
+	background-color: var(--primary-fixed);
+	color: var(--primary);
+	transform: translateY(-50%) scale(1.08);
+	box-shadow: 0 6px 25px rgba(0, 101, 145, 0.15);
+}
+
+.movie-carousel__arrow--prev {
+	left: -1rem;
+}
+
+.movie-carousel__arrow--next {
+	right: -1rem;
+}
+
+/* Viewport que oculta los slides no visibles */
+.movie-carousel__viewport {
+	overflow: hidden;
+	border-radius: 1.5rem;
+	background-color: #000;
+	box-shadow: 0 10px 40px rgba(27, 27, 30, 0.2);
+}
+
+/* Track que se desplaza horizontalmente */
+.movie-carousel__track {
+	display: flex;
+	transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Cada slide ocupa el 100% del viewport */
+.movie-carousel__slide {
+	min-width: 100%;
+	flex-shrink: 0;
+	position: relative;
+    min-height: 38rem; /* Para que en celular entre el texto */
+}
+
+@media (min-width: 768px) {
+    .movie-carousel__slide {
+        aspect-ratio: 16 / 9;
+        min-height: auto;
+    }
+}
+
+/* Hero Poster Background */
+.movie-carousel__poster {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Overlay gradient and content alignment */
+.movie-carousel__poster-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 15, 17, 1) 0%, rgba(15, 15, 17, 0.7) 40%, rgba(15, 15, 17, 0.1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .movie-carousel__poster-overlay {
+        padding: 4rem;
+    }
+}
+
+.movie-carousel__content {
+    max-width: 40rem;
+    color: #fff;
+}
+
+.movie-carousel__title {
+    font-family: var(--font-headline);
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.movie-carousel__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.movie-carousel__badge {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.movie-carousel__desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.movie-carousel__awards {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f1c40f;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Play Button */
+.movie-carousel__play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.movie-carousel__play-btn:hover {
+    filter: brightness(0.8);
+    transform: scale(1.02);
+}
+
+/* Video Container (hidden by default) */
+.movie-carousel__video-container {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    background-color: #000;
+}
+
+.movie-carousel__slide--playing .movie-carousel__video-container {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.movie-carousel__iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.movie-carousel__close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+
+.movie-carousel__close-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Indicadores de posición (dots) */
+.movie-carousel__dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.625rem;
+	padding-top: 1.25rem;
+}
+
+.movie-carousel__dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--outline-variant);
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease;
+	padding: 0;
+}
+
+.movie-carousel__dot--active {
+	background-color: var(--primary);
+	width: 1.5rem;
+	border-radius: var(--radius-full);
+	transform: scale(1);
+}
+
+.movie-carousel__dot:hover:not(.movie-carousel__dot--active) {
+	background-color: var(--on-surface-variant);
+	transform: scale(1.2);
+}
+
+/* Grid de música */
+.interests__music-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
+
+/* Tarjeta de álbum */
+.music-card {
+	background-color: var(--surface-container-lowest);
+	padding: 1rem;
+	border-radius: var(--radius-xl);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: background-color 0.3s ease;
+}
+
+.music-card:hover {
+	background-color: var(--surface-container-low);
+}
+
+.music-card__cover {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+
+.music-card__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.music-card__title {
+	font-family: var(--font-headline);
+	font-weight: 600;
+	color: var(--on-surface);
+	font-size: 0.875rem;
+}
+
+.music-card__artist {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	font-size: 0.75rem;
+	margin-top: 0.25rem;
+}
+
+/* --- Dropdown item activo --- */
+.navbar__dropdown-item--active {
+	color: var(--primary);
+	font-weight: 600;
+	background-color: var(--primary-fixed);
+}
+

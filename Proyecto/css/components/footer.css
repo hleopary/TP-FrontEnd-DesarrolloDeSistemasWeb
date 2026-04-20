@@ -1,0 +1,138 @@
+/* --------------------------------------------------------------------------
+   8. PIE DE PÁGINA (Footer)
+   --------------------------------------------------------------------------
+   Footer con grid de 4 columnas: marca, navegación, legal y plataforma.
+   -------------------------------------------------------------------------- */
+
+.footer {
+	width: 100%;
+	padding: 3rem 0;
+	/* py-12 */
+	background-color: #f8fafc;
+	/* bg-slate-50 */
+	color: #075985;
+	/* text-sky-800 */
+	font-family: var(--font-body);
+	font-size: 0.875rem;
+	/* text-sm */
+}
+
+.dark .footer {
+	background-color: #020617;
+	/* dark:bg-slate-950 */
+	color: #7dd3fc;
+	/* dark:text-sky-300 */
+}
+
+/* Grid del footer */
+.footer__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	padding: 0 3rem;
+	/* px-12 */
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+/* Columna de marca del footer */
+.footer__brand-col {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+/* Nombre de la marca en el footer */
+.footer__brand-name {
+	font-family: var(--font-headline);
+	font-weight: 700;
+	color: #0c4a6e;
+	/* text-sky-900 */
+	font-size: 1.125rem;
+}
+
+.dark .footer__brand-name {
+	color: #e0f2fe;
+	/* dark:text-sky-100 */
+}
+
+/* Eslogan del footer */
+.footer__brand-tagline {
+	color: #64748b;
+	/* text-slate-500 */
+}
+
+/* Iconos sociales */
+.footer__social-links {
+	display: flex;
+	gap: 1rem;
+	padding-top: 0.5rem;
+}
+
+.footer__social-link {
+	color: #64748b;
+	transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+	color: #0ea5e9;
+	/* hover:text-sky-500 */
+}
+
+.footer__social-link .material-symbols-outlined {
+	font-size: 20px;
+}
+
+/* Columna de enlaces del footer */
+.footer__link-col {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+/* Título de columna del footer */
+.footer__col-title {
+	font-weight: 600;
+	color: #0c4a6e;
+	/* text-sky-900 */
+	margin-bottom: 0.5rem;
+}
+
+.dark .footer__col-title {
+	color: #e0f2fe;
+}
+
+/* Enlaces del footer */
+.footer__link {
+	color: #64748b;
+	/* text-slate-500 */
+	transition: color 0.3s ease, transform 0.3s ease;
+	display: inline-block;
+}
+
+.footer__link:hover {
+	color: #0ea5e9;
+	/* hover:text-sky-500 */
+	transform: translateX(4px);
+	/* hover:translate-x-1 */
+}
+
+/* Línea de copyright */
+.footer__copyright {
+	margin-top: 3rem;
+	/* mt-12 */
+	padding-top: 2rem;
+	/* pt-8 */
+	border-top: 1px solid #e2e8f0;
+	/* border-slate-200 */
+	text-align: center;
+	color: #64748b;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.dark .footer__copyright {
+	border-top-color: #1e293b;
+	/* dark:border-slate-800 */
+}
+

@@ -1,0 +1,41 @@
+/* --------------------------------------------------------------------------
+   2. RESET & BASE
+   --------------------------------------------------------------------------
+   Estilos globales del documento y normalización básica.
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--surface);
+	color: var(--on-surface);
+	font-family: var(--font-body);
+	-webkit-font-smoothing: antialiased;
+	/* antialiased */
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
+}
+
+/* Selección de texto personalizada */
+body ::selection {
+	background-color: var(--primary-container);
+	color: var(--on-primary);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+

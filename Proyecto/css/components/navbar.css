@@ -1,0 +1,256 @@
+/* --------------------------------------------------------------------------
+   4. NAVEGACIÓN SUPERIOR (TopNavBar)
+   --------------------------------------------------------------------------
+   Barra de navegación fija con fondo translúcido y blur.
+   -------------------------------------------------------------------------- */
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+	background-color: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
+	transition: all 0.3s ease;
+}
+
+/* Modo oscuro de la navbar */
+.dark .navbar {
+	background-color: rgba(15, 23, 42, 0.7);
+	/* dark:bg-slate-900/70 */
+}
+
+/* Contenedor interno de la navbar */
+.navbar__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	/* py-4 px-8 */
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+/* Logo / Marca */
+.navbar__brand {
+	font-size: 1.25rem;
+	/* text-xl */
+	font-weight: 700;
+	/* font-bold */
+	letter-spacing: -0.05em;
+	/* tracking-tighter */
+	color: #0c4a6e;
+	/* text-sky-900 */
+	font-family: var(--font-headline);
+}
+
+.dark .navbar__brand {
+	color: #e0f2fe;
+	/* dark:text-sky-100 */
+}
+
+/* Grupo de enlaces de navegación */
+.navbar__links {
+	display: none;
+	/* hidden por defecto (mobile-first) */
+	gap: 2rem;
+	/* space-x-8 */
+	align-items: center;
+	font-family: var(--font-headline);
+	letter-spacing: -0.025em;
+	/* tracking-tight */
+}
+
+/* Enlace activo de la navbar */
+.navbar__link--active {
+	color: #0369a1;
+	/* text-sky-700 */
+	font-weight: 600;
+	border-bottom: 2px solid #0284c7;
+	/* border-sky-600 */
+	padding-bottom: 0.25rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar__link--active:hover {
+	opacity: 0.8;
+}
+
+.dark .navbar__link--active {
+	color: #38bdf8;
+	/* dark:text-sky-400 */
+}
+
+/* Enlaces inactivos de la navbar */
+.navbar__link {
+	color: #475569;
+	/* text-slate-600 */
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar__link:hover {
+	color: #0284c7;
+	/* hover:text-sky-600 */
+	opacity: 0.8;
+}
+
+.dark .navbar__link {
+	color: #94a3b8;
+	/* dark:text-slate-400 */
+}
+
+/* Contenedor del toggle (oculto en mobile) */
+.navbar__cta-wrapper {
+	display: none;
+	/* hidden en mobile, se muestra en md+ */
+}
+
+/* --- Botón Theme Toggle (Sol / Luna) --- */
+.theme-toggle {
+	position: relative;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: 1px solid var(--outline-variant);
+	background: var(--surface-container-high);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+	background: var(--surface-container-highest);
+	border-color: var(--primary);
+	transform: scale(1.1);
+}
+
+.theme-toggle:active {
+	transform: scale(0.95);
+}
+
+/* Iconos del toggle: sol y luna */
+.theme-toggle__icon {
+	position: absolute;
+	font-size: 1.25rem;
+	transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Estado Light: sol visible, luna oculta */
+.theme-toggle__icon--light {
+	color: #f59e0b;
+	/* ámbar/sol */
+	opacity: 1;
+	transform: rotate(0deg);
+}
+
+.theme-toggle__icon--dark {
+	color: var(--primary);
+	opacity: 0;
+	transform: rotate(-90deg);
+}
+
+/* Estado Dark: luna visible, sol oculto */
+.dark .theme-toggle__icon--light {
+	opacity: 0;
+	transform: rotate(90deg);
+}
+
+.dark .theme-toggle__icon--dark {
+	color: #fbbf24;
+	/* dorado brillante */
+	opacity: 1;
+	transform: rotate(0deg);
+}
+
+/* Botón hamburguesa (mobile) */
+.navbar__menu-toggle {
+	display: block;
+	background: none;
+	border: none;
+	color: var(--primary);
+	cursor: pointer;
+}
+
+/* --- Dropdown (menú desplegable "Team") --- */
+.navbar__dropdown {
+	position: relative;
+}
+
+/* Enlace que activa el dropdown */
+.navbar__dropdown-toggle {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	cursor: pointer;
+}
+
+/* Icono chevron del dropdown */
+.navbar__dropdown-icon {
+	font-size: 1.25rem;
+	transition: transform 0.3s ease;
+}
+
+/* Rotación del icono al hacer hover sobre el dropdown */
+.navbar__dropdown:hover .navbar__dropdown-icon {
+	transform: rotate(180deg);
+}
+
+/* Menú desplegable oculto por defecto */
+.navbar__dropdown-menu {
+	position: absolute;
+	top: calc(100% + 0.75rem);
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: 180px;
+	background-color: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-radius: var(--radius-xl);
+	box-shadow: 0 10px 40px rgba(27, 27, 30, 0.12);
+	padding: 0.5rem 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-50%) translateY(8px);
+	transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+	z-index: 60;
+}
+
+/* Mostrar dropdown al hacer hover */
+.navbar__dropdown:hover .navbar__dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%) translateY(0);
+}
+
+.dark .navbar__dropdown-menu {
+	background-color: rgba(15, 23, 42, 0.95);
+}
+
+/* Cada enlace dentro del dropdown */
+.navbar__dropdown-item {
+	display: block;
+	padding: 0.6rem 1.25rem;
+	color: #475569;
+	font-size: 0.9rem;
+	font-family: var(--font-body);
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar__dropdown-item:hover {
+	background-color: var(--primary-fixed);
+	color: var(--primary);
+}
+
+.dark .navbar__dropdown-item {
+	color: #94a3b8;
+}
+
+.dark .navbar__dropdown-item:hover {
+	background-color: rgba(14, 165, 233, 0.15);
+	color: #38bdf8;
+}
+

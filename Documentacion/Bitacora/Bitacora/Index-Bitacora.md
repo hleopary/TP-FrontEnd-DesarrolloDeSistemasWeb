@@ -2,7 +2,7 @@
 title: Index Bitacora
 status: activo
 owner: equipo-clouds
-updated: 2026-04-16
+updated: 2026-04-19
 ---
 
 # Index Bitacora
@@ -11,6 +11,7 @@ Este indice agrupa la documentacion de proceso, reuniones y uso de IA.
 
 ## Minutas de reunion
 
+- [[Bitacora/Bitacora/2026-04-19]]
 - [[Bitacora/Bitacora/2026-04-17]]
 - [[Bitacora/Bitacora/2026-04-08]]
 

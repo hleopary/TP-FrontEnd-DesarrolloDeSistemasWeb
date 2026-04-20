@@ -1,0 +1,184 @@
+/* --------------------------------------------------------------------------
+   12. MEDIA QUERIES — Responsive Design
+   --------------------------------------------------------------------------
+   Breakpoints:
+     sm  ≥ 640px
+     md  ≥ 768px
+     lg  ≥ 1024px
+   -------------------------------------------------------------------------- */
+
+/* --- sm: ≥ 640px --- */
+@media (min-width: 640px) {
+
+	/* Hero CTAs en fila horizontal */
+	.hero__actions {
+		flex-direction: row;
+	}
+
+	/* Música: 3 columnas en sm+ */
+	.interests__music-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* --- md: ≥ 768px --- */
+@media (min-width: 768px) {
+
+	/* Mostrar enlaces de navegación */
+	.navbar__links {
+		display: flex;
+	}
+
+	/* Mostrar CTA de la navbar */
+	.navbar__cta-wrapper {
+		display: block;
+	}
+
+	/* Ocultar hamburguesa */
+	.navbar__menu-toggle {
+		display: none;
+	}
+
+	/* Grid de servicios: 3 columnas */
+	.services__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* Grid de testimonios: 3 columnas */
+	.testimonials__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* Grid del footer: 4 columnas */
+	.footer__grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+
+}
+
+/* --- lg: ≥ 1024px --- */
+@media (min-width: 1024px) {
+
+	/* Hero: más padding vertical */
+	.hero {
+		padding-top: 14rem;
+		/* lg:pt-56 */
+		padding-bottom: 8rem;
+		/* lg:pb-32 */
+	}
+
+	/* Contenedor hero: grid 12 columnas */
+	.hero__content {
+		grid-template-columns: repeat(12, 1fr);
+		padding-left: 3rem;
+		/* lg:px-12 */
+		padding-right: 3rem;
+	}
+
+	/* Texto ocupa 7 de 12 columnas */
+	.hero__text {
+		grid-column: span 7;
+	}
+
+	/* Título más grande en desktop */
+	.hero__title {
+		font-size: 4.5rem;
+		/* lg:text-7xl */
+	}
+
+	/* Mostrar salto de línea decorativo */
+	.hero__title-break {
+		display: block;
+	}
+
+	/* Subtítulo más grande en desktop */
+	.hero__subtitle {
+		font-size: 1.5rem;
+		/* lg:text-2xl */
+	}
+
+	/* Imagen ocupa 5 de 12 columnas */
+	.hero__image-wrapper {
+		grid-column: span 5;
+		display: block;
+	}
+
+	/* Servicios: padding lateral mayor */
+	.services__inner {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	/* Títulos de sección más grandes */
+	.services__title {
+		font-size: 2.25rem;
+		/* lg:text-4xl */
+	}
+
+	/* Testimonios: padding lateral mayor */
+	.testimonials__inner {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.testimonials__title {
+		font-size: 2.25rem;
+		/* lg:text-4xl */
+	}
+
+	/* --- Profile Hero: layout horizontal en lg --- */
+	.profile-hero {
+		padding-top: 12rem;
+		padding-bottom: 6rem;
+	}
+
+	.profile-hero__content {
+		flex-direction: row;
+		gap: 4rem;
+	}
+
+	.profile-hero__info {
+		flex: 1;
+		order: 1;
+		gap: 2rem;
+	}
+
+	.profile-hero__name {
+		font-size: 4.5rem;
+	}
+
+	.profile-hero__role {
+		font-size: 1.5rem;
+	}
+
+	.profile-hero__image-col {
+		width: 45%;
+		order: 2;
+	}
+
+	.profile-hero__content {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	/* Tech Stack: padding lateral mayor en lg */
+	.tech-stack__inner {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.tech-stack__title {
+		font-size: 2.25rem;
+	}
+
+	.interests__inner {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.interests__title {
+		font-size: 2.25rem;
+	}
+}
+

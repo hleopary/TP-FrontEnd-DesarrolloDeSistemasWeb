@@ -1,0 +1,404 @@
+/* --------------------------------------------------------------------------
+   5. SECCIÓN HERO
+   --------------------------------------------------------------------------
+   Sección principal con título grande, subtítulo y CTAs.
+   Incluye efectos de "atmospheric glow" decorativos.
+   -------------------------------------------------------------------------- */
+
+.hero {
+	position: relative;
+	padding-top: 10rem;
+	/* pt-40 */
+	padding-bottom: 6rem;
+	/* pb-24 */
+	overflow: hidden;
+}
+
+/* Resplandor atmosférico superior derecho */
+.hero__glow--top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 800px;
+	height: 800px;
+	background-color: var(--primary-fixed);
+	opacity: 0.2;
+	border-radius: 50%;
+	filter: blur(120px);
+	transform: translateY(-50%) translateX(33%);
+	pointer-events: none;
+}
+
+/* Resplandor atmosférico inferior izquierdo */
+.hero__glow--bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 600px;
+	height: 600px;
+	background-color: var(--primary-container);
+	opacity: 0.1;
+	border-radius: 50%;
+	filter: blur(100px);
+	transform: translateY(33%) translateX(-33%);
+	pointer-events: none;
+}
+
+/* Grid del contenido hero */
+.hero__content {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	position: relative;
+	z-index: 10;
+	display: grid;
+	gap: 4rem;
+	/* gap-16 */
+	align-items: center;
+}
+
+/* Columna de texto del hero */
+.hero__text {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	/* space-y-8 */
+}
+
+/* Título principal H1 */
+.hero__title {
+	font-family: var(--font-headline);
+	font-weight: 800;
+	/* font-extrabold */
+	font-size: 3rem;
+	/* text-5xl */
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	color: var(--on-surface);
+}
+
+/* Salto de línea decorativo (solo desktop) */
+.hero__title-break {
+	display: none;
+}
+
+/* Subtítulo del hero */
+.hero__subtitle {
+	font-family: var(--font-body);
+	font-size: 1.25rem;
+	/* text-xl */
+	color: var(--on-surface-variant);
+	max-width: 42rem;
+	/* max-w-2xl */
+	line-height: 1.75;
+	/* leading-relaxed */
+}
+
+/* Grupo de botones CTA del hero */
+.hero__actions {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	/* gap-4 */
+	padding-top: 1rem;
+}
+
+/* Botón principal CTA del hero */
+.hero__cta-primary {
+	background-image: linear-gradient(135deg, #006591, #0ea5e9);
+	color: var(--on-primary);
+	font-family: var(--font-label);
+	font-weight: 500;
+	font-size: 1.125rem;
+	/* text-lg */
+	padding: 1rem 2rem;
+	/* py-4 px-8 */
+	border-radius: var(--radius-default);
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 10px 15px -3px rgba(0, 101, 145, 0.2);
+	transition: all 0.3s ease;
+	transform: translateY(0);
+}
+
+.hero__cta-primary:hover {
+	opacity: 0.9;
+	transform: translateY(-2px);
+}
+
+/* Botón secundario CTA del hero */
+.hero__cta-secondary {
+	color: var(--primary);
+	font-family: var(--font-label);
+	font-weight: 500;
+	font-size: 1.125rem;
+	padding: 1rem 2rem;
+	border-radius: var(--radius-default);
+	border: 1px solid transparent;
+	background: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.hero__cta-secondary:hover {
+	background-color: var(--primary-fixed);
+}
+
+/* Columna de imagen del hero */
+.hero__image-wrapper {
+	position: relative;
+	display: none;
+	/* hidden en mobile, visible en lg */
+}
+
+/* Imagen del hero */
+.hero__image {
+	width: 100%;
+	height: auto;
+	border-radius: 1.5rem;
+	/* rounded-3xl */
+	object-fit: cover;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN DE SERVICIOS
+   --------------------------------------------------------------------------
+   Grid de 3 tarjetas con iconos, títulos y descripciones.
+   -------------------------------------------------------------------------- */
+
+.services {
+	padding: 6rem 0;
+	/* py-24 */
+	background-color: var(--surface-container-low);
+	transition: background-color 0.5s ease;
+}
+
+/* Contenedor interno de servicios */
+.services__inner {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+/* Encabezado de la sección servicios */
+.services__header {
+	margin-bottom: 4rem;
+	/* mb-16 */
+	max-width: 42rem;
+	/* max-w-2xl */
+}
+
+.services__title {
+	font-family: var(--font-headline);
+	font-weight: 700;
+	font-size: 1.875rem;
+	/* text-3xl */
+	color: var(--on-surface);
+	letter-spacing: -0.025em;
+	margin-bottom: 1rem;
+}
+
+.services__description {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	font-size: 1.125rem;
+	/* text-lg */
+}
+
+/* Grid de tarjetas de servicio */
+.services__grid {
+	display: grid;
+	gap: 2rem;
+	/* gap-8 */
+}
+
+/* Tarjeta individual de servicio */
+.service-card {
+	background-color: var(--surface-container-lowest);
+	border-radius: var(--radius-xl);
+	padding: 2rem;
+	/* p-8 */
+	box-shadow: 0 10px 40px rgba(27, 27, 30, 0.04);
+	transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+	transform: translateY(-4px);
+	/* hover:-translate-y-1 */
+}
+
+/* Icono circular del servicio */
+.service-card__icon {
+	width: 3.5rem;
+	/* w-14 */
+	height: 3.5rem;
+	/* h-14 */
+	background-color: var(--surface-container-high);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	/* mb-6 */
+	transition: background-color 0.3s ease;
+}
+
+/* Hover del icono cuando se pasa sobre la tarjeta */
+.service-card:hover .service-card__icon {
+	background-color: var(--primary-fixed);
+}
+
+/* Icono Material Symbols dentro del círculo */
+.service-card__icon .material-symbols-outlined {
+	color: var(--primary);
+	font-size: 1.5rem;
+	/* text-2xl */
+}
+
+/* Título de la tarjeta de servicio */
+.service-card__title {
+	font-family: var(--font-headline);
+	font-weight: 700;
+	font-size: 1.25rem;
+	/* text-xl */
+	color: var(--on-surface);
+	margin-bottom: 0.75rem;
+}
+
+/* Descripción de la tarjeta de servicio */
+.service-card__text {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	line-height: 1.75;
+	/* leading-relaxed */
+}
+
+
+/* --------------------------------------------------------------------------
+   7. SECCIÓN DE TESTIMONIOS
+   --------------------------------------------------------------------------
+   Grid de 3 testimonios con estrellas, citas y avatares.
+   -------------------------------------------------------------------------- */
+
+.testimonials {
+	padding: 6rem 0;
+	/* py-24 */
+	background-color: var(--surface);
+	position: relative;
+	overflow: hidden;
+}
+
+/* Contenedor interno de testimonios */
+.testimonials__inner {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	position: relative;
+	z-index: 10;
+}
+
+/* Título de la sección testimonios */
+.testimonials__title {
+	font-family: var(--font-headline);
+	font-weight: 700;
+	font-size: 1.875rem;
+	/* text-3xl */
+	color: var(--on-surface);
+	letter-spacing: -0.025em;
+	margin-bottom: 4rem;
+	text-align: center;
+}
+
+/* Grid de tarjetas de testimonios */
+.testimonials__grid {
+	display: grid;
+	gap: 2rem;
+}
+
+/* Tarjeta individual de testimonio */
+.testimonial-card {
+	background-color: var(--surface-container-low);
+	border-radius: var(--radius-xl);
+	padding: 2rem;
+	transition: background-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+	background-color: var(--surface-container);
+}
+
+/* Estrellas de valoración */
+.testimonial-card__stars {
+	display: flex;
+	color: var(--primary);
+	margin-bottom: 1.5rem;
+}
+
+/* Texto de la cita */
+.testimonial-card__quote {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	font-style: italic;
+	margin-bottom: 1.5rem;
+	line-height: 1.75;
+}
+
+/* Zona del autor (avatar + datos) */
+.testimonial-card__author {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+/* Avatar circular con iniciales */
+.testimonial-card__avatar {
+	width: 2.5rem;
+	/* w-10 */
+	height: 2.5rem;
+	/* h-10 */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-family: var(--font-label);
+	font-size: 0.875rem;
+}
+
+/* Variantes de color para los avatares */
+.testimonial-card__avatar--tertiary {
+	background-color: var(--tertiary-fixed);
+	color: var(--on-tertiary-fixed);
+}
+
+.testimonial-card__avatar--secondary {
+	background-color: var(--secondary-container);
+	color: var(--on-secondary-container);
+}
+
+.testimonial-card__avatar--primary {
+	background-color: var(--primary-fixed);
+	color: var(--on-primary-fixed);
+}
+
+/* Nombre del autor */
+.testimonial-card__name {
+	font-family: var(--font-headline);
+	font-weight: 600;
+	color: var(--on-surface);
+	font-size: 0.875rem;
+	/* text-sm */
+}
+
+/* Rol del autor */
+.testimonial-card__role {
+	font-family: var(--font-body);
+	color: var(--on-surface-variant);
+	font-size: 0.75rem;
+	/* text-xs */
+}
+

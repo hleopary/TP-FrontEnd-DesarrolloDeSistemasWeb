@@ -1,0 +1,407 @@
+/* ==========================================================================
+   10. DARK MODE — Estética "Relámpago Dorado"
+   ==========================================================================
+   Paleta oscura inspirada en indexexample2.html:
+   Fondos profundos (#131313), acentos dorados/ámbar (#ffeebb, #f4d03f,
+   #e7c433), y toques de brillo para simular destellos eléctricos.
+   Se activa agregando la clase "dark" al elemento <html>.
+   ========================================================================== */
+
+/* --- Override de Custom Properties en Dark Mode --- */
+.dark {
+	/* Primarios → dorados/ámbar */
+	--primary: #ffeebb;
+	--primary-container: #f4d03f;
+	--primary-fixed: #ffe174;
+	--primary-fixed-dim: #e7c433;
+	--on-primary: #3b2f00;
+	--on-primary-container: #6c5900;
+	--on-primary-fixed: #221b00;
+	--on-primary-fixed-variant: #554500;
+	--inverse-primary: #705d00;
+
+	/* Secundarios → dorados cálidos */
+	--secondary: #e9c400;
+	--secondary-container: #ffdb3c;
+	--secondary-fixed: #ffe16d;
+	--secondary-fixed-dim: #e9c400;
+	--on-secondary: #3a3000;
+	--on-secondary-container: #725f00;
+	--on-secondary-fixed: #221b00;
+	--on-secondary-fixed-variant: #544600;
+
+	/* Terciarios → azul pálido frío (contraste) */
+	--tertiary: #e7efff;
+	--tertiary-container: #c3d4ee;
+	--tertiary-fixed: #d3e4fe;
+	--tertiary-fixed-dim: #b7c8e1;
+	--on-tertiary: #213145;
+	--on-tertiary-container: #4c5c72;
+	--on-tertiary-fixed: #0b1c30;
+
+	/* Superficies → negros profundos */
+	--surface: #131313;
+	--surface-dim: #131313;
+	--surface-bright: #393939;
+	--surface-variant: #353534;
+	--surface-tint: #e7c433;
+	--surface-container-lowest: #0e0e0e;
+	--surface-container-low: #1c1b1b;
+	--surface-container: #201f1f;
+	--surface-container-high: #2a2a2a;
+	--surface-container-highest: #353534;
+	--on-surface: #e5e2e1;
+	--on-surface-variant: #cfc6ae;
+	--on-background: #e5e2e1;
+	--inverse-surface: #e5e2e1;
+	--inverse-on-surface: #313030;
+	--background: #131313;
+
+	/* Error */
+	--error: #ffb4ab;
+	--error-container: #93000a;
+	--on-error: #690005;
+	--on-error-container: #ffdad6;
+
+	/* Outline → tonos cálidos apagados */
+	--outline: #98907a;
+	--outline-variant: #4c4634;
+}
+
+
+/* --- Body Dark --- */
+.dark body {
+	background-color: var(--surface);
+	color: var(--on-surface);
+}
+
+.dark body ::selection {
+	background-color: rgba(244, 208, 63, 0.3);
+	color: var(--primary);
+}
+
+
+/* --- Navbar Dark --- */
+.dark .navbar {
+	background-color: rgba(19, 19, 19, 0.8);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .navbar__brand {
+	color: var(--primary);
+}
+
+.dark .navbar__link--active {
+	color: var(--primary);
+	border-bottom-color: var(--primary);
+}
+
+.dark .navbar__link {
+	color: var(--on-surface-variant);
+}
+
+.dark .navbar__link:hover {
+	color: var(--primary);
+}
+
+.dark .navbar__menu-toggle {
+	color: var(--primary);
+}
+
+/* Toggle en dark mode */
+.dark .theme-toggle {
+	background: var(--surface-container-high);
+	border-color: var(--outline-variant);
+}
+
+.dark .theme-toggle:hover {
+	background: var(--surface-container-highest);
+	border-color: var(--primary);
+	box-shadow: 0 0 12px rgba(244, 208, 63, 0.25);
+}
+
+
+/* --- Hero Dark --- */
+.dark .hero__glow--top {
+	background-color: var(--primary);
+	opacity: 0.08;
+}
+
+.dark .hero__glow--bottom {
+	background-color: var(--secondary);
+	opacity: 0.05;
+}
+
+.dark .hero__title {
+	color: var(--on-surface);
+}
+
+/* Gradiente de texto dorado en dark */
+.dark .text-gradient {
+	background-image: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+}
+
+.dark .hero__subtitle {
+	color: var(--on-surface-variant);
+}
+
+/* CTA primario dark: gradiente dorado */
+.dark .hero__cta-primary {
+	background-image: linear-gradient(135deg, #f4d03f, #e7c433);
+	color: var(--on-primary);
+	box-shadow: 0 0 25px rgba(244, 208, 63, 0.2);
+}
+
+.dark .hero__cta-primary:hover {
+	box-shadow: 0 0 35px rgba(244, 208, 63, 0.35);
+}
+
+/* CTA secundario dark */
+.dark .hero__cta-secondary {
+	color: var(--primary);
+	border-color: rgba(255, 238, 187, 0.3);
+}
+
+.dark .hero__cta-secondary:hover {
+	background-color: rgba(255, 238, 187, 0.1);
+}
+
+/* Imagen con borde sutil */
+.dark .hero__image {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .cloud-shadow {
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* --- Services Dark --- */
+.dark .services {
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .service-card {
+	background-color: rgba(19, 19, 19, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	box-shadow: none;
+}
+
+.dark .service-card:hover {
+	border-color: rgba(244, 208, 63, 0.4);
+	box-shadow: 0 0 20px rgba(244, 208, 63, 0.08);
+}
+
+.dark .service-card__icon {
+	background-color: var(--surface-variant);
+}
+
+.dark .service-card:hover .service-card__icon {
+	background-color: rgba(244, 208, 63, 0.2);
+}
+
+.dark .service-card__icon .material-symbols-outlined {
+	color: var(--primary);
+}
+
+
+/* --- Testimonials Dark --- */
+.dark .testimonial-card {
+	background-color: rgba(19, 19, 19, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .testimonial-card:hover {
+	background-color: var(--surface-variant);
+}
+
+.dark .testimonial-card__stars {
+	color: var(--primary);
+}
+
+.dark .testimonial-card__avatar--tertiary {
+	background-color: rgba(255, 238, 187, 0.15);
+	border: 1px solid rgba(255, 238, 187, 0.3);
+	color: var(--primary);
+}
+
+.dark .testimonial-card__avatar--secondary {
+	background-color: rgba(244, 208, 63, 0.2);
+	border: 1px solid rgba(244, 208, 63, 0.4);
+	color: var(--primary);
+}
+
+.dark .testimonial-card__avatar--primary {
+	background-color: rgba(255, 238, 187, 0.15);
+	border: 1px solid rgba(255, 238, 187, 0.3);
+	color: var(--primary);
+}
+
+
+/* --- Footer Dark --- */
+.dark .footer {
+	background-color: var(--background);
+	color: var(--on-surface-variant);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .footer__brand-name {
+	color: var(--primary);
+}
+
+.dark .footer__brand-tagline {
+	color: var(--on-surface-variant);
+}
+
+.dark .footer__social-link {
+	color: var(--on-surface-variant);
+}
+
+.dark .footer__social-link:hover {
+	color: var(--primary);
+}
+
+.dark .footer__col-title {
+	color: var(--on-surface);
+}
+
+.dark .footer__link {
+	color: var(--on-surface-variant);
+}
+
+.dark .footer__link:hover {
+	color: var(--primary);
+}
+
+.dark .footer__copyright {
+	color: rgba(207, 198, 174, 0.6);
+	border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* --- Dropdown Dark (ya definido arriba, override adicional) --- */
+.dark .navbar__dropdown-toggle {
+	color: var(--on-surface-variant);
+}
+
+.dark .navbar__dropdown-toggle:hover {
+	color: var(--primary);
+}
+
+
+/* --- Profile Hero Dark --- */
+.dark .profile-hero__glow--top {
+	background-color: var(--primary);
+	opacity: 0.06;
+}
+
+.dark .profile-hero__glow--bottom {
+	background-color: var(--secondary);
+	opacity: 0.04;
+}
+
+.dark .profile-hero__label {
+	color: var(--primary);
+}
+
+.dark .profile-hero__cta-primary {
+	background-image: linear-gradient(135deg, #f4d03f, #e7c433);
+	color: var(--on-primary);
+	box-shadow: 0 0 25px rgba(244, 208, 63, 0.2);
+}
+
+.dark .profile-hero__cta-primary:hover {
+	box-shadow: 0 0 35px rgba(244, 208, 63, 0.35);
+}
+
+.dark .profile-hero__cta-secondary {
+	background-color: var(--surface-container-high);
+	color: var(--primary);
+	border: 1px solid rgba(255, 238, 187, 0.2);
+}
+
+.dark .profile-hero__cta-secondary:hover {
+	background-color: rgba(255, 238, 187, 0.1);
+}
+
+.dark .profile-hero__image-wrapper {
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* --- Tech Stack Dark --- */
+.dark .tech-chip {
+	background-color: rgba(19, 19, 19, 0.5);
+	box-shadow: none;
+}
+
+.dark .tech-chip:hover {
+	background-color: var(--surface-container-high);
+	box-shadow: 0 0 30px rgba(244, 208, 63, 0.08);
+}
+
+.dark .tech-chip__icon-wrapper {
+	background-color: var(--surface-variant);
+}
+
+.dark .tech-chip:hover .tech-chip__icon-wrapper {
+	background-color: rgba(244, 208, 63, 0.2);
+}
+
+
+/* --- Interests Dark --- */
+.dark .interests__block--border-top {
+	border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .interests__block-icon--primary {
+	color: var(--primary);
+}
+
+.dark .interests__block-icon--accent {
+	color: var(--primary-container);
+}
+
+.dark .movie-carousel__viewport {
+	background-color: var(--surface-container-high);
+}
+
+.dark .movie-carousel__arrow {
+	background-color: rgba(30, 30, 30, 0.85);
+	color: var(--on-surface);
+}
+
+.dark .movie-carousel__arrow:hover {
+	background-color: rgba(244, 208, 63, 0.2);
+	color: var(--primary);
+	box-shadow: 0 0 20px rgba(244, 208, 63, 0.1);
+}
+
+.dark .movie-carousel__award-icon {
+	color: var(--primary);
+}
+
+.dark .movie-carousel__dot {
+	background-color: var(--outline-variant);
+}
+
+.dark .movie-carousel__dot--active {
+	background-color: var(--primary);
+}
+
+.dark .music-card {
+	background-color: rgba(19, 19, 19, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .music-card:hover {
+	background-color: var(--surface-container-high);
+	border-color: rgba(244, 208, 63, 0.3);
+}
+
+/* --- Dropdown item activo dark --- */
+.dark .navbar__dropdown-item--active {
+	background-color: rgba(14, 165, 233, 0.15);
+	color: var(--primary);
+}
