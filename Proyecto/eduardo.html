@@ -1,39 +1,491 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo - Clouds Guild</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <h1>Eduardo</h1>
-        <nav class="site-nav" aria-label="Navegacion principal">
-            <a href="index.html">Inicio</a>
-            <a href="bitacora.html">Bitacora</a>
-            <a href="eduardo.html" aria-current="page">Eduardo</a>
-            <a href="leandro.html">Leandro</a>
-            <a href="marcelo.html">Marcelo</a>
-            <a href="melisa.html">Melisa</a>
-        </nav>
-    </header>
 
-    <main class="container">
-        <section class="card">
-            <h2>Tarjeta de presentacion</h2>
-            <ul>
-                <li>Ubicacion: A definir</li>
-                <li>Edad: A definir</li>
-                <li>Habilidades: HTML, CSS, JavaScript, Trabajo en equipo</li>
-                <li>Peliculas favoritas: A definir (3)</li>
-                <li>Discos favoritos: A definir (3)</li>
-            </ul>
-            <button class="btn profile-btn" type="button" data-name="Eduardo">Mostrar mensaje</button>
-            <p class="hint profile-hint" aria-live="polite"></p>
-        </section>
-    </main>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eduardo - Grupo Clouds</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <div class="navbar__brand">
+                Grupo Clouds
+            </div>
+            <div class="navbar__links">
+                <a class="navbar__link" href="index.html">Principal</a>
+                <a class="navbar__link" href="bitacora.html">Bitacora</a>
+                <div class="navbar__dropdown">
+                    <a class="navbar__link navbar__dropdown-toggle navbar__link--active" href="#">
+                        Team
+                        <span class="material-symbols-outlined navbar__dropdown-icon">expand_more</span>
+                    </a>
+                    <div class="navbar__dropdown-menu">
+                        <a class="navbar__dropdown-item navbar__dropdown-item--active" href="eduardo.html">Eduardo</a>
+                        <a class="navbar__dropdown-item" href="leandro.html">Leandro</a>
+                        <a class="navbar__dropdown-item" href="melisa.html">Melisa</a>
+                        <a class="navbar__dropdown-item" href="marcelo.html">Marcelo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__cta-wrapper">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span
+                        class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--light">light_mode</span>
+                    <span class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--dark">dark_mode</span>
+                </button>
+            </div>
+            <button class="navbar__menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="profile-hero">
+        <div class="profile-hero__glow--top"></div>
+        <div class="profile-hero__glow--bottom"></div>
+
+        <div class="profile-hero__content">
+            <div class="profile-hero__info">
+                <p class="profile-hero__label">Perfil de Miembro</p>
+                <h1 class="profile-hero__name">
+                    Eduardo <br /> <span class="text-gradient">Moreno</span>
+                </h1>
+                <p class="profile-hero__role">
+                    Desarrollador Back-End <span class="profile-hero__role-detail">en Grupo Clouds</span>
+                </p>
+
+                <div class="profile-hero__meta">
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">location_on</span>
+                        <span>La Plata, Argentina</span>
+                    </div>
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">cake</span>
+                        <span>Experiencia en el area Back-End</span>
+                    </div>
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">work</span>
+                        <span>Fuerte interes en Inteligencia Artificial</span>
+                    </div>
+                </div>
+
+                <p class="profile-hero__role-detail">
+                    Soy desarrollador con experiencia en Back-End y enfocado en integrar soluciones con Inteligencia
+                    Artificial.
+                </p>
+
+                <div class="profile-hero__actions">
+                    <a class="profile-hero__cta-primary" href="bitacora.html">Ver bitacora</a>
+                    <a class="profile-hero__cta-secondary" href="index.html">Volver al inicio</a>
+                </div>
+                <p class="profile-hero__hint" aria-live="polite"></p>
+            </div>
+
+            <div class="profile-hero__image-col" style="display: flex; justify-content: center;">
+                <div class="profile-hero__image-wrapper cloud-shadow"
+                    style="max-width: 25rem; width: 80%; aspect-ratio: 3 / 4; overflow: hidden;">
+                    <img alt="Eduardo" class="profile-hero__image"
+                        src="https://avatars.githubusercontent.com/u/126937215?v=4"
+                        style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <div class="tech-stack__inner">
+            <div class="tech-stack__header">
+                <h2 class="tech-stack__title">Stack Tecnologico</h2>
+                <p class="tech-stack__subtitle">Herramientas y habilidades que uso para construir experiencias web.</p>
+            </div>
+            <div class="tech-stack__grid">
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#E44D26"
+                                d="M6 2l2.4 26L16 30l7.6-2L26 2H6zm16.3 8H12.7l.3 3.5h9l-.5 5.5-5.5 1.5-5.5-1.5-.3-3.5h3.3l.1 1.8 2.4.6 2.4-.6.3-2.8H9.5L9 6h14l-.7 4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">HTML</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#1572B6"
+                                d="M6 2l2.4 26L16 30l7.6-2L26 2H6zm16.1 8H12.7l.3 3.5h8.8l-.5 5.5-5.3 1.5-5.3-1.5-.4-3.5h3.3l.2 1.8 2.2.6 2.2-.6.3-2.8H9.7L9 6h14l-.9 4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">CSS</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect fill="#F7DF1E" width="32" height="32" rx="2" />
+                            <path
+                                d="M20.8 23.7c.6 1 1.4 1.7 2.8 1.7 1.2 0 1.9-.6 1.9-1.4 0-1-.8-1.3-2-1.9l-.7-.3c-2-.9-3.4-1.9-3.4-4.2 0-2.1 1.6-3.7 4.1-3.7 1.8 0 3 .6 3.9 2.2l-2.2 1.4c-.5-.9-1-1.2-1.8-1.2-.8 0-1.3.5-1.3 1.2 0 .8.5 1.1 1.7 1.6l.7.3c2.4 1 3.7 2.1 3.7 4.4 0 2.5-2 3.9-4.6 3.9-2.6 0-4.3-1.2-5.1-2.9l2.3-1.1zm-10 .3c.5.8.9 1.5 1.9 1.5 1 0 1.6-.4 1.6-1.9v-10h3v10.2c0 3.1-1.8 4.5-4.5 4.5-2.4 0-3.8-1.2-4.5-2.7l2.5-1.6z"
+                                fill="#000" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">JavaScript</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect fill="#43853D" width="32" height="32" rx="2" />
+                            <path
+                                d="M9 20.2V11h2v9.1c0 2.1-1.2 3.2-3 3.2-.9 0-1.8-.3-2.4-1l1.1-1.5c.3.3.7.5 1.1.5.8 0 1.2-.4 1.2-1.1z"
+                                fill="#fff" />
+                            <path
+                                d="M17 17.1c0-3.5 2.6-6.2 6.1-6.2 2 0 3.7.8 4.8 2.2l-1.5 1.2c-.8-1-2-1.6-3.4-1.6-2.4 0-4.1 1.8-4.1 4.4s1.7 4.4 4.1 4.4c1.4 0 2.6-.6 3.4-1.6l1.5 1.2c-1.1 1.4-2.8 2.2-4.8 2.2-3.5 0-6.1-2.7-6.1-6.2z"
+                                fill="#fff" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Node.js</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#F05032"
+                                d="M29.5 15.2L16.8 2.5a1.7 1.7 0 0 0-2.4 0l-2.6 2.6 3.3 3.3a2 2 0 0 1 2.5 2.6l3.2 3.2a2 2 0 1 1-1.2 1.1l-3-3v7.8a2 2 0 1 1-1.6-.1V12a2 2 0 0 1-1.1-2.6L11.6 6.1l-9.1 9.1a1.7 1.7 0 0 0 0 2.4l12.7 12.7a1.7 1.7 0 0 0 2.4 0l12.7-12.7a1.7 1.7 0 0 0 .2-2.4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Git / GitHub</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <ellipse cx="16" cy="8" rx="10" ry="4" fill="#0f766e" />
+                            <path fill="#0f766e"
+                                d="M6 8v16c0 2.2 4.5 4 10 4s10-1.8 10-4V8c0 2.2-4.5 4-10 4S6 10.2 6 8z" />
+                            <ellipse cx="16" cy="8" rx="10" ry="4" fill="#14b8a6" opacity="0.35" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">SQLite</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="vite-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7c3aed" />
+                                    <stop offset="100%" stop-color="#06b6d4" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#vite-grad)" d="M6 8l10-4 10 4-10 18L6 8z" opacity="0.2" />
+                            <path fill="url(#vite-grad)" d="M16 4l7 4-7 18L9 8l7-4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Vite</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="react-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#22d3ee" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="2.6" fill="url(#react-grad)" />
+                            <ellipse cx="16" cy="16" rx="11" ry="4.2" fill="none" stroke="url(#react-grad)" stroke-width="1.5" />
+                            <ellipse cx="16" cy="16" rx="11" ry="4.2" fill="none" stroke="url(#react-grad)" stroke-width="1.5" transform="rotate(60 16 16)" />
+                            <ellipse cx="16" cy="16" rx="11" ry="4.2" fill="none" stroke="url(#react-grad)" stroke-width="1.5" transform="rotate(120 16 16)" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">React</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <ellipse cx="16" cy="8" rx="10" ry="4" fill="#0ea5e9" />
+                            <path fill="#0ea5e9"
+                                d="M6 8v16c0 2.2 4.5 4 10 4s10-1.8 10-4V8c0 2.2-4.5 4-10 4S6 10.2 6 8z" />
+                            <ellipse cx="16" cy="8" rx="10" ry="4" fill="#38bdf8" opacity="0.35" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">MySQL</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="prisma-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#111827" />
+                                    <stop offset="100%" stop-color="#6b7280" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#prisma-grad)" d="M16 4l8 18-8 6-8-6 8-18z" />
+                            <path fill="#ffffff" opacity="0.9" d="M16 8l4.8 11-4.8 3.6L11.2 19 16 8z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Prisma</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect x="6" y="7" width="20" height="14" rx="3" fill="#0ea5e9" />
+                            <rect x="8" y="9" width="16" height="10" rx="2" fill="#e0f2fe" />
+                            <rect x="12" y="22" width="8" height="2" rx="1" fill="#0ea5e9" />
+                            <circle cx="11" cy="13" r="1" fill="#0ea5e9" />
+                            <circle cx="16" cy="13" r="1" fill="#0ea5e9" />
+                            <circle cx="21" cy="13" r="1" fill="#0ea5e9" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Docker</span>
+                </div>
+
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="ai-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0ea5e9" />
+                                    <stop offset="100%" stop-color="#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="16" cy="16" r="12" fill="url(#ai-grad)" opacity="0.18" />
+                            <path d="M16 7l1.9 4.4L22 13l-4.1 1.6L16 19l-1.9-4.4L10 13l4.1-1.6L16 7z" fill="url(#ai-grad)" />
+                            <path d="M9 22c1.6-1.8 3.7-2.8 7-2.8s5.4 1 7 2.8" fill="none" stroke="url(#ai-grad)" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Inteligencia Artificial</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests">
+        <div class="interests__inner">
+            <div class="interests__header">
+                <h2 class="interests__title">Off the Grid</h2>
+                <p class="interests__description">Peliculas y discos favoritos para conocer mejor a Eduardo Moreno.</p>
+            </div>
+
+            <div class="interests__block">
+                <div class="interests__block-header">
+                    <span
+                        class="material-symbols-outlined interests__block-icon interests__block-icon--primary">movie</span>
+                    <h3 class="interests__block-title">Peliculas favoritas</h3>
+                </div>
+
+                <div class="movie-carousel" id="movieCarousel">
+                    <button class="movie-carousel__arrow movie-carousel__arrow--prev" id="carouselPrev"
+                        aria-label="Pelicula anterior">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+
+                    <div class="movie-carousel__viewport">
+                        <div class="movie-carousel__track" id="carouselTrack">
+                            <div class="movie-carousel__slide movie-carousel__slide--active">
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://static.wikia.nocookie.net/doblaje/images/1/11/Temblores.png/revision/latest?cb=20171019001311&amp;path-prefix=es');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Temblores (Tremors, 1990)</h4>
+                                            <div class="movie-carousel__meta">
+                                                <span>1990</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Terror + comedia</span>
+                                            </div>
+                                            <p class="movie-carousel__desc">Una joya del cine de serie B. En Perfeccion,
+                                                Nevada, unos gusanos gigantes subterraneos llamados Graboids atacan
+                                                guiandose por las vibraciones del suelo.</p>
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/liJfZvXdiTE?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="movie-carousel__slide">
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://play-lh.googleusercontent.com/F4zzqbLEgxjbHhCWM-NGfHR_cN1ABRGHTlDZd3iUTs1CjifKhRMjQVCSIwtrwGCKrnBg');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Idiocracia (Idiocracy, 2006)</h4>
+                                            <div class="movie-carousel__meta">
+                                                <span>2006</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Dirigida por Mike Judge</span>
+                                            </div>
+                                            <p class="movie-carousel__desc">Paso de largo en su estreno y termino como
+                                                pelicula de culto. Un hombre comun despierta 500 anos en el futuro y
+                                                descubre que se volvio la persona mas inteligente del planeta.</p>
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/sP2tUW0HDHA?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="movie-carousel__slide">
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTkxZmMxODMtODBkYy00MTg0LWI2MjctMTQzNmRiMDY0OTZkXkEyXkFqcGc@._V1_.jpg');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Blues Brothers 2000 (1998)</h4>
+                                            <div class="movie-carousel__meta">
+                                                <span>1998</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Musica y comedia</span>
+                                            </div>
+                                            <p class="movie-carousel__desc">Elwood Blues sale de la carcel y vuelve a
+                                                reunir la banda con nuevos companeros. Destacan B.B. King, Eric Clapton
+                                                y Aretha Franklin en un final inolvidable.</p>
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/2eEpcETVV3s?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="movie-carousel__arrow movie-carousel__arrow--next" id="carouselNext"
+                        aria-label="Pelicula siguiente">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+
+                    <div class="movie-carousel__dots" id="carouselDots">
+                        <button class="movie-carousel__dot movie-carousel__dot--active"
+                            aria-label="Pelicula 1"></button>
+                        <button class="movie-carousel__dot" aria-label="Pelicula 2"></button>
+                        <button class="movie-carousel__dot" aria-label="Pelicula 3"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interests__block interests__block--border-top">
+                <div class="interests__block-header">
+                    <span
+                        class="material-symbols-outlined interests__block-icon interests__block-icon--accent">album</span>
+                    <h3 class="interests__block-title">Discos favoritos</h3>
+                </div>
+                <div class="interests__music-grid">
+                    <iframe class="cloud-shadow" data-testid="embed-iframe" style="border-radius:1.5rem"
+                        src="https://open.spotify.com/embed/album/3HCCUaRSjHSFOe4fqE0BiP?utm_source=generator&amp;theme=0"
+                        width="100%" height="352" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+
+                    <iframe class="cloud-shadow" data-testid="embed-iframe" style="border-radius:1.5rem"
+                        src="https://open.spotify.com/embed/album/0Ip2GlQPoAIgdkqCO2YkMa?utm_source=generator&amp;theme=0"
+                        width="100%" height="352" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+
+                    <iframe class="cloud-shadow" data-testid="embed-iframe" style="border-radius:1.5rem"
+                        src="https://open.spotify.com/embed/album/6xj8KDSoPvZCquyIHWo0PJ?utm_source=generator&amp;theme=0"
+                        width="100%" height="352" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand-col">
+                <div class="footer__brand-name">
+                    Grupo Clouds
+                </div>
+                <p class="footer__brand-tagline">Atmospheric Infrastructure for the Modern Enterprise.</p>
+                <div class="footer__social-links">
+                    <a class="footer__social-link" href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a class="footer__social-link" href="#"><span class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Navegacion</h4>
+                <a class="footer__link" href="index.html">Principal</a>
+                <a class="footer__link" href="bitacora.html">Bitacora</a>
+                <a class="footer__link" href="eduardo.html">Eduardo</a>
+                <a class="footer__link" href="leandro.html">Leandro</a>
+                <a class="footer__link" href="melisa.html">Melisa</a>
+                <a class="footer__link" href="marcelo.html">Marcelo</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Legal</h4>
+                <a class="footer__link" href="#">Privacy Policy</a>
+                <a class="footer__link" href="#">Terms of Service</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Platform</h4>
+                <a class="footer__link" href="#">Architecture</a>
+                <a class="footer__link" href="#">Cloud Security</a>
+                <a class="footer__link" href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            © 2024 Grupo Clouds. Atmospheric Infrastructure for the Modern Enterprise.
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

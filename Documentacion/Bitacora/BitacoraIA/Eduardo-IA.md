@@ -2,7 +2,7 @@
 title: Bitacora IA - Eduardo
 status: activo
 integrante: eduardo
-updated: 2026-04-16
+updated: 2026-04-20
 ---
 
 # Bitacora IA - Eduardo
@@ -13,6 +13,23 @@ Esta bitacora se mantiene en formato changelog.
 Cada entrada representa un cambio puntual realizado con asistencia de IA.
 
 ## Changelog
+
+### [2026-04-20] Ajuste integral de perfil y stack
+
+- Tipo: Codigo frontend y contenido.
+- Modelo: GPT-5.4 mini.
+- Herramienta: GitHub Copilot Chat.
+- Archivos impactados:
+  - `Proyecto/eduardo.html`
+- Cambio:
+  - Se actualizo el perfil personal para reflejar experiencia en Back-End y fuerte interes en Inteligencia Artificial.
+  - Se incorporaron nuevos chips al stack tecnologico: SQLite, Vite, React, MySQL, Prisma y Docker.
+  - Se ajusto la imagen del hero con estilos inline para soportar una foto mas grande sin tocar el CSS global.
+  - Se corrigio el enlace de video del tercer film del carrusel y se mantuvo el formato de discos con embeds de Spotify.
+- Impacto:
+  - La pagina de Eduardo quedo mas alineada con su perfil real y con mejor coherencia visual.
+- Validacion manual:
+  - Se verifico que `Proyecto/eduardo.html` quedara sin errores luego de los cambios.
 
 ### [2026-04-16] Estandarizacion de consigna en Markdown
 
