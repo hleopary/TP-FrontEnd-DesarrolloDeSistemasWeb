@@ -1,39 +1,485 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelo - Clouds Guild</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marcelo Moreno - Grupo Clouds</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Estilos principales -->
+    <link href="css/style.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header class="site-header">
-        <h1>Marcelo</h1>
-        <nav class="site-nav" aria-label="Navegacion principal">
-            <a href="index.html">Inicio</a>
-            <a href="bitacora.html">Bitacora</a>
-            <a href="eduardo.html">Eduardo</a>
-            <a href="leandro.html">Leandro</a>
-            <a href="marcelo.html" aria-current="page">Marcelo</a>
-            <a href="melisa.html">Melisa</a>
-        </nav>
-    </header>
+    <!-- TopNavBar (mismo que index.html) -->
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <div class="navbar__brand">
+                Grupo Clouds
+            </div>
+            <div class="navbar__links">
+                <a class="navbar__link" href="index.html">Principal</a>
+                <a class="navbar__link" href="bitacora.html">Bitácora</a>
+                <div class="navbar__dropdown">
+                    <a class="navbar__link navbar__dropdown-toggle navbar__link--active" href="#">
+                        Team
+                        <span class="material-symbols-outlined navbar__dropdown-icon">expand_more</span>
+                    </a>
+                    <div class="navbar__dropdown-menu">
+                        <a class="navbar__dropdown-item" href="eduardo.html">Eduardo</a>
+                        <a class="navbar__dropdown-item" href="leandro.html">Leandro</a>
+                        <a class="navbar__dropdown-item" href="melisa.html">Melisa</a>
+                        <a class="navbar__dropdown-item navbar__dropdown-item--active" href="marcelo.html">Marcelo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__cta-wrapper">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span
+                        class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--light">light_mode</span>
+                    <span class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--dark">dark_mode</span>
+                </button>
+            </div>
+            <button class="navbar__menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
 
-    <main class="container">
-        <section class="card">
-            <h2>Tarjeta de presentacion</h2>
-            <ul>
-                <li>Ubicacion: A definir</li>
-                <li>Edad: A definir</li>
-                <li>Habilidades: HTML, CSS, JavaScript, Diseno UI</li>
-                <li>Peliculas favoritas: A definir (3)</li>
-                <li>Discos favoritos: A definir (3)</li>
-            </ul>
-            <button class="btn profile-btn" type="button" data-name="Marcelo">Mostrar mensaje</button>
-            <p class="hint profile-hint" aria-live="polite"></p>
-        </section>
-    </main>
+    <!-- Hero Profile Section -->
+    <section class="profile-hero">
+        <div class="profile-hero__glow--top"></div>
+        <div class="profile-hero__glow--bottom"></div>
 
+        <div class="profile-hero__content">
+            <div class="profile-hero__info">
+                <p class="profile-hero__label">Perfil de Miembro</p>
+                <h1 class="profile-hero__name">
+                    Marcelo <br /> <span class="text-gradient">Moreno</span>
+                </h1>
+                <p class="profile-hero__role">
+                    Product Designer <span class="profile-hero__role-detail">en Grupo Clouds</span>
+                </p>
+
+                <div class="profile-hero__meta">
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">location_on</span>
+                        <span>Buenos Aires, Argentina</span>
+                    </div>
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">cake</span>
+                        <span>30 años</span>
+                    </div>
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">work</span>
+                        <span>2 años de experiencia</span>
+                    </div>
+                </div>
+
+                <div class="profile-hero__actions">
+                    <a class="profile-hero__cta-primary" href="https://github.com/Javiacode" target="_blank"
+                        rel="noopener noreferrer">Contactar a
+                        Marcelo</a>
+                    <a class="profile-hero__cta-secondary" href="https://pfo-1-landing-page.vercel.app/" target="_blank"
+                        rel="noopener noreferrer">Ver proyectos</a>
+                </div>
+                <p class="profile-hero__hint" aria-live="polite"></p>
+            </div>
+
+            <div class="profile-hero__image-col">
+                <div class="profile-hero__image-wrapper cloud-shadow">
+                    <img alt="Marcelo Moreno" class="profile-hero__image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKV-JJu4hJv6q7cuHbqADHu2kxOoiVw43rI3oZk8a4omdJd6g2upNAu2ppLs7MuIjBn0B3qT8sAy_353poG368kLRuyNaKUwtLt7LClxAIFBt0OTw3A7mspCcwxPKIUX-FXiwk91oxAmYgKKEnFcVpyVMFAFtzrqSNL1rpaJxJUd42Bq2dSvM2sMGTGNVgWbGM6s3LPCfw-U4wkW2LD78-3Awy5UCLSu8CgKD16fD3-_Ug0OJLdXzIkS_W80wStOa5soBQpPRPgNdf" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Tecnológico Section -->
+    <section class="tech-stack">
+        <div class="tech-stack__inner">
+            <div class="tech-stack__header">
+                <h2 class="tech-stack__title">Stack Tecnológico</h2>
+                <p class="tech-stack__subtitle">Las herramientas y lenguajes que definen mi flujo de trabajo.</p>
+            </div>
+            <div class="tech-stack__grid">
+                <!-- HTML -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#E44D26"
+                                d="M6 2l2.4 26L16 30l7.6-2L26 2H6zm16.3 8H12.7l.3 3.5h9l-.5 5.5-5.5 1.5-5.5-1.5-.3-3.5h3.3l.1 1.8 2.4.6 2.4-.6.3-2.8H9.5L9 6h14l-.7 4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">HTML</span>
+                </div>
+                <!-- CSS -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#1572B6"
+                                d="M6 2l2.4 26L16 30l7.6-2L26 2H6zm16.1 8H12.7l.3 3.5h8.8l-.5 5.5-5.3 1.5-5.3-1.5-.4-3.5h3.3l.2 1.8 2.2.6 2.2-.6.3-2.8H9.7L9 6h14l-.9 4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">CSS</span>
+                </div>
+                <!-- Git / GitHub -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#F05032"
+                                d="M29.5 15.2L16.8 2.5a1.7 1.7 0 0 0-2.4 0l-2.6 2.6 3.3 3.3a2 2 0 0 1 2.5 2.6l3.2 3.2a2 2 0 1 1-1.2 1.1l-3-3v7.8a2 2 0 1 1-1.6-.1V12a2 2 0 0 1-1.1-2.6L11.6 6.1l-9.1 9.1a1.7 1.7 0 0 0 0 2.4l12.7 12.7a1.7 1.7 0 0 0 2.4 0l12.7-12.7a1.7 1.7 0 0 0 .2-2.4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Git / GitHub</span>
+                </div>
+                <!-- JavaScript -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect fill="#F7DF1E" width="32" height="32" rx="2" />
+                            <path
+                                d="M20.8 23.7c.6 1 1.4 1.7 2.8 1.7 1.2 0 1.9-.6 1.9-1.4 0-1-.8-1.3-2-1.9l-.7-.3c-2-.9-3.4-1.9-3.4-4.2 0-2.1 1.6-3.7 4.1-3.7 1.8 0 3 .6 3.9 2.2l-2.2 1.4c-.5-.9-1-1.2-1.8-1.2-.8 0-1.3.5-1.3 1.2 0 .8.5 1.1 1.7 1.6l.7.3c2.4 1 3.7 2.1 3.7 4.4 0 2.5-2 3.9-4.6 3.9-2.6 0-4.3-1.2-5.1-2.9l2.3-1.1zm-10 .3c.5.8.9 1.5 1.9 1.5 1 0 1.6-.4 1.6-1.9v-10h3v10.2c0 3.1-1.8 4.5-4.5 4.5-2.4 0-3.8-1.2-4.5-2.7l2.5-1.6z"
+                                fill="#000" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">JavaScript</span>
+                </div>
+                <!-- TypeScript -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect fill="#3178C6" width="32" height="32" rx="2" />
+                            <path
+                                d="M22.8 25.4c.5.9 1.2 1.6 2.5 1.6 1 0 1.7-.5 1.7-1.3 0-.9-.7-1.2-1.8-1.7l-.6-.3c-1.8-.8-3-1.7-3-3.8 0-1.9 1.4-3.3 3.7-3.3 1.6 0 2.7.6 3.5 2l-1.9 1.3c-.4-.8-.9-1.1-1.6-1.1-.7 0-1.2.5-1.2 1.1 0 .7.5 1 1.5 1.5l.6.3c2.1 1 3.4 1.9 3.4 4 0 2.3-1.8 3.5-4.1 3.5-2.3 0-3.9-1.1-4.6-2.6l1.9-1.2zm-9.2.1c.4.7.7 1.2 1.6 1.2s1.4-.4 1.4-1.7V16.6h2.7v8.5c0 2.8-1.6 4-4 4-2.2 0-3.4-1.1-4-2.5l2.3-1.1z"
+                                fill="#fff" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">TypeScript</span>
+                </div>
+                <!-- C# -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#68217A"
+                                d="M16 2a14 14 0 1 0 0 28 14 14 0 0 0 0-28zm5.7 17.3h-1.3l-.3 1h-1.3l.3-1h-1.5l-.3 1h-1.3l.3-1H15l.3-1.2h1.2l.4-1.3H15.6l.3-1h1.3l.3-1h1.3l-.3 1h1.5l.3-1h1.3l-.3 1h1.2l-.3 1.2h-1.2l-.4 1.3h1.3zm-3.7 0h1.5l.4-1.3H18.4l-.4 1.3zM16 6.5c2.6 0 5 1.1 6.8 2.8L20 12.1A7.5 7.5 0 0 0 8.5 16 7.5 7.5 0 0 0 20 19.9l2.8 2.8A12.6 12.6 0 0 1 16 25.5c-5.2 0-9.5-4.3-9.5-9.5S10.8 6.5 16 6.5z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">C#</span>
+                </div>
+                <!-- Kotlin -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="kotlin-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7F52FF" />
+                                    <stop offset="50%" stop-color="#C811E2" />
+                                    <stop offset="100%" stop-color="#E54857" />
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#kotlin-grad)"
+                                d="M4 28L16.2 15.6 28 28H4zM4 4h12.1L4 16.4V4zM16.5 4L4 17v11l12.5-12.8L28 4H16.5z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Kotlin</span>
+                </div>
+                <!-- SQL -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <ellipse cx="16" cy="8" rx="10" ry="4" fill="#006591" />
+                            <path fill="#006591"
+                                d="M6 8v16c0 2.2 4.5 4 10 4s10-1.8 10-4V8c0 2.2-4.5 4-10 4S6 10.2 6 8z" />
+                            <ellipse cx="16" cy="8" rx="10" ry="4" fill="#0ea5e9" opacity="0.5" />
+                            <path d="M6 14c0 2.2 4.5 4 10 4s10-1.8 10-4" fill="none" stroke="#0ea5e9"
+                                stroke-opacity="0.4" stroke-width="0.8" />
+                            <path d="M6 20c0 2.2 4.5 4 10 4s10-1.8 10-4" fill="none" stroke="#0ea5e9"
+                                stroke-opacity="0.4" stroke-width="0.8" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Bases de datos SQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Interests Section -->
+    <section class="interests">
+        <div class="interests__inner">
+            <div class="interests__header">
+                <h2 class="interests__title">Off the Grid</h2>
+                <p class="interests__description">Lo que inspira a Marcelo fuera del entorno cloud.</p>
+            </div>
+
+            <!-- Peliculas - Carousel -->
+            <div class="interests__block">
+                <div class="interests__block-header">
+                    <span
+                        class="material-symbols-outlined interests__block-icon interests__block-icon--primary">movie</span>
+                    <h3 class="interests__block-title">Películas favoritas</h3>
+                </div>
+
+                <div class="movie-carousel" id="movieCarousel">
+                    <button class="movie-carousel__arrow movie-carousel__arrow--prev" id="carouselPrev"
+                        aria-label="Película anterior">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+
+                    <div class="movie-carousel__viewport">
+                        <div class="movie-carousel__track" id="carouselTrack">
+
+                            <!-- Slide 1: El Señor de los Anillos -->
+                            <div class="movie-carousel__slide movie-carousel__slide--active">
+                                <!-- Hero Poster -->
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://cineciutat.org/storage/app/uploads/public/654/930/261/thumb_3860_1920_1080_0_0_crop.jpg');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">El Señor de los Anillos: La Comunidad del
+                                                Anillo</h4>
+
+                                            <div class="movie-carousel__meta">
+                                                <span>2001</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Dirigida por Peter Jackson</span>
+                                            </div>
+
+                                            <p class="movie-carousel__desc">La épica aventura de Frodo Bolsón y la
+                                                Comunidad en su misión para destruir el Anillo Único y salvar la Tierra
+                                                Media de la oscuridad de Sauron.</p>
+
+                                            <div class="movie-carousel__awards">
+                                                <span
+                                                    class="material-symbols-outlined movie-carousel__award-icon">emoji_events</span>
+                                                <span>4 Premios Óscar</span>
+                                            </div>
+
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/V75dMMIW2B4?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Video Container (Hidden until played) -->
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Gladiator -->
+                            <div class="movie-carousel__slide">
+                                <!-- Hero Poster -->
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://www.studioremarkable.com/wp-content/uploads/2000/05/Gladiator-Still.jpg');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Gladiator</h4>
+
+                                            <div class="movie-carousel__meta">
+                                                <span>2000</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Dirigida por Ridley Scott</span>
+                                            </div>
+
+                                            <p class="movie-carousel__desc">Un general romano traicionado busca venganza
+                                                contra el emperador corrupto que asesinó a su familia, luchando como
+                                                gladiador en el Coliseo de Roma.</p>
+
+                                            <div class="movie-carousel__awards">
+                                                <span
+                                                    class="material-symbols-outlined movie-carousel__award-icon">emoji_events</span>
+                                                <span>5 Premios Óscar</span>
+                                            </div>
+
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/owK1qxDselE?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Video Container -->
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Demon Slayer -->
+                            <div class="movie-carousel__slide">
+                                <!-- Hero Poster -->
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://external-preview.redd.it/kimetsu-no-yaiba-the-movie-mugen-train-new-key-visual-v0-JvNsx-vE-zFAdi_cJMpvDiOAFfJG5Sw2lQBQwGvp4wE.jpg?auto=webp&s=dcf83c7810691804b137be9add9712bb3d8bfcf9');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Demon Slayer: El tren infinito</h4>
+
+                                            <div class="movie-carousel__meta">
+                                                <span>2020</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Dirigida por Haruo Sotozaki</span>
+                                            </div>
+
+                                            <p class="movie-carousel__desc">Tanjiro y sus compañeros se embarcan en una
+                                                misión a bordo del Tren Infinito junto al Pilar de la Llama, Kyōjurō
+                                                Rengoku, enfrentándose a un poderoso demonio.</p>
+
+                                            <div class="movie-carousel__awards">
+                                                <span
+                                                    class="material-symbols-outlined movie-carousel__award-icon">emoji_events</span>
+                                                <span>Película de Anime #1 a nivel global</span>
+                                            </div>
+
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/-AwLMRgcEoA?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Video Container -->
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="movie-carousel__arrow movie-carousel__arrow--next" id="carouselNext"
+                        aria-label="Película siguiente">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+
+                    <!-- Indicadores de posición -->
+                    <div class="movie-carousel__dots" id="carouselDots">
+                        <button class="movie-carousel__dot movie-carousel__dot--active"
+                            aria-label="Película 1"></button>
+                        <button class="movie-carousel__dot" aria-label="Película 2"></button>
+                        <button class="movie-carousel__dot" aria-label="Película 3"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Musica -->
+            <div class="interests__block interests__block--border-top">
+                <div class="interests__block-header">
+                    <span
+                        class="material-symbols-outlined interests__block-icon interests__block-icon--accent">album</span>
+                    <h3 class="interests__block-title">Discos favoritos</h3>
+                </div>
+                <div class="interests__music-grid">
+                    <div class="music-card cloud-shadow">
+                        <div class="music-card__cover">
+                            <img alt="Random Access Memories" class="music-card__image"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2dTVYwNI1ddb6uvAZRQGSDgZDcXf6riW3iCwsdr_0GYvGisqhvqHJy2f-82BunzEcatwDdKZfiNJR-lcTgJKHDzmm6YT7PJKKgoh0nKLCdqFtsghnPCfFARSsxtxJRP-UP3GzXJcmh9xhkvM6I2sjUUUeZp-6lYEaplDai4GwpXxxD4-aLRwqJPy4aapvqmKIGTtPLHMy0KTrBwqcEhhhdGbIfAvu3fge63XuNPiHaVn-rMMNUKtth9S4kte7LPeQWI0TQQ8xi2U" />
+                        </div>
+                        <p class="music-card__title">Random Access Memories</p>
+                        <p class="music-card__artist">Daft Punk</p>
+                    </div>
+                    <div class="music-card cloud-shadow">
+                        <div class="music-card__cover">
+                            <img alt="Currents" class="music-card__image"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDO650ucoXL89yOCylLTxCNxFaB4pSMBPP60fjC7HKlWMK6T3rJhQGS866292znFjQ_iqdDVpRc78uMyR8dqt21c4fNB23r-rUnRrGwov7c30ihyOYh_w40EZY_p5B2uEXvKALxs6FuXMxucHbXupuh7xYHgI-wqJdsr2j2ZHLvnMimmO0zHVR--6SbrMD7ElVX1iJZqXmQrvZEAo8mxDUu_ECvWE4k6Iu_SzzSLU5adcxFUCxIiVau6rmbWY8ycmFVeK6xWU-3zE" />
+                        </div>
+                        <p class="music-card__title">Currents</p>
+                        <p class="music-card__artist">Tame Impala</p>
+                    </div>
+                    <div class="music-card cloud-shadow">
+                        <div class="music-card__cover">
+                            <img alt="Plastic Beach" class="music-card__image"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaPh5tYKL99MdFuK4vhRjEUx63O5vPSMuSsOYI6BOdJ_dFy8_URzR9KkHvQm3c0lJN1Me-Ao3xJCGbC95y2JjsWJp76knypNv_7FX_Zr0Ecr-Y_j9xb-etCEvu2Z099rq_idhA2NakgRefOAHZ2XyZoNY_-ASZjXL71yJtr0CE6w0CynAW3pmykxbtBYzxhhjmFXBJOa7M_96A_z5gidan5YhSaxejBFlJngxxnxysAgd2eVkAVvp086e2Qi3izyGte5e3vttVFRTS" />
+                        </div>
+                        <p class="music-card__title">Plastic Beach</p>
+                        <p class="music-card__artist">Gorillaz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (mismo que index.html) -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand-col">
+                <div class="footer__brand-name">
+                    Grupo Clouds
+                </div>
+                <p class="footer__brand-tagline">Atmospheric Infrastructure for the Modern Enterprise.</p>
+                <div class="footer__social-links">
+                    <a class="footer__social-link" href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a class="footer__social-link" href="#"><span class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Navegación</h4>
+                <a class="footer__link" href="index.html">Principal</a>
+                <a class="footer__link" href="bitacora.html">Bitácora</a>
+                <a class="footer__link" href="eduardo.html">Eduardo</a>
+                <a class="footer__link" href="leandro.html">Leandro</a>
+                <a class="footer__link" href="melisa.html">Melisa</a>
+                <a class="footer__link" href="marcelo.html">Marcelo</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Legal</h4>
+                <a class="footer__link" href="#">Privacy
+                    Policy</a>
+                <a class="footer__link" href="#">Terms of
+                    Service</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Platform</h4>
+                <a class="footer__link" href="#">Architecture</a>
+                <a class="footer__link" href="#">Cloud
+                    Security</a>
+                <a class="footer__link" href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            © 2024 Grupo Clouds. Atmospheric Infrastructure for the Modern Enterprise.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

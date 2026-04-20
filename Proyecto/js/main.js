@@ -35,3 +35,92 @@
         });
     }
 })();
+
+
+/* --------------------------------------------------------------------------
+   2. MOVIE CAROUSEL
+   --------------------------------------------------------------------------
+   Carousel de películas con trailers de YouTube.
+   Navegación por flechas y dots indicadores.
+   -------------------------------------------------------------------------- */
+
+(function initMovieCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+    const slides = track.querySelectorAll('.movie-carousel__slide');
+    const dots = dotsContainer.querySelectorAll('.movie-carousel__dot');
+    let currentIndex = 0;
+
+    // Detiene el video activo cuando se cambia de slide o se cierra
+    function stopActiveVideo() {
+        const activePlayingSlide = track.querySelector('.movie-carousel__slide--playing');
+        if (activePlayingSlide) {
+            activePlayingSlide.classList.remove('movie-carousel__slide--playing');
+            const iframe = activePlayingSlide.querySelector('.movie-carousel__iframe');
+            if (iframe) {
+                iframe.src = ''; // Corta la reproducción y limpia el iframe
+            }
+        }
+    }
+
+    function goToSlide(index) {
+        // Wrap around
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        // Detener cualquier video que se esté reproduciendo antes de deslizar
+        stopActiveVideo();
+
+        currentIndex = index;
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+
+        // Actualizar dots
+        dots.forEach(function (dot, i) {
+            dot.classList.toggle('movie-carousel__dot--active', i === currentIndex);
+        });
+    }
+
+    prevBtn.addEventListener('click', function () {
+        goToSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', function () {
+        goToSlide(currentIndex + 1);
+    });
+
+    // Click en dots
+    dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+            goToSlide(i);
+        });
+    });
+
+    // Lógica Netflix-style "Reproducir" video
+    const playBtns = track.querySelectorAll('.movie-carousel__play-btn');
+    const closeBtns = track.querySelectorAll('.movie-carousel__close-btn');
+
+    playBtns.forEach((btn) => {
+        btn.addEventListener('click', function (e) {
+            const slide = e.target.closest('.movie-carousel__slide');
+            const videoUrl = this.getAttribute('data-video');
+            const iframe = slide.querySelector('.movie-carousel__iframe');
+            
+            // Asigna la url con autoplay configurado y añade clase playing
+            iframe.src = videoUrl;
+            slide.classList.add('movie-carousel__slide--playing');
+        });
+    });
+
+    // Lógica para cerrar el video
+    closeBtns.forEach((btn) => {
+        btn.addEventListener('click', function (e) {
+            stopActiveVideo();
+        });
+    });
+
+})();
