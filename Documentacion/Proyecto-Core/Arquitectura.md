@@ -1,7 +1,7 @@
 ---
 title: Arquitectura
 status: activo
-updated: 2026-04-16
+updated: 2026-04-19
 ---
 
 # Arquitectura
@@ -38,6 +38,11 @@ TP-FrontEnd-DesarrolloDeSistemasWeb/
 	├─ marcelo.html
 	├─ melisa.html
 	├─ css/
+	│  ├─ base/
+	│  ├─ components/
+	│  ├─ layout/
+	│  ├─ pages/
+	│  ├─ theme/
 	│  └─ style.css
 	├─ js/
 	│  └─ main.js
@@ -52,7 +57,7 @@ TP-FrontEnd-DesarrolloDeSistemasWeb/
 - `index.html`: portada principal y acceso a todas las secciones.
 - `bitacora.html`: registro del proceso dentro del menu principal.
 - `eduardo.html`, `leandro.html`, `marcelo.html`, `melisa.html`: una pagina por integrante.
-- `css/style.css`: estilos globales y responsive.
+- `css/style.css`: entrypoint que enlaza la arquitectura modular de estilos (variables, componentes y vistas).
 - `js/main.js`: interacciones compartidas del sitio.
 - `img/`: recursos visuales usados por la web final.
 
@@ -66,7 +71,8 @@ TP-FrontEnd-DesarrolloDeSistemasWeb/
 ## Convenciones
 
 - Los HTML viven en la raiz de `Proyecto`.
-- Se usa una sola hoja global: `css/style.css`.
+- Guía de Diseño: Utilizar rigurosamente `DESIGN.md` como fuente de verdad para componentes, colores y animaciones estéticas.
+- La hoja de estilos principal es `css/style.css`, la cual funciona únicamente como índice mediante `@import`. El CSS debe distribuirse modularmente dentro de sus respectivos subdirectorios (`base/`, `components/`, etc.).
 - Se usa un solo script global: `js/main.js`.
 - Imagenes de entrega solo en `Proyecto/img`.
 - Nombres de archivos en minuscula y sin espacios.
