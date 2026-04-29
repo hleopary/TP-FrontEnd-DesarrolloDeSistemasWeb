@@ -1,39 +1,461 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leandro - Clouds Guild</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <h1>Leandro</h1>
-        <nav class="site-nav" aria-label="Navegacion principal">
-            <a href="index.html">Inicio</a>
-            <a href="bitacora.html">Bitacora</a>
-            <a href="eduardo.html">Eduardo</a>
-            <a href="leandro.html" aria-current="page">Leandro</a>
-            <a href="marcelo.html">Marcelo</a>
-            <a href="melisa.html">Melisa</a>
-        </nav>
-    </header>
 
-    <main class="container">
-        <section class="card">
-            <h2>Tarjeta de presentacion</h2>
-            <ul>
-                <li>Ubicacion: A definir</li>
-                <li>Edad: A definir</li>
-                <li>Habilidades: HTML, CSS, JavaScript, Resolucion de problemas</li>
-                <li>Peliculas favoritas: A definir (3)</li>
-                <li>Discos favoritos: A definir (3)</li>
-            </ul>
-            <button class="btn profile-btn" type="button" data-name="Leandro">Mostrar mensaje</button>
-            <p class="hint profile-hint" aria-live="polite"></p>
-        </section>
-    </main>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Leandro - Grupo Clouds</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <div class="navbar__brand">
+                Grupo Clouds
+            </div>
+            <div class="navbar__links">
+                <a class="navbar__link" href="index.html">Principal</a>
+                <a class="navbar__link" href="bitacora.html">Bitacora</a>
+                <div class="navbar__dropdown">
+                    <a class="navbar__link navbar__dropdown-toggle navbar__link--active" href="#">
+                        Team
+                        <span class="material-symbols-outlined navbar__dropdown-icon">expand_more</span>
+                    </a>
+                    <div class="navbar__dropdown-menu">
+                        <a class="navbar__dropdown-item navbar__dropdown-item--active" href="leandro.html">Leandro</a>
+                        <a class="navbar__dropdown-item" href="eduardo.html">Eduardo</a>
+                        <a class="navbar__dropdown-item" href="melisa.html">Melisa</a>
+                        <a class="navbar__dropdown-item" href="marcelo.html">Marcelo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__cta-wrapper">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span
+                        class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--light">light_mode</span>
+                    <span class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--dark">dark_mode</span>
+                </button>
+            </div>
+            <button class="navbar__menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="profile-hero">
+        <div class="profile-hero__glow--top"></div>
+        <div class="profile-hero__glow--bottom"></div>
+
+        <div class="profile-hero__content">
+            <div class="profile-hero__info">
+                <p class="profile-hero__label">Perfil de Miembro</p>
+                <h1 class="profile-hero__name">
+                    Leandro <br /> <span class="text-gradient">Paryszewsi</span>
+                </h1>
+                <p class="profile-hero__role">
+                    Desarrollador y Soporte <span class="profile-hero__role-detail">en Grupo Clouds</span>
+                </p>
+
+                <div class="profile-hero__meta">
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">location_on</span>
+                        <span>Buenos Aires, Argentina</span>
+                    </div>
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">cake</span>
+                        <span>Experiencia en servidores</span>
+                    </div>
+                    <div class="profile-hero__meta-item">
+                        <span class="material-symbols-outlined profile-hero__meta-icon">work</span>
+                        <span>Open Source Technology Fan</span>
+                    </div>
+                </div>
+
+                <p class="profile-hero__role-detail">
+                    Soy un entusiasta de la tecnología experiencia con servidores, electronica, mecánica, lógistica y ...redoble de tambores "Software".
+                </p>
+
+                <div class="profile-hero__actions">
+                    <a class="profile-hero__cta-primary" href="bitacora.html">Ver bitacora</a>
+                    <a class="profile-hero__cta-secondary" href="index.html">Volver al inicio</a>
+                </div>
+                <p class="profile-hero__hint" aria-live="polite"></p>
+            </div>
+
+            <div class="profile-hero__image-col" style="display: flex; justify-content: center;">
+                <div class="profile-hero__image-wrapper cloud-shadow"
+                    style="max-width: 25rem; width: 80%; aspect-ratio: 3 / 4; overflow: hidden; border: 3px solid var(--primary); border-radius: 2rem; background: linear-gradient(135deg, var(--primary-container), var(--surface-container-high));">
+                    <img alt="Leandro Paryszewski" class="profile-hero__image"
+                        src="https://avatars.githubusercontent.com/u/167145451?v=4"
+                        style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <div class="tech-stack__inner">
+            <div class="tech-stack__header">
+                <h2 class="tech-stack__title">Stack Tecnologico</h2>
+                <p class="tech-stack__subtitle">Herramientas y habilidades que uso para construir experiencias web.</p>
+            </div>
+            <div class="tech-stack__grid">
+                <!-- C -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#00599C" d="M16 2L2.5 8.5v15L16 30l13.5-6.5v-15L16 2zm0 4l10 4.8v9.4L16 25l-10-4.8v-9.4L16 6z"/>
+                            <path fill="#00599C" d="M19 12h-6v8h6v-2h-4v-1h4v-2h-4v-1h4v-2z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">C</span>
+                </div>
+
+                <!-- C++ -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#004482" d="M16 2L2.5 8.5v15L16 30l13.5-6.5v-15L16 2z"/>
+                            <path fill="#ffffff" d="M14 12h-4v8h4v-2h-2v-1h2v-2h-2v-1h2v-2zm8 3h-1v-1h-1v1h-1v1h1v1h1v-1h1v-1zm4 0h-1v-1h-1v1h-1v1h1v1h1v-1h1v-1z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">C++</span>
+                </div>
+
+                <!-- ASM -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect x="8" y="8" width="16" height="16" fill="#4B5563" />
+                            <path fill="#9CA3AF" d="M6 10h2v2H6zm0 5h2v2H6zm0 5h2v2H6zm20-10h2v2h-2zm0 5h2v2h-2zm0 5h2v2h-2zM12 6h2v2h-2zm5 0h2v2h-2zm-10 18h2v2H7zm5 0h2v2h-2z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">ASM</span>
+                </div>
+
+                <!-- Linux -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#333" d="M16 2c-4.4 0-8 3.6-8 8 0 1.6.5 3.1 1.3 4.4C8.5 15.6 8 17.2 8 19c0 3.9 3.1 7 7 7h2c3.9 0 7-3.1 7-7 0-1.8-.5-3.4-1.3-4.6.8-1.3 1.3-2.8 1.3-4.4 0-4.4-3.6-8-8-8z"/>
+                            <circle cx="13" cy="10" r="1.5" fill="#fff"/>
+                            <circle cx="19" cy="10" r="1.5" fill="#fff"/>
+                            <path fill="#FFA000" d="M13 14h6l-3 3-3-3zM10 26c-1 0-2 1-2 2s1 2 2 2 2-1 2-2-1-2-2-2zm12 0c-1 0-2 1-2 2s1 2 2 2 2-1 2-2-1-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Linux / GNU</span>
+                </div>
+
+                <!-- SSH -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect x="4" y="6" width="24" height="20" rx="2" fill="#1F2937"/>
+                            <path fill="#10B981" d="M8 12l4 4-4 4M14 20h6" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                            <path fill="#F59E0B" d="M22 14c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">SSH</span>
+                </div>
+
+                <!-- Docker -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#2496ED" d="M29.5 17.5c0 4.5-4 6-7.5 6h-16c-1 0-1.5-1-1.5-1.5s.5-1 1.5-1h1c0-1 0-5 5-5h12c5 0 5.5 1.5 5.5 1.5zM7 16h3v3H7v-3zm4 0h3v3h-3v-3zm4 0h3v3h-3v-3zm4 0h3v3h-3v-3zM7 12h3v3H7v-3zm4 0h3v3h-3v-3zm4 0h3v3h-3v-3zM7 8h3v3H7V8z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Docker</span>
+                </div>
+
+                <!-- Kubernetes -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#326CE5" d="M16 2l11 4.5v11L16 30l-11-12.5v-11L16 2z"/>
+                            <path fill="#fff" d="M16 8l5 2.5v5.5L16 18.5l-5-2.5v-5.5L16 8z"/>
+                            <path fill="#fff" d="M16 6v10m-8.5-1.5L16 16m8.5-1.5L16 16m-4.5 7.5L16 16m4.5 7.5L16 16" stroke="#fff" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Kubernetes</span>
+                </div>
+
+                <!-- Bash / Shell -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#4D4D4D" d="M4 6h24v20H4z"/>
+                            <path fill="#fff" d="M8 12l4 4-4 4m6 0h6"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Bash / Shell</span>
+                </div>
+
+                <!-- Embedded -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#00979C" d="M16 6c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm-4 12h-2v-4h2v4zm8 0h-2v-4h2v4zm-1-8l2 2-2 2-2-2 2-2z"/>
+                            <path fill="#00979C" d="M12 22l-2-2 2-2 2 2-2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Embedded / IoT</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <rect fill="#F7DF1E" width="32" height="32" rx="2" />
+                            <path d="M20.8 23.7c.6 1 1.4 1.7 2.8 1.7 1.2 0 1.9-.6 1.9-1.4 0-1-.8-1.3-2-1.9l-.7-.3c-2-.9-3.4-1.9-3.4-4.2 0-2.1 1.6-3.7 4.1-3.7 1.8 0 3 .6 3.9 2.2l-2.2 1.4c-.5-.9-1-1.2-1.8-1.2-.8 0-1.3.5-1.3 1.2 0 .8.5 1.1 1.7 1.6l.7.3c2.4 1 3.7 2.1 3.7 4.4 0 2.5-2 3.9-4.6 3.9-2.6 0-4.3-1.2-5.1-2.9l2.3-1.1zm-10 .3c.5.8.9 1.5 1.9 1.5 1 0 1.6-.4 1.6-1.9v-10h3v10.2c0 3.1-1.8 4.5-4.5 4.5-2.4 0-3.8-1.2-4.5-2.7l2.5-1.6z" fill="#000" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">JavaScript</span>
+                </div>
+
+                <!-- Git -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#F05032" d="M29.5 15.2L16.8 2.5a1.7 1.7 0 0 0-2.4 0l-2.6 2.6 3.3 3.3a2 2 0 0 1 2.5 2.6l3.2 3.2a2 2 0 1 1-1.2 1.1l-3-3v7.8a2 2 0 1 1-1.6-.1V12a2 2 0 0 1-1.1-2.6L11.6 6.1l-9.1 9.1a1.7 1.7 0 0 0 0 2.4l12.7 12.7a1.7 1.7 0 0 0 2.4 0l12.7-12.7a1.7 1.7 0 0 0 .2-2.4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Git / GitHub</span>
+                </div>
+
+                <!-- HTML/CSS -->
+                <div class="tech-chip">
+                    <div class="tech-chip__icon-wrapper">
+                        <svg class="tech-chip__svg" viewBox="0 0 32 32" aria-hidden="true">
+                            <path fill="#E44D26" d="M6 2l2.4 26L16 30l7.6-2L26 2H6zm16.3 8H12.7l.3 3.5h9l-.5 5.5-5.5 1.5-5.5-1.5-.3-3.5h3.3l.1 1.8 2.4.6 2.4-.6.3-2.8H9.5L9 6h14l-.7 4z" />
+                        </svg>
+                    </div>
+                    <span class="tech-chip__label">Web Core</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests">
+        <div class="interests__inner">
+            <div class="interests__header">
+                <h2 class="interests__title">Off the Grid</h2>
+                <p class="interests__description">Peliculas y discos favoritos para conocer mejor a Leandro Paryszewski.</p>
+            </div>
+
+           <div class="interests__block">
+                <div class="interests__block-header">
+                    <span
+                        class="material-symbols-outlined interests__block-icon interests__block-icon--primary">movie</span>
+                    <h3 class="interests__block-title">Peliculas favoritas</h3>
+                </div>
+
+                <div class="movie-carousel" id="movieCarousel">
+                    <button class="movie-carousel__arrow movie-carousel__arrow--prev" id="carouselPrev"
+                        aria-label="Pelicula anterior">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+
+                    <div class="movie-carousel__viewport">
+                        <div class="movie-carousel__track" id="carouselTrack">
+                            <!-- Matrix -->
+                            <div class="movie-carousel__slide movie-carousel__slide--active">
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://static.wikia.nocookie.net/thebigbangtheory/images/7/7a/Matrix.jpg/revision/latest?cb=20100301173222&path-prefix=es');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Matrix (The Matrix, 1999)</h4>
+                                            <div class="movie-carousel__meta">
+                                                <span>1999</span>
+                                                <span class="movie-carousel__badge">4K</span>
+                                                <span>Ciencia Ficción</span>
+                                            </div>
+                                            <p class="movie-carousel__desc">Un clásico de la ciencia ficción que explora la realidad simulada. Ideal para un perfil tecnológico y mentes curiosas.</p>
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/vKQi3bBA1y8?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Avatar -->
+                            <div class="movie-carousel__slide">
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://i0.wp.com/www.serendypia.com/wp-content/uploads/2022/12/avatar_es.jpg?fit=1140%2C660&ssl=1');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Avatar (2009)</h4>
+                                            <div class="movie-carousel__meta">
+                                                <span>2009</span>
+                                                <span class="movie-carousel__badge">HD</span>
+                                                <span>Aventura + Sci-Fi</span>
+                                            </div>
+                                            <p class="movie-carousel__desc">Una revolución visual y tecnológica en el cine sobre la conexión profunda entre la naturaleza y la tecnología.</p>
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/5PSNL1qE6VY?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Ladrón de bicicletas -->
+                            <div class="movie-carousel__slide">
+                                <div class="movie-carousel__poster"
+                                    style="background-image: url('https://www.infobae.com/resizer/v2/2NDD4HLK5RDDXIIPPMD7ZSTCUQ.jpg?auth=3d542ee6190ff552b4c7014b82cd0fbc1a971ea8aa7d3ce4c215f22dd03fd402&smart=true&width=992&height=558&quality=85');">
+                                    <div class="movie-carousel__poster-overlay">
+                                        <div class="movie-carousel__content">
+                                            <h4 class="movie-carousel__title">Ladrón de bicicletas (1948)</h4>
+                                            <div class="movie-carousel__meta">
+                                                <span>1948</span>
+                                                <span class="movie-carousel__badge">B&amp;W</span>
+                                                <span>Neorrealismo</span>
+                                            </div>
+                                            <p class="movie-carousel__desc">Una obra maestra del cine italiano. Una historia humana profunda sobre la lucha, la perseverancia y la realidad social.</p>
+                                            <div class="movie-carousel__actions">
+                                                <button class="movie-carousel__play-btn"
+                                                    data-video="https://www.youtube.com/embed/H3jnzPaRj04?autoplay=1">
+                                                    <span class="material-symbols-outlined">play_arrow</span>
+                                                    Reproducir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-carousel__video-container">
+                                    <iframe class="movie-carousel__iframe" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <button class="movie-carousel__close-btn" aria-label="Cerrar video">
+                                        <span class="material-symbols-outlined">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="movie-carousel__arrow movie-carousel__arrow--next" id="carouselNext"
+                        aria-label="Pelicula siguiente">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+
+                    <div class="movie-carousel__dots" id="carouselDots">
+                        <button class="movie-carousel__dot movie-carousel__dot--active"
+                            aria-label="Pelicula 1"></button>
+                        <button class="movie-carousel__dot" aria-label="Pelicula 2"></button>
+                        <button class="movie-carousel__dot" aria-label="Pelicula 3"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interests__block interests__block--border-top">
+                <div class="interests__block-header">
+                    <span
+                        class="material-symbols-outlined interests__block-icon interests__block-icon--accent">album</span>
+                    <h3 class="interests__block-title">Discos favoritos</h3>
+                </div>
+                <div class="interests__music-grid">
+                    <!-- Led Zeppelin IV -->
+                    <iframe class="cloud-shadow" style="border-radius:1.5rem"
+                        src="https://open.spotify.com/embed/album/5EyIDBAqhnlkAHqvPRwdbX?utm_source=generator&amp;theme=0"
+                        width="100%" height="352" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+
+                    <!-- Filosofía barata y zapatos de goma - Charly García -->
+                    <iframe class="cloud-shadow" style="border-radius:1.5rem"
+                        src="https://open.spotify.com/embed/album/4eZKmaAjQLChmpJ7uqoZAY?utm_source=generator&amp;theme=0"
+                        width="100%" height="352" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+
+                    <!-- Eric Clapton Unplugged -->
+                    <iframe class="cloud-shadow" style="border-radius:1.5rem"
+                        src="https://open.spotify.com/embed/album/2lORE9lVX7YUCZfiFVnKWa?utm_source=generator&amp;theme=0"
+                        width="100%" height="352" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand-col">
+                <div class="footer__brand-name">
+                    Grupo Clouds
+                </div>
+                <p class="footer__brand-tagline">Atmospheric Infrastructure for the Modern Enterprise.</p>
+                <div class="footer__social-links">
+                    <a class="footer__social-link" href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a class="footer__social-link" href="#"><span class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Navegacion</h4>
+                <a class="footer__link" href="index.html">Principal</a>
+                <a class="footer__link" href="bitacora.html">Bitacora</a>
+                <a class="footer__link" href="eduardo.html">Eduardo</a>
+                <a class="footer__link" href="leandro.html">Leandro</a>
+                <a class="footer__link" href="melisa.html">Melisa</a>
+                <a class="footer__link" href="marcelo.html">Marcelo</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Legal</h4>
+                <a class="footer__link" href="#">Privacy Policy</a>
+                <a class="footer__link" href="#">Terms of Service</a>
+            </div>
+            <div class="footer__link-col">
+                <h4 class="footer__col-title">Platform</h4>
+                <a class="footer__link" href="#">Architecture</a>
+                <a class="footer__link" href="#">Cloud Security</a>
+                <a class="footer__link" href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            © 2024 Grupo Clouds. Atmospheric Infrastructure for the Modern Enterprise.
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
