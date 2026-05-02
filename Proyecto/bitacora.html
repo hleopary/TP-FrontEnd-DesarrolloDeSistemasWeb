@@ -1,41 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bitacora - Clouds Guild</title>
-	<link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<title>Bitacora - Grupo Clouds</title>
+
+	<link href="https://fonts.googleapis.com" rel="preconnect" />
+	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
+		rel="stylesheet" />
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+		rel="stylesheet" />
+
+	<link href="css/style.css" rel="stylesheet" />
 </head>
+
 <body>
-	<header class="site-header">
-		<h1>Bitacora del Proyecto</h1>
-		<nav class="site-nav" aria-label="Navegacion principal">
-			<a href="index.html">Inicio</a>
-			<a href="bitacora.html" aria-current="page">Bitacora</a>
-			<a href="eduardo.html">Eduardo</a>
-			<a href="leandro.html">Leandro</a>
-			<a href="marcelo.html">Marcelo</a>
-			<a href="melisa.html">Melisa</a>
-		</nav>
-	</header>
+	<nav class="navbar">
+		<div class="navbar__inner">
+			<div class="navbar__brand">
+				Grupo Clouds
+			</div>
+			<div class="navbar__links">
+				<a class="navbar__link" href="index.html">Principal</a>
+				<a class="navbar__link navbar__link--active" href="bitacora.html">Bitacora</a>
+				<div class="navbar__dropdown">
+					<a class="navbar__link navbar__dropdown-toggle" href="#">
+						Team
+						<span class="material-symbols-outlined navbar__dropdown-icon">expand_more</span>
+					</a>
+					<div class="navbar__dropdown-menu">
+						<a class="navbar__dropdown-item" href="eduardo.html">Eduardo</a>
+						<a class="navbar__dropdown-item" href="leandro.html">Leandro</a>
+						<a class="navbar__dropdown-item" href="melisa.html">Melisa</a>
+						<a class="navbar__dropdown-item" href="marcelo.html">Marcelo</a>
+					</div>
+				</div>
+			</div>
+			<div class="navbar__cta-wrapper">
+				<button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+					<span class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--light">light_mode</span>
+					<span class="material-symbols-outlined theme-toggle__icon theme-toggle__icon--dark">dark_mode</span>
+				</button>
+			</div>
+			<button class="navbar__menu-toggle">
+				<span class="material-symbols-outlined">menu</span>
+			</button>
+		</div>
+	</nav>
 
-	<main class="container">
-		<section class="card">
-			<h2>Decisiones de diseno</h2>
-			<p>Definimos una estetica RPG con foco en legibilidad y navegacion simple.</p>
-		</section>
+	<section class="bitacora-hero">
+		<div class="bitacora-hero__glow--top"></div>
+		<div class="bitacora-hero__glow--bottom"></div>
 
-		<section class="card">
-			<h2>Dificultades y resolucion</h2>
-			<p>Unificamos estructura de archivos para evitar duplicacion y acelerar el desarrollo.</p>
-		</section>
+		<div class="bitacora-hero__content">
+			<p class="bitacora-hero__label">Proceso de trabajo</p>
+			<h1 class="bitacora-hero__title">
+				Bitacora del <span class="text-gradient">Proyecto Clouds</span>
+			</h1>
+			<p class="bitacora-hero__subtitle">
+				Registro de avances por integrante con asistencia de IA y resumen de minutas con decisiones tomadas en cada reunion.
+			</p>
+			<div class="bitacora-hero__stats">
+				<article class="bitacora-stat">
+					<span class="material-symbols-outlined bitacora-stat__icon">groups</span>
+					<div>
+						<p class="bitacora-stat__value">4</p>
+						<p class="bitacora-stat__label">integrantes</p>
+					</div>
+				</article>
+				<article class="bitacora-stat">
+					<span class="material-symbols-outlined bitacora-stat__icon">auto_awesome</span>
+					<div>
+						<p class="bitacora-stat__value">13+</p>
+						<p class="bitacora-stat__label">cambios IA</p>
+					</div>
+				</article>
+				<article class="bitacora-stat">
+					<span class="material-symbols-outlined bitacora-stat__icon">event_note</span>
+					<div>
+						<p class="bitacora-stat__value">3</p>
+						<p class="bitacora-stat__label">minutas clave</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
 
-		<section class="card">
-			<h2>Cambios importantes</h2>
-			<p>Se renombraron archivos globales a <strong>style.css</strong> y <strong>main.js</strong>.</p>
-		</section>
-	</main>
+	<section class="bitacora-section">
+		<div class="bitacora-section__inner">
+			<div class="bitacora-section__header">
+				<h2 class="bitacora-section__title">Bitacora IA por integrante</h2>
+				<p class="bitacora-section__description">Entradas tomadas desde BitacoraIA. </p>
+			</div>
+
+			<div class="bitacora-grid">
+				<article class="bitacora-card">
+					<div class="bitacora-card__head">
+						<h3>Eduardo</h3>
+						<a href="eduardo.html">Ver perfil</a>
+					</div>
+					<ul class="bitacora-card__list">
+						<li><strong>2026-04-20:</strong> Ajuste integral del perfil y stack con foco Back-End + IA.</li>
+						<li><strong>2026-04-16:</strong> Estandarizacion de consigna, arquitectura y estructura de documentacion.</li>
+						<li><strong>2026-04-16:</strong> Implementacion base del frontend y renombre global a <strong>style.css</strong> y <strong>main.js</strong>.</li>
+					</ul>
+				</article>
+
+				<article class="bitacora-card">
+					<div class="bitacora-card__head">
+						<h3>Leandro</h3>
+						<a href="leandro.html">Ver perfil</a>
+					</div>
+					<ul class="bitacora-card__list">
+						<li><strong>2026-04-18:</strong> Armado de estructura inicial del perfil personal y definicion del stack tecnico visible.</li>
+						<li><strong>2026-04-19:</strong> Curado de contenidos de peliculas y discos para la seccion Off the Grid.</li>
+						<li><strong>2026-04-20:</strong> Ajustes de accesibilidad y revisiones responsive en navegacion y tarjetas de intereses.</li>
+					</ul>
+				</article>
+
+				<article class="bitacora-card">
+					<div class="bitacora-card__head">
+						<h3>Marcelo</h3>
+						<a href="marcelo.html">Ver perfil</a>
+					</div>
+					<ul class="bitacora-card__list">
+						<li><strong>2026-04-17:</strong> Prototipos visuales y reglas de diseno en <strong>DESIGN.md</strong>.</li>
+						<li><strong>2026-04-19:</strong> Refactor a CSS modular, menu Team y modo oscuro persistente.</li>
+						<li><strong>2026-04-19:</strong> Creacion de su perfil completo con carrusel estilo streaming y embeds de Spotify.</li>
+					</ul>
+				</article>
+
+				<article class="bitacora-card">
+					<div class="bitacora-card__head">
+						<h3>Melisa</h3>
+						<a href="melisa.html">Ver perfil</a>
+					</div>
+					<ul class="bitacora-card__list">
+						<li><strong>2026-04-18:</strong> Definicion de texto de perfil con enfoque en testing y aseguramiento de calidad.</li>
+						<li><strong>2026-04-19:</strong> Integracion de catalogo multimedia para la seccion de intereses personales.</li>
+						<li><strong>2026-04-20:</strong> Validacion manual del flujo de navegacion y ajustes de consistencia visual en mobile.</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="bitacora-section bitacora-section--alt">
+		<div class="bitacora-section__inner">
+			<div class="bitacora-section__header">
+				<h2 class="bitacora-section__title">Minutas de reunion</h2>
+				<p class="bitacora-section__description">Resumen de reuniones, decisiones de diseno y direccion tecnica tomada por el equipo.</p>
+			</div>
+
+			<div class="minutas-list">
+				<article class="minuta-item">
+					<div class="minuta-item__date">2026-04-08</div>
+					<div class="minuta-item__body">
+						<h3>Exploracion de propuestas visuales (archivada)</h3>
+						<p>Se evaluaron tres alternativas de producto: dashboard dinamico, portfolio bento y Cloud Hub glassmorphism.</p>
+						<ul>
+							<li>Se definio usar un contexto comun para todas las IAs.</li>
+							<li>Se establecio registrar decisiones visuales, errores y prompts usados.</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="minuta-item">
+					<div class="minuta-item__date">2026-04-17</div>
+					<div class="minuta-item__body">
+						<h3>Cambio de direccion del proyecto</h3>
+						<p>Se descarto la idea RPG/juego y se adopto una identidad de agencia de software para asegurar viabilidad tecnica y entrega.</p>
+						<ul>
+							<li>Decision clave: pasar a estilo corporativo moderno.</li>
+							<li>Referencias principales: <strong>Estilo-Visual.md</strong> y <strong>DESIGN.md</strong>.</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="minuta-item">
+					<div class="minuta-item__date">2026-04-19</div>
+					<div class="minuta-item__body">
+						<h3>Modularizacion de CSS y consolidacion tecnica</h3>
+						<p>Se resolvio segmentar el CSS monolitico para mejorar mantenibilidad y trabajo colaborativo sin romper enlaces existentes.</p>
+						<ul>
+							<li>Se adopto la arquitectura: <strong>base</strong>, <strong>components</strong>, <strong>pages</strong>, <strong>layout</strong>, <strong>theme</strong>.</li>
+							<li>Resultado: reduccion de riesgo de conflictos y mayor escalabilidad.</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__grid">
+			<div class="footer__brand-col">
+				<div class="footer__brand-name">
+					Grupo Clouds
+				</div>
+				<p class="footer__brand-tagline">Atmospheric Infrastructure for the Modern Enterprise.</p>
+				<div class="footer__social-links">
+					<a class="footer__social-link" href="#"><span class="material-symbols-outlined">public</span></a>
+					<a class="footer__social-link" href="#"><span class="material-symbols-outlined">mail</span></a>
+				</div>
+			</div>
+			<div class="footer__link-col">
+				<h4 class="footer__col-title">Navegacion</h4>
+				<a class="footer__link" href="index.html">Principal</a>
+				<a class="footer__link" href="bitacora.html">Bitacora</a>
+				<a class="footer__link" href="eduardo.html">Eduardo</a>
+				<a class="footer__link" href="leandro.html">Leandro</a>
+				<a class="footer__link" href="melisa.html">Melisa</a>
+				<a class="footer__link" href="marcelo.html">Marcelo</a>
+			</div>
+			<div class="footer__link-col">
+				<h4 class="footer__col-title">Legal</h4>
+				<a class="footer__link" href="#">Privacy Policy</a>
+				<a class="footer__link" href="#">Terms of Service</a>
+			</div>
+			<div class="footer__link-col">
+				<h4 class="footer__col-title">Platform</h4>
+				<a class="footer__link" href="#">Architecture</a>
+				<a class="footer__link" href="#">Cloud Security</a>
+				<a class="footer__link" href="#">Support</a>
+			</div>
+		</div>
+		<div class="footer__copyright">
+			© 2024 Grupo Clouds. Atmospheric Infrastructure for the Modern Enterprise.
+		</div>
+	</footer>
 
 	<script src="js/main.js"></script>
 </body>
+
 </html>
