@@ -19,8 +19,8 @@ Checklist operativo para transformar la consigna en decisiones concretas del equ
 ## 2. Contenido obligatorio por integrante
 
 - [x] Definir plantilla comun de tarjeta (foto, nombre, ubicacion, edad, 4 habilidades, 3 peliculas, 3 discos).
-- [ ] Definir tono y longitud del texto personal para mantener consistencia.
-- [ ] Confirmar origen de avatares/imagenes por privacidad (IA, ilustraciones o fotos no personales).
+- [x] Definir tono y longitud del texto personal para mantener consistencia.
+- [x] Confirmar origen de avatares/imagenes por privacidad (IA, ilustraciones o fotos no personales).
 
 ## 3. Requerimientos visuales
 
@@ -46,9 +46,9 @@ Checklist operativo para transformar la consigna en decisiones concretas del equ
 
 - [ ] Crear README base con todas las secciones exigidas por consigna.
 - [ ] Definir lista completa de integrantes + links a GitHub.
-- [ ] Preparar lista de tecnologias finales usadas.
-- [ ] Definir formato de capturas de pantalla para README.
-- [ ] Reservar lugar para link del deploy en Vercel.
+- [x] Preparar lista de tecnologias finales usadas.
+- [] Definir formato de capturas de pantalla para README.
+- [] Reservar lugar para link del deploy en Vercel.
 
 ## 7. Uso de IA (obligatorio)
 
