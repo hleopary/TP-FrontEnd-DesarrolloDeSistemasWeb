@@ -124,3 +124,74 @@
     });
 
 })();
+
+/* --------------------------------------------------------------------------
+   3. MOBILE NAVBAR TOGGLE
+   -------------------------------------------------------------------------- */
+
+(function () {
+  var menuToggle = document.querySelector('.navbar__menu-toggle');
+  var menuIcon = menuToggle ? menuToggle.querySelector('.material-symbols-outlined') : null;
+  var slideout = document.querySelector('.navbar__slideout');
+  var overlay = document.querySelector('.navbar__overlay');
+
+  if (!menuToggle) {
+    console.warn('Mobile nav: menuToggle not found');
+    return;
+  }
+  if (!menuIcon) {
+    console.warn('Mobile nav: menuIcon not found');
+    return;
+  }
+  if (!slideout) {
+    console.warn('Mobile nav: slideout not found');
+    return;
+  }
+  if (!overlay) {
+    console.warn('Mobile nav: overlay not found');
+    return;
+  }
+
+  function openMenu() {
+    slideout.classList.add('navbar__slideout--open');
+    overlay.classList.add('navbar__overlay--visible');
+    menuToggle.classList.add('navbar__menu-toggle--open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    if (menuIcon) menuIcon.textContent = 'close';
+  }
+
+  function closeMenu() {
+    slideout.classList.remove('navbar__slideout--open');
+    overlay.classList.remove('navbar__overlay--visible');
+    menuToggle.classList.remove('navbar__menu-toggle--open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (menuIcon) menuIcon.textContent = 'menu';
+  }
+
+  function toggleMenu() {
+    if (slideout.classList.contains('navbar__slideout--open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  slideout.addEventListener('click', function (e) {
+    var link = e.target.closest('.navbar__link, .navbar__team-list a');
+    if (link) {
+      closeMenu();
+    }
+  });
+
+})();

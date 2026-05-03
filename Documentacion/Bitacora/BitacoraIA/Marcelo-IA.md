@@ -14,6 +14,30 @@ Cada entrada representa un cambio puntual realizado con asistencia de IA.
 
 ## Changelog
 
+### [2026-05-03] Fix menú hamburguesa mobile — slide-out glassmorphism
+
+- Tipo: Desarrollo Frontend / UX Mobile.
+- Modelo: MiniMax M2.7 (OpenCode Go)
+- Herramienta: Agente SDD (OpenCode).
+- Archivos impactados:
+  - `css/components/navbar.css`
+  - `js/main.js`
+  - `index.html`, `bitacora.html`, `eduardo.html`, `leandro.html`, `melisa.html`, `marcelo.html`
+- Cambio:
+  - Implementación de panel slide-out glassmorphism desde el borde derecho para navegación mobile (<768px).
+  - El botón hamburguesa no tenía handler JS — se agregó toggle completo con `openMenu()` / `closeMenu()` y transiciones 300ms.
+  - Se corrigió bug crítico: `main.js` se cargaba ANTES del overlay/slideout en el DOM, causando que el script hiciera return temprano en mobile. Los elementos overlay y slideout fueron reordenados después del script en las 6 páginas.
+  - Icono hamburguesa ahora muta a "close" cuando el menú está abierto.
+  - Overlay con `backdrop-filter: blur(8px)` cierra el menú al tap.
+  - Team members mostrados como lista inline (no dropdown — el hover no funciona en touch).
+  - Modo oscuro soportado (`rgba(15,23,42,0.85)` en slideout).
+  - Cierre por tecla Escape y lock de scroll del body.
+- Impacto:
+  - Navegación mobile completamente funcional. Todos los criterios de aceptación verificados (14/14).
+- Validación manual:
+  - Se probó en DevTools con viewport <768px. Click en hamburguesa abre panel, tap en overlay lo cierra, links navegan y auto-cierran el menú.
+
+
 ### [2026-04-19] Creación de Perfil Marcelo con Carrusel estilo Netflix y Spotify
 
 - Tipo: Desarrollo Frontend / UI.

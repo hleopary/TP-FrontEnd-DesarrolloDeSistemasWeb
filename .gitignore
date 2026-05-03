@@ -15,3 +15,6 @@ Documentacion/.obsidian/workspaces.json
 # Generic temp
 *.tmp
 *.temp
+
+# SDD artifacts
+.atl/

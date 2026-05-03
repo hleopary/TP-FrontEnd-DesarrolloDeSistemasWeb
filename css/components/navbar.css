@@ -254,3 +254,97 @@
 	color: #38bdf8;
 }
 
+/* === MOBILE SLIDE-OUT PANEL === */
+
+/* Overlay backdrop */
+.navbar__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.navbar__overlay--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Slide-out panel */
+.navbar__slideout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(320px, 85vw);
+  height: 100dvh;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.dark .navbar__slideout {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.navbar__slideout--open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Slide-out inner layout */
+.navbar__slideout-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem 2rem;
+  gap: 1.5rem;
+}
+
+/* Links inside slide-out */
+.navbar__slideout .navbar__link {
+  display: block;
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  color: #475569;
+  border-bottom: none;
+}
+
+.dark .navbar__slideout .navbar__link:hover {
+  color: #38bdf8;
+}
+
+/* Team section: flat inline list (not dropdown) */
+.navbar__slideout .navbar__team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.navbar__slideout .navbar__team-list a {
+  color: #475569;
+  transition: color 0.3s ease;
+}
+
+.navbar__slideout .navbar__team-list a:hover {
+  color: #0284c7;
+}
+
+.dark .navbar__slideout .navbar__team-list a {
+  color: #94a3b8;
+}
+
+.dark .navbar__slideout .navbar__team-list a:hover {
+  color: #38bdf8;
+}
+
