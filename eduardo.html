@@ -100,7 +100,7 @@
                     style="max-width: 25rem; width: 80%; aspect-ratio: 3 / 4; overflow: hidden;">
                     <img alt="Eduardo" class="profile-hero__image"
                         src="https://avatars.githubusercontent.com/u/126937215?v=4"
-                        style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;" />
+                        />
                 </div>
             </div>
         </div>
@@ -501,6 +501,123 @@
         </div>
     </nav>
     <script src="js/main.js"></script>
+    <script>
+        /* Funciones initNavbarInteractions y initBackToTop se encargan de la interactividad del menú móvil y el botón de volver arriba respectivamente. */
+        (function initNavbarInteractions() {
+            const menuToggle = document.querySelector('.navbar__menu-toggle');
+            const navbarLinks = document.querySelector('.navbar__links');
+            if (!menuToggle || !navbarLinks) return;
+
+            const overlay = document.createElement('div');
+            overlay.className = 'navbar__overlay';
+
+            const slideout = document.createElement('div');
+            slideout.className = 'navbar__slideout';
+
+            const inner = document.createElement('div');
+            inner.className = 'navbar__slideout-inner';
+            inner.appendChild(navbarLinks.cloneNode(true));
+            slideout.appendChild(inner);
+
+            document.body.appendChild(overlay);
+            document.body.appendChild(slideout);
+
+            function openMenu() {
+                overlay.classList.add('navbar__overlay--visible');
+                slideout.classList.add('navbar__slideout--open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                overlay.classList.remove('navbar__overlay--visible');
+                slideout.classList.remove('navbar__slideout--open');
+                document.body.style.overflow = '';
+            }
+
+            menuToggle.addEventListener('click', function () {
+                if (slideout.classList.contains('navbar__slideout--open')) closeMenu();
+                else openMenu();
+            });
+
+            overlay.addEventListener('click', closeMenu);
+
+            slideout.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', closeMenu);
+            });
+
+            document.querySelectorAll('.navbar__dropdown').forEach(function (dropdown) {
+                const toggle = dropdown.querySelector('.navbar__dropdown-toggle');
+                const menu = dropdown.querySelector('.navbar__dropdown-menu');
+                if (!toggle || !menu) return;
+
+                const hasHover = window.matchMedia('(hover: hover)').matches;
+                if (!hasHover) {
+                    toggle.addEventListener('click', function (ev) {
+                        ev.preventDefault();
+                        const isOpen = menu.style.visibility === 'visible';
+                        if (isOpen) {
+                            menu.style.opacity = '';
+                            menu.style.visibility = '';
+                            menu.style.transform = '';
+                        } else {
+                            menu.style.opacity = '1';
+                            menu.style.visibility = 'visible';
+                            menu.style.transform = 'translateX(-50%) translateY(0)';
+                        }
+                    });
+                }
+            });
+
+        })();
+
+        (function initBackToTop() {
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top';
+            btn.setAttribute('aria-label', 'Volver arriba');
+            btn.innerHTML = '<span class="material-symbols-outlined">arrow_upward</span>';
+
+            Object.assign(btn.style, {
+                position: 'fixed',
+                right: '1rem',
+                bottom: '1.25rem',
+                width: '3.25rem',
+                height: '3.25rem',
+                borderRadius: '999px',
+                border: 'none',
+                background: 'var(--primary)',
+                color: 'white',
+                display: 'grid',
+                placeItems: 'center',
+                boxShadow: '0 8px 20px rgba(2,6,23,0.12)',
+                opacity: '0',
+                transform: 'translateY(8px)',
+                transition: 'opacity 200ms ease, transform 200ms ease',
+                zIndex: 80,
+                cursor: 'pointer'
+            });
+
+            document.body.appendChild(btn);
+
+            function show() {
+                btn.style.opacity = '1';
+                btn.style.transform = 'translateY(0)';
+            }
+            function hide() {
+                btn.style.opacity = '0';
+                btn.style.transform = 'translateY(8px)';
+            }
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 400) show();
+                else hide();
+            }, { passive: true });
+
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        })();
+    </script>
 </body>
 
 </html>
