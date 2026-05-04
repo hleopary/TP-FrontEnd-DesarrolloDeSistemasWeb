@@ -2,7 +2,7 @@
 title: Bitacora IA - Eduardo
 status: activo
 integrante: eduardo
-updated: 2026-04-20
+updated: 2026-05-03
 ---
 
 # Bitacora IA - Eduardo
@@ -13,6 +13,25 @@ Esta bitacora se mantiene en formato changelog.
 Cada entrada representa un cambio puntual realizado con asistencia de IA.
 
 ## Changelog
+
+### [2026-05-03] Corrección menú hamburguesa y refactor pequeño de JS
+
+- Tipo: Código frontend.
+- Modelo: GPT-5 mini.
+- Herramienta: GitHub Copilot Chat.
+- Archivos impactados:
+  - `eduardo.html`
+  - `js/main.js`
+  - `README.md`
+- Cambio:
+  - Se movió la funcionalidad del botón "volver arriba" a `js/main.js`.
+  - Se eliminó el script inline duplicado en `eduardo.html` que creaba elementos `.navbar__overlay` y `.navbar__slideout`, evitando conflictos de listeners.
+  - Se centralizó la interacción del menú móvil en `js/main.js`, restaurando el comportamiento esperado del menú hamburguesa (apertura/cierre, overlay, cierre por click y Escape).
+  - Se actualizó la documentación en `README.md` con la convención y la descripción de la función afectada.
+- Impacto:
+  - Menú hamburguesa reparado en `eduardo.html` y menor riesgo de duplicación en futuras ediciones.
+- Validación manual:
+  - Se probó localmente la apertura/cierre del menú y el botón volver arriba.
 
 ### [2026-04-20] Ajuste integral de perfil y stack
 
