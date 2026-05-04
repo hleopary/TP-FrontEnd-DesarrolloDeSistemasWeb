@@ -112,7 +112,7 @@ Agregar aquí capturas finales de:
 ## Documentación complementaria
 
 - [Inicio de documentación](Documentacion/Index-Principal.md)
-- [Consigna TP1](Documentacion/Consigna%20TP1%20-%20Markdown.md)
+- [Consigna TP1](Documentacion/Proyecto-Core/Consigna TP1.md)
 - [Arquitectura](Documentacion/Proyecto-Core/Arquitectura.md)
 - [Estilo visual](Documentacion/Proyecto-Core/Estilo-Visual.md)
 
