@@ -111,7 +111,7 @@ Agregar aquí capturas finales de:
 
 ## Documentación complementaria
 
-- [Inicio de documentación](Documentacion/Index-Principal.md)
+- [Checkpoints](Documentacion/Consignas-Faltantes-Por-Definir.md)
 - [Consigna TP1](Documentacion/Proyecto-Core/Consigna%20TP1.md)
 - [Arquitectura](Documentacion/Proyecto-Core/Arquitectura.md)
 - [Estilo visual](Documentacion/Proyecto-Core/Estilo-Visual.md)
