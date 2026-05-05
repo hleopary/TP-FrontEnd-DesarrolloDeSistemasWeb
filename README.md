@@ -8,15 +8,17 @@ El sitio incluye una portada principal, una bitácora de desarrollo y una págin
 
 ## Links de entrega
 
-- Repositorio: pendiente de completar.
-- Deploy en Vercel: pendiente de completar.
+- Repositorio: [https://github.com/EduMMorenolp/TP-FrontEnd-DesarrolloDeSistemasWeb.git](https://github.com/EduMMorenolp/TP-FrontEnd-DesarrolloDeSistemasWeb.git)
+- Deploy en Vercel: [https://tp-frontend-olive.vercel.app/](https://tp-frontend-olive.vercel.app/)
+
+
 
 ## Integrantes
 
 - Eduardo Moreno - página personal: [eduardo.html](eduardo.html) - GitHub: pendiente de completar.
 - Leandro Paryszewsi - página personal: [leandro.html](leandro.html) - GitHub: pendiente de completar.
 - Marcelo Moreno - página personal: [marcelo.html](marcelo.html) - GitHub: pendiente de completar.
-- Melissa Galeano - página personal: [melisa.html](melisa.html) - GitHub: pendiente de completar.
+- Melissa Galeano - página personal: [melissa.html](melissa.html) - GitHub: pendiente de completar.
 
 ## Tecnologías utilizadas
 
@@ -32,7 +34,7 @@ El sitio incluye una portada principal, una bitácora de desarrollo y una págin
 
 - index.html: portada principal del sitio.
 - bitacora.html: registro del proceso de trabajo.
-- eduardo.html, leandro.html, marcelo.html, melisa.html: perfiles individuales de cada integrante.
+- eduardo.html, leandro.html, marcelo.html, melissa.html: perfiles individuales de cada integrante.
 - css/: estilos organizados por capas y vistas.
 - js/main.js: lógica compartida del sitio.
 - img/: recursos visuales del proyecto.
