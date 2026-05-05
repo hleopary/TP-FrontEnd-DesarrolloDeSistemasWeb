@@ -18,6 +18,7 @@ TP-FrontEnd-DesarrolloDeSistemasWeb/
 │  │  ├─ Overview.md
 │  │  ├─ Arquitectura.md
 │  │  ├─ Estilo-Visual.md
+│  │  ├─ DESIGN.md
 │  │  └─ Consignas-Faltantes-Por-Definir.md
 │  ├─ Bitacora/
 │  │  ├─ Bitacora/
