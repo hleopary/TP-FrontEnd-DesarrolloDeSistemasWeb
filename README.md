@@ -8,15 +8,17 @@ El sitio incluye una portada principal, una bitácora de desarrollo y una págin
 
 ## Links de entrega
 
-- Repositorio: pendiente de completar.
-- Deploy en Vercel: pendiente de completar.
+- Repositorio: [https://github.com/EduMMorenolp/TP-FrontEnd-DesarrolloDeSistemasWeb.git](https://github.com/EduMMorenolp/TP-FrontEnd-DesarrolloDeSistemasWeb.git)
+- Deploy en Vercel: [https://tp-frontend-olive.vercel.app/](https://tp-frontend-olive.vercel.app/)
+
+
 
 ## Integrantes
 
 - Eduardo Moreno - página personal: [eduardo.html](eduardo.html) - GitHub: pendiente de completar.
 - Leandro Paryszewsi - página personal: [leandro.html](leandro.html) - GitHub: pendiente de completar.
 - Marcelo Moreno - página personal: [marcelo.html](marcelo.html) - GitHub: pendiente de completar.
-- Melissa Galeano - página personal: [melisa.html](melisa.html) - GitHub: pendiente de completar.
+- Melissa Galeano - página personal: [melissa.html](melissa.html) - GitHub: pendiente de completar.
 
 ## Tecnologías utilizadas
 
@@ -32,7 +34,7 @@ El sitio incluye una portada principal, una bitácora de desarrollo y una págin
 
 - index.html: portada principal del sitio.
 - bitacora.html: registro del proceso de trabajo.
-- eduardo.html, leandro.html, marcelo.html, melisa.html: perfiles individuales de cada integrante.
+- eduardo.html, leandro.html, marcelo.html, melissa.html: perfiles individuales de cada integrante.
 - css/: estilos organizados por capas y vistas.
 - js/main.js: lógica compartida del sitio.
 - img/: recursos visuales del proyecto.
@@ -83,11 +85,27 @@ La lógica interactiva está centralizada en js/main.js y se reutiliza en todo e
 
 - `initThemeToggle` — Ubicación: `js/main.js`. Descripción: gestiona el cambio de tema claro/oscuro; añade/quita la clase `dark` en el elemento raíz, persiste la preferencia en `localStorage` y usa la preferencia del sistema como fallback.
 
+![cambio de tema claro/oscuro](./Documentacion/img/initThemeToggle.gif)
+
 - `initMovieCarousel` — Ubicación: `js/main.js` (inline en páginas de perfil). Descripción: controla el carrusel de películas (navegación por flechas y dots), carga y detiene trailers en iframes y actualiza el estado visual de las slides.
+
+![carrusel de películas](./Documentacion/img/initMovieCarrousel.gif)
 
 - `initNavbarInteractions` — Ubicación: `js/main.js` (inline en páginas). Descripción: crea dinámicamente el overlay y el panel slide-out para navegación móvil, gestiona la apertura/cierre del menú hamburguesa y adapta el dropdown `Team` para permitir toggle por clic en dispositivos táctiles.
 
+![inline páginas](./Documentacion/img/initNavbarInteractions.gif)
+
 - `initBackToTop` — Ubicación: `eduardo.html`. Descripción: crea un botón flotante "Volver arriba"; aparece al hacer scroll y realiza scroll suave hasta el inicio al pulsarlo.
+
+![volver arriba](./Documentacion/img/initBackToTop.gif)
+
+- `initSphereRainEffect` — Ubicación: `js/leopary.js`. Descripción: añade un "easter egg" en el perfil de Leandro. Un botón junto a su nombre activa una lluvia de esferas de colores con físicas de colisión, creando una experiencia interactiva y personalizada.
+
+![esferitas](./Documentacion/img/initSphereRainEffect.gif)
+
+- `initProfileImageEffect` — Ubicación: `js/melissa.js`. Descripción: aplica un efecto visual a la foto de perfil de Melissa. Al pasar el cursor sobre la imagen, esta se convierte a escala de grises y un texto de ayuda aparece, demostrando una interacción sutil con CSS y JavaScript.
+
+![blanco y negro](./Documentacion/img/initProfileImageEffect.gif)
 
 La interactividad está aplicada en la portada, la bitácora y las páginas de integrantes mediante componentes compartidos, no con scripts duplicados por página.
 
@@ -106,13 +124,25 @@ Si el equipo utilizó otras herramientas como ChatGPT o Gemini, conviene agregar
 Agregar aquí capturas finales de:
 
 - Portada principal.
+
+![portada principal](./Documentacion/img/portada%20principal.png)
+
 - Bitácora.
+
+![bitácora](./Documentacion/img/bitacora.gif)
+
 - Cada perfil individual.
+
+![marcelo](./Documentacion/img/perfilmarcelo.png)
+![eduardo](./Documentacion/img/perfileduardo.png)
+![melissa](./Documentacion/img/perfilmelissa.png)
+![leandro](./Documentacion/img/perfilleandro.png)
+
 
 ## Documentación complementaria
 
-- [Inicio de documentación](Documentacion/Index-Principal.md)
-- [Consigna TP1](Documentacion/Consigna%20TP1%20-%20Markdown.md)
+- [Checkpoints](Documentacion/Proyecto-Core/Consignas-Faltantes-Por-Definir.md)
+- [Consigna TP1](Documentacion/Proyecto-Core/Consigna%20TP1.md)
 - [Arquitectura](Documentacion/Proyecto-Core/Arquitectura.md)
 - [Estilo visual](Documentacion/Proyecto-Core/Estilo-Visual.md)
 
