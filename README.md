@@ -93,7 +93,7 @@ La lógica interactiva está centralizada en js/main.js y se reutiliza en todo e
 
 - `initNavbarInteractions` — Ubicación: `js/main.js` (inline en páginas). Descripción: crea dinámicamente el overlay y el panel slide-out para navegación móvil, gestiona la apertura/cierre del menú hamburguesa y adapta el dropdown `Team` para permitir toggle por clic en dispositivos táctiles.
 
-![inline páginas](./Documentacion/img/initNavbarinteractions.gif)
+![inline páginas](./Documentacion/img/initNavbarInteractions.gif)
 
 - `initBackToTop` — Ubicación: `eduardo.html`. Descripción: crea un botón flotante "Volver arriba"; aparece al hacer scroll y realiza scroll suave hasta el inicio al pulsarlo.
 
