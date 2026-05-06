@@ -85,11 +85,19 @@ La lógica interactiva está centralizada en js/main.js y se reutiliza en todo e
 
 - `initThemeToggle` — Ubicación: `js/main.js`. Descripción: gestiona el cambio de tema claro/oscuro; añade/quita la clase `dark` en el elemento raíz, persiste la preferencia en `localStorage` y usa la preferencia del sistema como fallback.
 
+![cambio de tema claro/oscuro](./Documentacion/img/initThemeToggle.gif)
+
 - `initMovieCarousel` — Ubicación: `js/main.js` (inline en páginas de perfil). Descripción: controla el carrusel de películas (navegación por flechas y dots), carga y detiene trailers en iframes y actualiza el estado visual de las slides.
+
+![carrusel de películas](./Documentacion/img/initMovieCarrousel.gif)
 
 - `initNavbarInteractions` — Ubicación: `js/main.js` (inline en páginas). Descripción: crea dinámicamente el overlay y el panel slide-out para navegación móvil, gestiona la apertura/cierre del menú hamburguesa y adapta el dropdown `Team` para permitir toggle por clic en dispositivos táctiles.
 
+![inline páginas](./Documentacion/img/initNavbarinteractions.gif)
+
 - `initBackToTop` — Ubicación: `eduardo.html`. Descripción: crea un botón flotante "Volver arriba"; aparece al hacer scroll y realiza scroll suave hasta el inicio al pulsarlo.
+
+![volver arriba](./Documentacion/img/initBackToTop.gif)
 
 La interactividad está aplicada en la portada, la bitácora y las páginas de integrantes mediante componentes compartidos, no con scripts duplicados por página.
 
