@@ -99,6 +99,14 @@ La lógica interactiva está centralizada en js/main.js y se reutiliza en todo e
 
 ![volver arriba](./Documentacion/img/initBackToTop.gif)
 
+- `initSphereRainEffect` — Ubicación: `js/leopary.js`. Descripción: añade un "easter egg" en el perfil de Leandro. Un botón junto a su nombre activa una lluvia de esferas de colores con físicas de colisión, creando una experiencia interactiva y personalizada.
+
+![esferitas](./Documentacion/img/initSphereRainEffect.gif)
+
+- `initProfileImageEffect` — Ubicación: `js/melissa.js`. Descripción: aplica un efecto visual a la foto de perfil de Melissa. Al pasar el cursor sobre la imagen, esta se convierte a escala de grises y un texto de ayuda aparece, demostrando una interacción sutil con CSS y JavaScript.
+
+![blanco y negro](./Documentacion/img/initProfileImageEffect.gif)
+
 La interactividad está aplicada en la portada, la bitácora y las páginas de integrantes mediante componentes compartidos, no con scripts duplicados por página.
 
 ## Uso de IA
