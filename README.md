@@ -116,8 +116,20 @@ Si el equipo utilizó otras herramientas como ChatGPT o Gemini, conviene agregar
 Agregar aquí capturas finales de:
 
 - Portada principal.
+
+![portada principal](./Documentacion/img/portada%20principal.png)
+
 - Bitácora.
+
+![bitácora](./Documentacion/img/bitacora.gif)
+
 - Cada perfil individual.
+
+![marcelo](./Documentacion/img/perfilmarcelo.png)
+![eduardo](./Documentacion/img/perfileduardo.png)
+![melissa](./Documentacion/img/perfilmelissa.png)
+![leandro](./Documentacion/img/perfilleandro.png)
+
 
 ## Documentación complementaria
 
